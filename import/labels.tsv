@@ -1,0 +1,73 @@
+name	color	description
+case:A	0E4C92	Case A: Emergency Scenarios
+epic:A-EP1	5B8DEF	Foundation and scenario domain model
+epic:A-EP2	5B8DEF	Scenario selection and activation
+epic:A-EP3	5B8DEF	Shared situational overview
+epic:A-EP4	5B8DEF	Steward self-localization and status
+epic:A-EP5	5B8DEF	Low-radio dispatch
+epic:A-EP6	5B8DEF	Decision support: classification and checklists
+epic:A-EP7	5B8DEF	Incident log and post-incident analysis
+epic:A-EP8	5B8DEF	Access, roles and identity
+epic:A-EP9	5B8DEF	Offline and degraded operation
+epic:A-EP10	5B8DEF	Inheritance and handover
+case:B	0E4C92	Case B: Steward Localization
+epic:B-EP1	5B8DEF	Foundation: positioning abstraction and station reference data
+epic:B-EP2	5B8DEF	Presence and patrol capture
+epic:B-EP3	5B8DEF	Station patrol coverage
+epic:B-EP4	5B8DEF	Train manning coverage
+epic:B-EP5	5B8DEF	Compliance dashboard and reporting
+epic:B-EP6	5B8DEF	Coverage analytics and forecasting
+epic:B-EP7	5B8DEF	Data protection, transparency and steward rights
+epic:B-EP8	5B8DEF	Verifiable historical record
+epic:B-EP9	5B8DEF	Access, roles and identity
+epic:B-EP10	5B8DEF	Inheritance and handover
+case:C	0E4C92	Case C: Operational Restrictions
+epic:C-EP1	5B8DEF	Foundation: lifecycle model and signature primitive
+epic:C-EP2	5B8DEF	Authoring
+epic:C-EP3	5B8DEF	Approval and implementation signing
+epic:C-EP4	5B8DEF	Operator read-and-sign
+epic:C-EP5	5B8DEF	Shift handover compliance
+epic:C-EP6	5B8DEF	Cancellation
+epic:C-EP7	5B8DEF	Register and status visibility
+epic:C-EP8	5B8DEF	Notifications
+epic:C-EP9	5B8DEF	Archiving and retention
+epic:C-EP10	5B8DEF	Drafting support and conflict detection
+epic:C-EP11	5B8DEF	Access control, audit and versioning
+epic:C-EP12	5B8DEF	Inheritance and handover
+case:D	0E4C92	Case D: DID Master
+epic:D-EP1	5B8DEF	Catalogue data model, import and maintenance
+epic:D-EP2	5B8DEF	Browse, search and filter
+epic:D-EP3	5B8DEF	Natural-language search and ranking
+epic:D-EP4	5B8DEF	Preview and comparison
+epic:D-EP5	5B8DEF	Selection, confirmation and record (reconstructed, presumed D5)
+epic:D-EP6	5B8DEF	Audit, access and traceability (reconstructed, presumed D6)
+epic:D-EP7	5B8DEF	Planning support
+epic:D-EP8	5B8DEF	Evaluation
+epic:D-EP9	5B8DEF	Inheritance and handover
+track:frontend	7E57C2	Owning track: frontend
+track:backend	7E57C2	Owning track: backend
+track:mobile	7E57C2	Owning track: mobile
+track:cross-team	7E57C2	Owning track: cross-team
+type:feature	607D8B	Item type: feature
+type:contract	607D8B	Item type: contract
+type:tech	607D8B	Item type: tech
+type:data	607D8B	Item type: data
+type:compliance	607D8B	Item type: compliance
+type:evaluation	607D8B	Item type: evaluation
+type:spike	607D8B	Item type: spike
+size:XS	C8E6C9	A few hours for one person. A configuration change, a copy fix, a single small test.
+size:S	A5D6A7	About one day for one person.
+size:M	FFE082	Two to three days for a pair. The typical size of a well-formed item.
+size:L	FFB74D	Most of a sprint for a pair, or roughly half a sprint for the team.
+size:XL	FF8A65	A full sprint for the whole team. Should normally be split before it is pulled.
+size:XXL	E57373	Larger than a sprint. Must be split before it can enter a sprint. Present here only where the sou...
+prio:must	B71C1C	Required for a viable prototype
+prio:should	EF6C00	Important, not vital for the first usable version
+prio:could	9E9E9E	Desirable if capacity allows
+status:ready	2E7D32	Can be pulled into a sprint as written.
+status:refine	F9A825	Needs an AAU refinement pass. No external input required.
+status:blocked	C62828	Cannot be completed without input from Metro Service.
+needs:metro	6A1B9A	Carries an open question for Metro Service
+provenance:metro	455A64	Derived from a Metro user story
+provenance:aau-added	00695C	Added by AAU; no source story exists
+provenance:reconstructed	AD1457	AAU reconstruction of a missing source epic, pending Metro confirmation
