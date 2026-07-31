@@ -1,0 +1,104 @@
+id	case	title	labels	milestone	body_file
+MET-A-001	A	Derive the scenario domain model from the Metro alternative-operation presentations	case:A,epic:A-EP1,track:cross-team,type:spike,size:M,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 1	bodies/MET-A-001.md
+MET-A-002	A	Scenario reference data schema, persistence and seed loader	case:A,epic:A-EP1,track:backend,type:data,size:L,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 2	bodies/MET-A-002.md
+MET-A-003	A	Scenario state contract published and versioned	case:A,epic:A-EP1,track:cross-team,type:contract,size:M,prio:must,status:ready,provenance:aau-added	Sprint 1	bodies/MET-A-003.md
+MET-A-004	A	Real-time propagation of scenario and position changes to connected clients	case:A,epic:A-EP3,track:backend,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 2	bodies/MET-A-004.md
+MET-A-005	A	Active scenario and own assignment readable with no network	case:A,epic:A-EP9,track:mobile,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:aau-added	Sprint 3	bodies/MET-A-005.md
+MET-A-006	A	Reconnection, reconciliation and exactly-once delivery of queued reports	case:A,epic:A-EP9,track:mobile,type:feature,size:L,prio:should,status:ready,provenance:aau-added	Sprint 4	bodies/MET-A-006.md
+MET-A-007	A	Operator selects and activates a scenario from the predefined list	case:A,epic:A-EP2,track:frontend,type:feature,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 2	bodies/MET-A-007.md
+MET-A-008	A	Required staffing for the active scenario shown to the operator	case:A,epic:A-EP2,track:frontend,type:feature,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 2	bodies/MET-A-008.md
+MET-A-009	A	Operator changes or stands down the active scenario	case:A,epic:A-EP2,track:frontend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 3	bodies/MET-A-009.md
+MET-A-010	A	Steward graphical scenario overview on the mobile client	case:A,epic:A-EP3,track:mobile,type:feature,size:L,prio:must,status:refine,needs:metro,provenance:metro	Sprint 3	bodies/MET-A-010.md
+MET-A-011	A	Control-room live coverage overview with steward positions	case:A,epic:A-EP3,track:frontend,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 3	bodies/MET-A-011.md
+MET-A-012	A	Coverage gap rules and derived station state	case:A,epic:A-EP3,track:backend,type:feature,size:S,prio:should,status:refine,needs:metro,provenance:metro	Sprint 3	bodies/MET-A-012.md
+MET-A-013	A	Steward sets current location with a single action	case:A,epic:A-EP4,track:mobile,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 3	bodies/MET-A-013.md
+MET-A-014	A	Steward marks a required station as covered	case:A,epic:A-EP4,track:mobile,type:feature,size:S,prio:should,status:ready,needs:metro,provenance:metro	Sprint 3	bodies/MET-A-014.md
+MET-A-015	A	Steward status transitions	case:A,epic:A-EP4,track:mobile,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 4	bodies/MET-A-015.md
+MET-A-016	A	Operator sends a dispatch instruction to selected stewards	case:A,epic:A-EP5,track:backend,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-A-016.md
+MET-A-017	A	Steward acknowledges a received instruction	case:A,epic:A-EP5,track:mobile,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 4	bodies/MET-A-017.md
+MET-A-018	A	Notification delivery decision and implementation for dispatch	case:A,epic:A-EP5,track:mobile,type:tech,size:M,prio:should,status:blocked,needs:metro,provenance:aau-added	Sprint 4	bodies/MET-A-018.md
+MET-A-019	A	Scenario suggestion from a free-text incident description	case:A,epic:A-EP6,track:backend,type:feature,size:L,prio:should,status:refine,needs:metro,provenance:metro	Sprint 4	bodies/MET-A-019.md
+MET-A-020	A	Evaluation set and measured accuracy for scenario suggestion	case:A,epic:A-EP6,track:backend,type:evaluation,size:M,prio:could,status:blocked,needs:metro,provenance:aau-added	Sprint 5	bodies/MET-A-020.md
+MET-A-021	A	Response checklist for the active scenario	case:A,epic:A-EP6,track:frontend,type:feature,size:M,prio:should,status:refine,needs:metro,provenance:metro	Sprint 4	bodies/MET-A-021.md
+MET-A-022	A	Dispatch message drafting from scenario templates	case:A,epic:A-EP6,track:frontend,type:feature,size:S,prio:could,status:refine,provenance:metro	-	bodies/MET-A-022.md
+MET-A-023	A	Append-only incident event log with actor and timestamp	case:A,epic:A-EP7,track:backend,type:tech,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 2	bodies/MET-A-023.md
+MET-A-024	A	Incident timeline reconstruction	case:A,epic:A-EP7,track:frontend,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 5	bodies/MET-A-024.md
+MET-A-025	A	Authentication and role-based interface routing	case:A,epic:A-EP8,track:backend,type:feature,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 2	bodies/MET-A-025.md
+MET-A-026	A	Role and permission matrix enforced server-side	case:A,epic:A-EP8,track:backend,type:compliance,size:S,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-A-026.md
+MET-A-027	A	Usability evaluation of the steward overview under time pressure	case:A,epic:A-EP3,track:cross-team,type:evaluation,size:M,prio:should,status:ready,needs:metro,provenance:aau-added	Sprint 5	bodies/MET-A-027.md
+MET-A-028	A	Inheritance package for the 2027 cohort	case:A,epic:A-EP10,track:cross-team,type:tech,size:L,prio:must,status:ready,provenance:aau-added	Sprint 7	bodies/MET-A-028.md
+MET-B-001	B	Evidence rule decision: is presence asserted by the system or confirmed by the steward?	case:B,epic:B-EP1,track:cross-team,type:spike,size:S,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 1	bodies/MET-B-001.md
+MET-B-002	B	Positioning interface with a simulator implementation	case:B,epic:B-EP1,track:backend,type:tech,size:M,prio:must,status:ready,provenance:metro	Sprint 1	bodies/MET-B-002.md
+MET-B-003	B	Station reference dataset with concourse and platform areas	case:B,epic:B-EP1,track:backend,type:data,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 2	bodies/MET-B-003.md
+MET-B-004	B	Presence and patrol record capture	case:B,epic:B-EP2,track:backend,type:feature,size:M,prio:must,status:blocked,provenance:metro	Sprint 2	bodies/MET-B-004.md
+MET-B-005	B	Steward sees that their presence has been registered	case:B,epic:B-EP2,track:mobile,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 3	bodies/MET-B-005.md
+MET-B-006	B	Duplicate and out-of-order observation handling	case:B,epic:B-EP2,track:backend,type:tech,size:S,prio:should,status:ready,needs:metro,provenance:aau-added	Sprint 2	bodies/MET-B-006.md
+MET-B-007	B	Patrol completion rule and hourly coverage computation	case:B,epic:B-EP3,track:backend,type:feature,size:L,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-B-007.md
+MET-B-008	B	Overdue and at-risk station indication	case:B,epic:B-EP3,track:frontend,type:feature,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 3	bodies/MET-B-008.md
+MET-B-009	B	Steward view of stations due for patrol	case:B,epic:B-EP3,track:mobile,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-B-009.md
+MET-B-010	B	Train manning input behind an abstraction	case:B,epic:B-EP4,track:backend,type:tech,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-B-010.md
+MET-B-011	B	Manned-train percentage against the 70 percent target	case:B,epic:B-EP4,track:backend,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-B-011.md
+MET-B-012	B	Real-time shift compliance dashboard	case:B,epic:B-EP5,track:frontend,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-B-012.md
+MET-B-013	B	Exportable per-night compliance report with traceable records	case:B,epic:B-EP5,track:backend,type:compliance,size:L,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 5	bodies/MET-B-013.md
+MET-B-014	B	Coverage gap detection during the shift	case:B,epic:B-EP6,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-B-014.md
+MET-B-015	B	End-of-shift compliance forecast from partial-shift data	case:B,epic:B-EP6,track:backend,type:feature,size:L,prio:could,status:refine,needs:metro,provenance:metro	-	bodies/MET-B-015.md
+MET-B-016	B	Forecast evaluation against held-out shifts	case:B,epic:B-EP6,track:backend,type:evaluation,size:M,prio:could,status:refine,provenance:aau-added	-	bodies/MET-B-016.md
+MET-B-017	B	Shift audit summary generated from the record	case:B,epic:B-EP6,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-B-017.md
+MET-B-018	B	Steward transparency view	case:B,epic:B-EP7,track:mobile,type:compliance,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 3	bodies/MET-B-018.md
+MET-B-019	B	Retention expiry and anonymisation enforced by the system	case:B,epic:B-EP7,track:backend,type:compliance,size:L,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 4	bodies/MET-B-019.md
+MET-B-020	B	Append-only event store for presence and patrol records	case:B,epic:B-EP8,track:backend,type:tech,size:L,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-B-020.md
+MET-B-021	B	Tamper-evident record and point-in-time reconstruction	case:B,epic:B-EP8,track:backend,type:tech,size:L,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-B-021.md
+MET-B-022	B	Data-protection statement as a project deliverable	case:B,epic:B-EP7,track:cross-team,type:compliance,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 6	bodies/MET-B-022.md
+MET-B-023	B	Roles, access control and synthetic identity fixtures	case:B,epic:B-EP9,track:backend,type:feature,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-B-023.md
+MET-B-024	B	Inheritance package for the 2027 cohort	case:B,epic:B-EP10,track:cross-team,type:tech,size:L,prio:must,status:ready,provenance:aau-added	Sprint 7	bodies/MET-B-024.md
+MET-C-001	C	Document the Operational Restriction lifecycle as an explicit state model	case:C,epic:C-EP1,track:cross-team,type:spike,size:M,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 1	bodies/MET-C-001.md
+MET-C-002	C	State machine implementation with guarded transitions	case:C,epic:C-EP1,track:backend,type:tech,size:XL,prio:must,status:blocked,provenance:aau-added	Sprint 2	bodies/MET-C-002.md
+MET-C-003	C	Signature primitive: identity, role, timestamp, immutability	case:C,epic:C-EP1,track:backend,type:tech,size:M,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 2	bodies/MET-C-003.md
+MET-C-004	C	Create a restriction with the required fields	case:C,epic:C-EP2,track:frontend,type:feature,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-C-004.md
+MET-C-005	C	Validation blocks submission of an incomplete restriction	case:C,epic:C-EP2,track:frontend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 3	bodies/MET-C-005.md
+MET-C-006	C	Originator signs the restriction	case:C,epic:C-EP2,track:frontend,type:feature,size:S,prio:must,status:ready,provenance:metro	Sprint 3	bodies/MET-C-006.md
+MET-C-007	C	Return-for-change loop between approver and originator	case:C,epic:C-EP3,track:backend,type:feature,size:M,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 4	bodies/MET-C-007.md
+MET-C-008	C	Duty Operations Manager reviews and signs approval	case:C,epic:C-EP3,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-C-008.md
+MET-C-009	C	Control Room Supervisor signs for implementation	case:C,epic:C-EP3,track:frontend,type:feature,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-C-009.md
+MET-C-010	C	Remote signing from phone, tablet or remote desktop	case:C,epic:C-EP3,track:cross-team,type:feature,size:L,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 5	bodies/MET-C-010.md
+MET-C-011	C	Operator read-and-sign gate before taking the desk	case:C,epic:C-EP4,track:frontend,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 5	bodies/MET-C-011.md
+MET-C-012	C	Duty Operations Manager signs the awareness list	case:C,epic:C-EP4,track:frontend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-C-012.md
+MET-C-013	C	Shift handover signature completeness view	case:C,epic:C-EP5,track:frontend,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 5	bodies/MET-C-013.md
+MET-C-014	C	Cancellation chain: originator, manager and supervisor signatures	case:C,epic:C-EP6,track:frontend,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 6	bodies/MET-C-014.md
+MET-C-015	C	Implementation signers confirm awareness of a cancellation	case:C,epic:C-EP6,track:backend,type:feature,size:M,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 6	bodies/MET-C-015.md
+MET-C-016	C	Register of restrictions in force	case:C,epic:C-EP7,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-C-016.md
+MET-C-017	C	Signature completeness indication on a restriction	case:C,epic:C-EP7,track:frontend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-C-017.md
+MET-C-018	C	Notification channel decision and delivery guarantees	case:C,epic:C-EP8,track:backend,type:tech,size:M,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-C-018.md
+MET-C-019	C	Notification when an action is required	case:C,epic:C-EP8,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 4	bodies/MET-C-019.md
+MET-C-020	C	Notification when a signed restriction is cancelled	case:C,epic:C-EP8,track:backend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 6	bodies/MET-C-020.md
+MET-C-021	C	Versioned audit trail of every restriction and signature	case:C,epic:C-EP11,track:backend,type:tech,size:L,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-C-021.md
+MET-C-022	C	Role-based access control across the workflow	case:C,epic:C-EP11,track:backend,type:compliance,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-C-022.md
+MET-C-023	C	Automatic archiving and five-year retention	case:C,epic:C-EP9,track:backend,type:feature,size:M,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 6	bodies/MET-C-023.md
+MET-C-024	C	Assisted drafting of restriction text from structured input	case:C,epic:C-EP10,track:frontend,type:feature,size:M,prio:could,status:refine,provenance:metro	-	bodies/MET-C-024.md
+MET-C-025	C	Conflict detection against restrictions in force	case:C,epic:C-EP10,track:backend,type:feature,size:L,prio:could,status:blocked,needs:metro,provenance:metro	-	bodies/MET-C-025.md
+MET-C-026	C	Degraded behaviour for remote signing and register access	case:C,epic:C-EP7,track:cross-team,type:feature,size:M,prio:should,status:ready,provenance:aau-added	Sprint 6	bodies/MET-C-026.md
+MET-C-027	C	Inheritance package for the 2027 cohort	case:C,epic:C-EP12,track:cross-team,type:tech,size:L,prio:must,status:ready,needs:metro,provenance:aau-added	Sprint 7	bodies/MET-C-027.md
+MET-D-001	D	Data quality assessment of the Destination ID catalogue	case:D,epic:D-EP1,track:backend,type:data,size:M,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 1	bodies/MET-D-001.md
+MET-D-002	D	Catalogue data model with route attributes	case:D,epic:D-EP1,track:backend,type:data,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 2	bodies/MET-D-002.md
+MET-D-003	D	Import the catalogue and image set	case:D,epic:D-EP1,track:backend,type:feature,size:L,prio:must,status:blocked,provenance:metro	Sprint 2	bodies/MET-D-003.md
+MET-D-004	D	Correction and versioning of Destination ID records	case:D,epic:D-EP1,track:backend,type:feature,size:L,prio:should,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-D-004.md
+MET-D-005	D	Adding new Destination IDs, including a future network extension	case:D,epic:D-EP1,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-D-005.md
+MET-D-006	D	Attribute filter and sort over the catalogue	case:D,epic:D-EP2,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 3	bodies/MET-D-006.md
+MET-D-007	D	Readable route and behaviour presentation	case:D,epic:D-EP2,track:frontend,type:feature,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-D-007.md
+MET-D-008	D	Query and result contract between client and ranking service	case:D,epic:D-EP3,track:cross-team,type:contract,size:M,prio:must,status:ready,provenance:aau-added	Sprint 2	bodies/MET-D-008.md
+MET-D-009	D	Deterministic baseline ranker	case:D,epic:D-EP3,track:backend,type:feature,size:M,prio:must,status:ready,provenance:aau-added	Sprint 3	bodies/MET-D-009.md
+MET-D-010	D	Natural-language ranking of candidate Destination IDs	case:D,epic:D-EP3,track:backend,type:feature,size:L,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 4	bodies/MET-D-010.md
+MET-D-011	D	Rationale for each ranked candidate	case:D,epic:D-EP3,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 4	bodies/MET-D-011.md
+MET-D-012	D	Abstention when no confident match exists	case:D,epic:D-EP3,track:backend,type:feature,size:S,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-D-012.md
+MET-D-013	D	Graphical preview alongside the description	case:D,epic:D-EP4,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 3	bodies/MET-D-013.md
+MET-D-014	D	Side-by-side comparison of candidates	case:D,epic:D-EP4,track:frontend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-D-014.md
+MET-D-015	D	Operator selects and confirms a Destination ID [reconstructed]	case:D,epic:D-EP5,track:frontend,type:feature,size:L,prio:must,status:blocked,needs:metro,provenance:reconstructed	Sprint 5	bodies/MET-D-015.md
+MET-D-016	D	Record of every selection [reconstructed]	case:D,epic:D-EP5,track:backend,type:tech,size:M,prio:must,status:blocked,needs:metro,provenance:reconstructed	Sprint 5	bodies/MET-D-016.md
+MET-D-017	D	Role-based access control [reconstructed]	case:D,epic:D-EP6,track:backend,type:compliance,size:M,prio:should,status:blocked,needs:metro,provenance:reconstructed	Sprint 4	bodies/MET-D-017.md
+MET-D-018	D	Evaluation set and measured accuracy against the baseline	case:D,epic:D-EP8,track:backend,type:evaluation,size:M,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 4	bodies/MET-D-018.md
+MET-D-019	D	Time-to-selection measured against the current practice	case:D,epic:D-EP8,track:cross-team,type:evaluation,size:M,prio:should,status:ready,needs:metro,provenance:aau-added	Sprint 6	bodies/MET-D-019.md
+MET-D-020	D	Audit trail of catalogue changes [reconstructed]	case:D,epic:D-EP6,track:backend,type:tech,size:M,prio:should,status:ready,provenance:reconstructed	Sprint 3	bodies/MET-D-020.md
+MET-D-021	D	Coverage gaps and candidate new Destination IDs for planning	case:D,epic:D-EP7,track:backend,type:feature,size:L,prio:could,status:blocked,needs:metro,provenance:metro	-	bodies/MET-D-021.md
+MET-D-022	D	Suggested alternative service for a failed area	case:D,epic:D-EP7,track:backend,type:feature,size:L,prio:could,status:blocked,needs:metro,provenance:metro	-	bodies/MET-D-022.md
+MET-D-023	D	Degraded behaviour when the ranking service is unavailable	case:D,epic:D-EP3,track:frontend,type:feature,size:S,prio:should,status:ready,provenance:aau-added	Sprint 4	bodies/MET-D-023.md
+MET-D-024	D	Inheritance package for the 2027 cohort	case:D,epic:D-EP9,track:cross-team,type:tech,size:L,prio:must,status:ready,provenance:aau-added	Sprint 7	bodies/MET-D-024.md
