@@ -1,0 +1,30 @@
+> **Steward Localization (Case B)** · Epic B-EP4: Train manning coverage
+
+**Size** M · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 4
+
+## User story
+
+As a developer on this product, I want train manning supplied through an abstracted interface with a simulated or manually entered implementation, so that the design is ready for train hardware while that hardware is still under consideration.
+
+## Context
+
+Source story B3.2, raised from Won't to Should. As a Won't it removes the interface as well as the hardware, which leaves B3.1 with no input and makes the manning half of the compliance requirement undeliverable. Raised to Should as an interface only, it costs little and keeps the case whole.
+
+## Acceptance criteria
+
+- [ ] A manning source interface returns, for a given time, the set of running trains and which are manned.
+- [ ] A manual or simulated implementation exists and is seeded from a fixture.
+- [ ] No downstream component references beacons or any specific manning technology.
+
+## Dependencies
+
+- Blocks B-011.
+
+## Open questions
+
+- **[Shaping · Metro]** Is the raised priority accepted? As a Won't, source story B3.1 has no input and the 70 percent requirement cannot be demonstrated at all.
+- **[Blocking · Metro]** How many trains run at night per line, and where does the list of running trains come from today?
+
+## Provenance
+
+Source: B3.2, priority raised from Won't to Should by AAU
