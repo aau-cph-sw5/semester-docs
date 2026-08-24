@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP1: Foundation and scenario domain model
 
-**Size** L · **Priority** Must · **Readiness** Blocked · **Track** backend · **Type** data · **Proposed sprint** 2
+**Size** L · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** data · **Proposed sprint** 2
 
 ## User story
 
@@ -20,7 +20,7 @@ Follows A-001. The scenarios are reference data maintained by Metro operations, 
 
 ## Dependencies
 
-- Requires A-001.
+- Requires A-001, which the August material released.
 - Schema reviewed with the front-end team before implementation, since it constrains A-003.
 
 ## Open questions

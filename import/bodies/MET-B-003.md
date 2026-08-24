@@ -26,7 +26,7 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 - **[Answered · Metro, August 2026]** The station layout data is required before this item can start. **Received**: a per-line list stating for each station whether it has a platform level only or a platform and a concourse level. M1/M2 has 22 stations of which 7 have a concourse, M3/M4 has 24 stations of which 23 do: 46 stations and 76 patrol levels in total. Each station carries a short code (VAN, KGN, CPH) which is the natural primary key. The beacon-to-station mapping was answered "not relevant", which follows from the move to bar and QR codes; what the dataset needs instead is a code identifier per level and per train.
 - **[Shaping · Metro]** How long does a full patrol round take in practice? The station and level counts are now known; the round duration is not, and it is what decides whether the hourly requirement is comfortable or tight.
-- **[Blocking · Metro]** The list of trains on both lines, which the revised user stories name as required data for the case.
+- **[Shaping · Metro]** The list of trains on both lines, which the revised user stories name as required data for the case. A synthetic fleet of the right order of magnitude lets the work proceed, so this shapes the fixture rather than stopping the item.
 
 ## Provenance
 

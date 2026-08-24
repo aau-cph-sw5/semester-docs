@@ -23,7 +23,7 @@ Source story B3.2, raised from Won't to Should. As a Won't it removes the interf
 ## Open questions
 
 - **[Answered · Metro, August 2026]** Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so train beacons (B-024) become one implementation behind this interface rather than the precondition for the feature.
-- **[Blocking · Metro]** How many trains run at night per line, and where does the list of running trains come from today?
+- **[Shaping · Metro]** How many trains run at night per line, and where does the list of running trains come from today? The abstraction can be built and demonstrated against a synthetic fleet, so this shapes the fixture rather than stopping the item.
 
 ## Provenance
 

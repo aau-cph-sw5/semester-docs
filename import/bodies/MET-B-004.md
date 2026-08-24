@@ -25,7 +25,7 @@ Source story B1.1, revised by Metro Service in August 2026, which now specifies 
 
 ## Open questions
 
-- **[Blocking · Metro]** What is the mandatory re-scan interval on a train? The revised story leaves it as *x* minutes.
+- **[Shaping · Metro]** What is the mandatory re-scan interval on a train? The revised story leaves it as *x* minutes. Held as configuration, the item can be built and demonstrated before the value is fixed.
 - **[Shaping · Metro]** Does a missed re-scan end the manning record at the last valid scan, or continue it and flag the gap? The two produce different compliance figures for the same night.
 
 ## Provenance

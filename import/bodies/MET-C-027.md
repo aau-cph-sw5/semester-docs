@@ -20,7 +20,7 @@ This case carries more domain knowledge than the other three, and that knowledge
 
 ## Open questions
 
-- **[Shaping · Metro]** A glossary of the Danish operational terms used across the cases would serve every product, and this case most of all. Two pages would save each team a week.
+- **[Answered · Metro, August 2026]** A glossary of the Danish operational terms. **An abbreviation list was supplied** and is transcribed in [docs/12-glossary.md](../docs/12-glossary.md). It expands abbreviations rather than defining the operational terms themselves, so the semester glossary remains the place where meanings are recorded as teams learn them.
 
 ## Provenance
 
