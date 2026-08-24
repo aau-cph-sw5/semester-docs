@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP9: Access, roles and identity
+> **Manning/patrol requirement (Case B)** · Epic B-EP9: Access, roles and identity
 
 **Size** M · **Priority** Must · **Readiness** Blocked · **Track** backend · **Type** feature · **Proposed sprint** 3
 

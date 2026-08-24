@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP7: Data protection, transparency and steward rights
+> **Manning/patrol requirement (Case B)** · Epic B-EP7: Data protection, transparency and steward rights
 
 **Size** M · **Priority** Must · **Readiness** Blocked · **Track** cross-team · **Type** compliance · **Proposed sprint** 6
 

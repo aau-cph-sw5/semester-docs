@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP6: Coverage analytics and forecasting
+> **Manning/patrol requirement (Case B)** · Epic B-EP6: Coverage analytics and forecasting
 
 **Size** M · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 5
 

@@ -1,6 +1,6 @@
 > **Operational Restrictions (Case C)** · Epic C-EP1: Foundation: lifecycle model and signature primitive
 
-**Size** M · **Priority** Must · **Readiness** Blocked · **Track** cross-team · **Type** spike · **Proposed sprint** 1
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** cross-team · **Type** spike · **Proposed sprint** 1
 
 ## User story
 
@@ -20,14 +20,13 @@ The source backlog describes a complete workflow across ten epics and never name
 
 ## Dependencies
 
-- Blocked until the written Operational Restriction procedure is received.
 - Blocks C-002 and everything downstream of it.
 
 ## Open questions
 
-- **[Blocking · Metro]** The written procedure for handling Operational Restrictions is required before this item can start.
+- **[Answered · Metro, August 2026]** The written procedure. **Received**, as OPE-PR-S-400-04 Driftsrestriktioner, together with the restriction register for each line, the signature sheet used for each restriction, and one worked restriction per line. Enough of the state model is visible in the forms to start: a restriction carries a number, a restriction text, the initials of its originator, a date of implementation and a date of cancellation, and the register is closed off with the date and signature of the *vagthavende driftschef*, the DOM role Metro names as the approver. The two lines number restrictions differently, M1/M2 as `YYMMDD-NNNN` and M3/M4 as `DD-MM-YYYY-NNNN`, and their forms differ in layout. Whether the product imposes one scheme or carries both is a design decision to take with Metro rather than by default.
 - **[Blocking · Metro]** The AAU evaluation attached a condition to this case: a structured domain onboarding session of two to three hours in week one, covering the restriction lifecycle, roles and regulatory requirements. Can that be scheduled if the case is activated?
-- **[Blocking · Metro]** How many restrictions are typically in force at once, and how many are raised in a month? Ten and two hundred are different products.
+- **[Answered in part · Metro, August 2026]** How many restrictions are in force at once? **Up to 50.** How many are raised in a month is still unanswered, though the registers supplied give an indication.
 
 ## Provenance
 
