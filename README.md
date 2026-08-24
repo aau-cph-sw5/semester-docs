@@ -28,10 +28,18 @@ cohort. Which three is decided at the August backlog session.
 
 | Case | Product | Items | Blocked | Backlog | Board |
 |---|---|---|---|---|---|
-| A | Emergency Scenarios | 28 | 5 | [backlog](backlog/case-a-emergency-scenarios.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/3) |
-| B | Steward Localization | 24 | 8 | [backlog](backlog/case-b-steward-localization.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/4) |
-| C | Operational Restrictions | 27 | 11 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
+| A | Emergency Scenarios | 28 | 3 | [backlog](backlog/case-a-emergency-scenarios.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/3) |
+| B | Manning/patrol requirement | 24 | 3 | [backlog](backlog/case-b-manning-patrol.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/4) |
+| C | Operational Restrictions | 27 | 9 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
 | D | DID Master | 24 | 11 | [backlog](backlog/case-d-did-master.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/6) |
+
+> **Updated 24 August 2026.** Metro Service returned answers to the questions we
+> put to them in July, together with revised user stories and the operational
+> material several items were waiting for. Blocked items fall from 35 to 26.
+> Case B has been renamed by Metro from *Steward Localization* to *Manning/patrol
+> requirement*, and its repository is now `case-b-manning-patrol`; the old URL
+> redirects, but update your remote if you have already cloned it. Case D is the
+> one Metro says they do not prioritise.
 
 **Blocked** means the item cannot be finished until Metro Service answers a
 question. Those questions are collected in [CLARIFICATIONS.md](CLARIFICATIONS.md)
@@ -101,7 +109,7 @@ deliverable rather than a favour.
 ```
 semester-docs/          this repository: backlogs, conventions, guides
 case-a-emergency-scenarios/    product code
-case-b-steward-localization/   product code
+case-b-manning-patrol/   product code
 case-c-operational-restrictions/
 case-d-did-master/
 ```
