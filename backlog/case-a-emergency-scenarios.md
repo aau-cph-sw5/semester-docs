@@ -13,7 +13,9 @@ A shared situational-awareness tool that lets the control room select the active
 
 ## At a glance
 
-**28 items.** Priority: 13 Must, 13 Should, 2 Could. Readiness: 18 ready, 5 needing refinement, 5 blocked on Metro input. Size: 7×S, 12×M, 9×L.
+**28 items.** Priority: 13 Must, 13 Should, 2 Could. Readiness: 20 ready, 5 needing refinement, 3 blocked on Metro input. Size: 7×S, 12×M, 9×L.
+
+> **Updated 24 August 2026** against Metro Service's answers. The alternative-operation material for both lines has arrived, which releases `MET-A-001` and with it the whole case. The steward device is a Samsung Galaxy A52 to A55 on Android 14 or 15, operators type in Danish, and the role model is settled: CCR activates scenarios, DOM approves restrictions, Operation Administration amends the catalogue.
 
 **Minimum demonstrable product**, meaning the 12 Must items proposed for sprints 1 to 3: `MET-A-001`, `MET-A-002`, `MET-A-003`, `MET-A-004`, `MET-A-005`, `MET-A-007`, `MET-A-008`, `MET-A-010`, `MET-A-011`, `MET-A-013`, `MET-A-023`, `MET-A-025`. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
@@ -36,7 +38,7 @@ A shared situational-awareness tool that lets the control room select the active
 
 | ID | Title | Epic | Size | Priority | Readiness | Sprint |
 |---|---|---|---|---|---|---|
-| `MET-A-001` | Derive the scenario domain model from the Metro alternative-operation presentations | A-EP1 | M | Must | Blocked | 1 |
+| `MET-A-001` | Derive the scenario domain model from the Metro alternative-operation presentations | A-EP1 | M | Must | Ready | 1 |
 | `MET-A-002` | Scenario reference data schema, persistence and seed loader | A-EP1 | L | Must | Blocked | 2 |
 | `MET-A-003` | Scenario state contract published and versioned | A-EP1 | M | Must | Ready | 1 |
 | `MET-A-004` | Real-time propagation of scenario and position changes to connected clients | A-EP3 | L | Must | Ready | 2 |
@@ -61,7 +63,7 @@ A shared situational-awareness tool that lets the control room select the active
 | `MET-A-023` | Append-only incident event log with actor and timestamp | A-EP7 | L | Must | Ready | 2 |
 | `MET-A-024` | Incident timeline reconstruction | A-EP7 | M | Should | Ready | 5 |
 | `MET-A-025` | Authentication and role-based interface routing | A-EP8 | M | Must | Ready | 2 |
-| `MET-A-026` | Role and permission matrix enforced server-side | A-EP8 | S | Should | Blocked | 3 |
+| `MET-A-026` | Role and permission matrix enforced server-side | A-EP8 | S | Should | Ready | 3 |
 | `MET-A-027` | Usability evaluation of the steward overview under time pressure | A-EP3 | M | Should | Ready | 5 |
 | `MET-A-028` | Inheritance package for the 2027 cohort | A-EP10 | L | Must | Ready | 7 |
 
