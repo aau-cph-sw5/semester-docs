@@ -10,7 +10,7 @@ epic:A-EP7	5B8DEF	Incident log and post-incident analysis
 epic:A-EP8	5B8DEF	Access, roles and identity
 epic:A-EP9	5B8DEF	Offline and degraded operation
 epic:A-EP10	5B8DEF	Inheritance and handover
-case:B	0E4C92	Case B: Steward Localization
+case:B	0E4C92	Case B: Manning/patrol requirement
 epic:B-EP1	5B8DEF	Foundation: positioning abstraction and station reference data
 epic:B-EP2	5B8DEF	Presence and patrol capture
 epic:B-EP3	5B8DEF	Station patrol coverage

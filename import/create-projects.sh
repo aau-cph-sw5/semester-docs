@@ -23,7 +23,7 @@ command -v gh >/dev/null || { echo "gh CLI not found"; exit 1; }
 title_for() {
   case "$1" in
     A) echo "Case A. Emergency Scenarios" ;;
-    B) echo "Case B. Steward Localization" ;;
+    B) echo "Case B. Manning/patrol requirement" ;;
     C) echo "Case C. Operational Restrictions" ;;
     D) echo "Case D. DID Master" ;;
   esac
