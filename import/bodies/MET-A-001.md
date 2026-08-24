@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP1: Foundation and scenario domain model
 
-**Size** M · **Priority** Must · **Readiness** Blocked · **Track** cross-team · **Type** spike · **Proposed sprint** 1
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** cross-team · **Type** spike · **Proposed sprint** 1
 
 ## User story
 
@@ -24,8 +24,8 @@ The source document states that no dataset exists and that the only assets are t
 
 ## Open questions
 
-- **[Blocking · Metro]** The two alternative-operation presentations, one per line, are required before this item can start. Nothing else in Case A can be refined without them.
-- **[Shaping · Metro]** How many distinct scenarios exist per line, and roughly how often is a scenario activated in practice?
+- **[Answered · Metro, August 2026]** The alternative-operation material, required before this item can start. **Received, and more than was asked for.** M1/M2 is documented scenario by scenario: five fallback scenarios named for the section they cover (VAN-FB, FOR-KN, KHC-ISB, KHC-LGP, KHC) and *Hold Alle Tog*, each in a control-room and a steward view, most with separate steward-task and steward-placement documents. M3/M4 came as one presentation, *ATD, Alternativ TogDrift v2.1*. A station list for both lines came with it. Three things to read off the material before modelling: a scenario is defined by a section of line rather than by an incident type; the same scenario is a different document per role, so role is a property of the view rather than a filter over one text; and steward placement and steward tasks are separate concerns in Metro's own material.
+- **[Answered in part · Metro, August 2026]** How many scenarios exist per line? Six for M1/M2 in the material supplied, one general document for M3/M4. How often a scenario is activated in practice is still unanswered.
 
 ## Provenance
 

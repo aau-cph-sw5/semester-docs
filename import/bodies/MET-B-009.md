@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP3: Station patrol coverage
+> **Manning/patrol requirement (Case B)** · Epic B-EP3: Station patrol coverage
 
 **Size** M · **Priority** Should · **Readiness** Ready · **Track** mobile · **Type** feature · **Proposed sprint** 4
 
@@ -22,7 +22,7 @@ Source story B2.2. This is the item that makes the system useful to the steward 
 
 ## Open questions
 
-- **[Blocking · Metro]** How many stewards work a night shift per line? Whether the list must coordinate two people or fifteen changes its design.
+- **[Answered · Metro, August 2026]** How many stewards work a night shift? **Up to 20.** With 76 patrol levels across the two lines, the view is a coordination surface for a team rather than a personal task list, and it should show that a level is already being patrolled rather than only that it is due.
 
 ## Provenance
 

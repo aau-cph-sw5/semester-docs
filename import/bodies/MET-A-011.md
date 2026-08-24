@@ -23,7 +23,7 @@ Source stories A2.2 and A2.3 combined at the presentation layer. The transport t
 
 ## Open questions
 
-- **[Blocking · Metro]** How many stewards are on duty during an incident, and how many stations does one steward typically cover? A display for six stewards and a display for sixty are different designs.
+- **[Answered in part · Metro, August 2026]** How many stewards are on duty? **Up to 20 on a night shift.** Twenty positions against 46 stations is a scale at which every steward can be individually visible and legible at once, which rules out clustering work a display for sixty would have needed. How many stations one steward covers is still unanswered; Metro asked in return why it is relevant, and the answer worth giving is that it decides whether a steward's position is a point or a span, and therefore whether the operator reads coverage off the screen correctly.
 
 ## Provenance
 

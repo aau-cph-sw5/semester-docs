@@ -1,6 +1,6 @@
-> **Steward Localization (Case B)** · Epic B-EP3: Station patrol coverage
+> **Manning/patrol requirement (Case B)** · Epic B-EP3: Station patrol coverage
 
-**Size** L · **Priority** Must · **Readiness** Blocked · **Track** backend · **Type** feature · **Proposed sprint** 3
+**Size** L · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 3
 
 ## User story
 
@@ -24,8 +24,8 @@ Source story B2.1. The hard part is not the query but the definition: what makes
 
 ## Open questions
 
-- **[Blocking · Metro]** Is the hourly patrol requirement a rolling 60-minute window or a clock hour? The two produce different compliance figures for the same night.
-- **[Blocking · Metro]** Must concourse and platform be covered on the same pass by the same steward, or does any coverage of each within the window satisfy the requirement?
+- **[Answered · Metro, August 2026]** Rolling or clock hour? **Rolling sixty minutes.**
+- **[Answered · Metro, August 2026]** Same pass by the same steward? **Any coverage of each within the window satisfies the requirement.** The two levels are therefore computed independently, as the acceptance criteria already assume.
 
 ## Provenance
 

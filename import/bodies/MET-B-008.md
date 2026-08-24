@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP3: Station patrol coverage
+> **Manning/patrol requirement (Case B)** · Epic B-EP3: Station patrol coverage
 
 **Size** M · **Priority** Must · **Readiness** Ready · **Track** frontend · **Type** feature · **Proposed sprint** 3
 

@@ -24,7 +24,7 @@ The source document assumes instructions reach stewards but says nothing about h
 
 ## Open questions
 
-- **[Blocking · Metro]** Are the steward devices managed by Metro, and is a push notification service reachable from them? If Google services are unavailable on the device, the design changes.
+- **[Answered in part · Metro, August 2026]** The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble. **Still blocking:** are the phones enrolled in a mobile device management system, and if so which one? That decides whether an app can be pushed to them at all, whether notification permissions can be granted centrally, and whether a managed configuration can be read at install time.
 
 ## Provenance
 

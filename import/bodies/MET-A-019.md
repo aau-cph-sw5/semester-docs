@@ -25,7 +25,7 @@ Source story A5.1, restated. The original specified an assistant returning a ran
 
 ## Open questions
 
-- **[Blocking · Metro]** In which language will operators type incident descriptions? Danish free text against Danish scenario material is a different problem from the English equivalent, and the source document does not state a language anywhere.
+- **[Answered · Metro, August 2026]** In which language do operators type? **Danish.** The scenario material supplied in August is Danish throughout. The consequences are concrete: multilingual sentence embeddings rather than English-only models; Danish compounding makes pure lexical matching weak, so a hybrid of lexical and dense retrieval is the safer design; station and line abbreviations must survive tokenisation; and any evaluation set has to be Danish, which makes A-020 the highest-value outstanding request in the case.
 
 ## Provenance
 

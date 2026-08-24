@@ -25,8 +25,8 @@ Source story A2.1. Its criterion, that the required stations be identifiable wit
 
 ## Open questions
 
-- **[Blocking · Metro]** What device do stewards actually carry, by make, model and Android version? The use-case material mentions Samsung phones and Case B mentions a PDA, and it is not clear whether these are the same device.
-- **[Shaping · Metro]** A screenshot or photograph of the current PDF as it appears on the steward device would tell the team what they are replacing.
+- **[Answered · Metro, August 2026]** Which device do stewards carry? **Samsung Galaxy A52 to A55, mostly A52 and A55, on Android 14 and 15.** A 6.5 inch mid-range phone held in one hand, outdoors, at night, by somebody who is also walking. Android 14 as the floor puts minSdk at API 34.
+- **[Answered · Metro, August 2026]** The PDF stewards use on their phones today. **Received** with the August material. Worth an hour of the team's time in sprint 1 before designing the replacement.
 
 ## Provenance
 
