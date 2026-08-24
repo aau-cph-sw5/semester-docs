@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP8: Verifiable historical record
+> **Manning/patrol requirement (Case B)** · Epic B-EP8: Verifiable historical record
 
 **Size** L · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 2
 

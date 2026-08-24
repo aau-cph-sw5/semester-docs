@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP10: Inheritance and handover
+> **Manning/patrol requirement (Case B)** · Epic B-EP10: Inheritance and handover
 
 **Size** L · **Priority** Must · **Readiness** Ready · **Track** cross-team · **Type** tech · **Proposed sprint** 7
 

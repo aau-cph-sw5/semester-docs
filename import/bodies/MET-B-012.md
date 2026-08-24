@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP5: Compliance dashboard and reporting
+> **Manning/patrol requirement (Case B)** · Epic B-EP5: Compliance dashboard and reporting
 
 **Size** L · **Priority** Must · **Readiness** Ready · **Track** frontend · **Type** feature · **Proposed sprint** 4
 
