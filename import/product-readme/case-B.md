@@ -1,8 +1,10 @@
-# Case B. Steward Localization
+# Case B. Manning/patrol requirement
 
-*STW-lokalisering*  ·  5th Semester, BSc Software Engineering, AAU Copenhagen  ·  Autumn 2026
+*Manning og patruljering, previously STW-lokalisering*  ·  5th Semester, BSc Software Engineering, AAU Copenhagen  ·  Autumn 2026
 
-A compliance-grade system documenting that stewards are present and active during night operation, against a contractual requirement of at least 70 percent of trains manned and every station patrolled at least once per hour, with a verifiable real-time and historical record.
+A compliance-grade system documenting that stewards are present and active during night operation, against a contractual requirement that trains are manned at least 70 percent of their running time and that every station level is patrolled at least once per rolling sixty minutes, with a verifiable real-time and historical record.
+
+> **Renamed by Metro Service in August 2026.** The case was called *Steward Localization*; it is now *Manning/patrol requirement*, and this repository moved from `case-b-steward-localization` to `case-b-manning-patrol`. The old URL redirects, but update your remote if you cloned before the change.
 
 > **New here?** Read the [documentation hub](https://github.com/aau-cph-sw5/semester-docs) first,
 > in particular [CONTRIBUTING](https://github.com/aau-cph-sw5/semester-docs/blob/main/CONTRIBUTING.md),
@@ -13,7 +15,7 @@ A compliance-grade system documenting that stewards are present and active durin
 
 ## The work
 
-24 backlog items across 10 epics, one GitHub issue each. [Board](https://github.com/orgs/aau-cph-sw5/projects) · [Full backlog](https://github.com/aau-cph-sw5/semester-docs/blob/main/backlog/case-b-steward-localization.md)
+24 backlog items across 10 epics, one GitHub issue each. [Board](https://github.com/orgs/aau-cph-sw5/projects) · [Full backlog](https://github.com/aau-cph-sw5/semester-docs/blob/main/backlog/case-b-manning-patrol.md)
 
 **Start with the minimum demonstrable product**, the 9 items proposed for sprints 1 to 3:
 
@@ -27,7 +29,7 @@ A compliance-grade system documenting that stewards are present and active durin
 - `MET-B-020` Append-only event store for presence and patrol records
 - `MET-B-023` Roles, access control and synthetic identity fixtures
 
-**8 items are blocked** on an answer from Metro Service. They are not dead: read them, and bring the question to the next sprint review. Filter the issues by `needs:metro` to see them.
+**3 items are blocked** on an answer from Metro Service, down from eight before Metro's August answers. They are not dead: read them, and bring the question to the next sprint review. Filter the issues by `needs:metro` to see them.
 
 ## Getting it running
 
