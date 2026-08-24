@@ -63,7 +63,7 @@ Expected entities, from the backlog, subject to what the presentations actually
 contain: Scenario, RequiredStation, StationRole, ActionStep, StewardAssignment,
 PositionReport, IncidentEvent.
 
-## Case B. Steward Localization
+## Case B. Manning/patrol requirement
 
 <details><summary>Change history</summary>
 

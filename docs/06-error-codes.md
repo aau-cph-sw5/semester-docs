@@ -116,7 +116,7 @@ rather than a complete list.
 | E1004 | The station is not part of the active scenario |
 | E1005 | The client's local copy is too stale to act on |
 
-### Case B. Steward Localization
+### Case B. Manning/patrol requirement
 
 | Code | Meaning |
 |---|---|
