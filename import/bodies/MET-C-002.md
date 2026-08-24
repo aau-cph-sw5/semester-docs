@@ -1,6 +1,6 @@
 > **Operational Restrictions (Case C)** · Epic C-EP1: Foundation: lifecycle model and signature primitive
 
-**Size** XL · **Priority** Must · **Readiness** Blocked · **Track** backend · **Type** tech · **Proposed sprint** 2
+**Size** XL · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 2
 
 ## User story
 
@@ -20,7 +20,7 @@ Follows C-001. Scattering the rules across the features that trigger them is the
 
 ## Dependencies
 
-- Requires C-001.
+- Requires C-001, which the arrival of the written procedure released.
 - Blocks C-004 through C-018.
 
 ## Provenance
