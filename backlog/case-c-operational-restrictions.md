@@ -15,9 +15,9 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 
 ## At a glance
 
-**27 items.** Priority: 13 Must, 12 Should, 2 Could. Readiness: 16 ready, 2 needing refinement, 9 blocked on Metro input. Size: 5×S, 16×M, 5×L, 1×XL.
+**27 items.** Priority: 13 Must, 12 Should, 2 Could. Readiness: 17 ready, 2 needing refinement, 8 blocked on Metro input. Size: 5×S, 16×M, 5×L, 1×XL.
 
-> **Updated 24 August 2026.** The written procedure has arrived, with the forms it operates on: the restriction register for each line, the signature sheet, and a worked restriction per line. That releases `MET-C-001` and, with Metro's answer that no regulatory standard applies, `MET-C-003`. Note that the two lines do not share a numbering convention.
+> **Updated 24 August 2026.** The written procedure has arrived, with the forms it operates on: the restriction register for each line, the signature sheet, and a worked restriction per line. That releases `MET-C-001`, `MET-C-004`, whose field set the worked restrictions now define, and, with Metro's answer that no regulatory standard applies, `MET-C-003`. Note that the two lines do not share a numbering convention.
 
 **Minimum demonstrable product**, meaning the 7 Must items proposed for sprints 1 to 3: `MET-C-001`, `MET-C-002`, `MET-C-003`, `MET-C-004`, `MET-C-006`, `MET-C-021`, `MET-C-022`. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
@@ -42,10 +42,10 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 
 | ID | Title | Epic | Size | Priority | Readiness | Sprint |
 |---|---|---|---|---|---|---|
-| `MET-C-001` | Document the Operational Restriction lifecycle as an explicit state model | C-EP1 | M | Must | Blocked | 1 |
+| `MET-C-001` | Document the Operational Restriction lifecycle as an explicit state model | C-EP1 | M | Must | Ready | 1 |
 | `MET-C-002` | State machine implementation with guarded transitions | C-EP1 | XL | Must | Blocked | 2 |
-| `MET-C-003` | Signature primitive: identity, role, timestamp, immutability | C-EP1 | M | Must | Blocked | 2 |
-| `MET-C-004` | Create a restriction with the required fields | C-EP2 | M | Must | Blocked | 3 |
+| `MET-C-003` | Signature primitive: identity, role, timestamp, immutability | C-EP1 | M | Must | Ready | 2 |
+| `MET-C-004` | Create a restriction with the required fields | C-EP2 | M | Must | Ready | 3 |
 | `MET-C-005` | Validation blocks submission of an incomplete restriction | C-EP2 | S | Should | Ready | 3 |
 | `MET-C-006` | Originator signs the restriction | C-EP2 | S | Must | Ready | 3 |
 | `MET-C-007` | Return-for-change loop between approver and originator | C-EP3 | M | Should | Blocked | 4 |
@@ -54,7 +54,7 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 | `MET-C-010` | Remote signing from phone, tablet or remote desktop | C-EP3 | L | Must | Blocked | 5 |
 | `MET-C-011` | Operator read-and-sign gate before taking the desk | C-EP4 | L | Must | Ready | 5 |
 | `MET-C-012` | Duty Operations Manager signs the awareness list | C-EP4 | S | Should | Ready | 5 |
-| `MET-C-013` | Signature completeness view across the CCR population | C-EP5 | M | Should | Ready | 5 |
+| `MET-C-013` | Signature completeness view across the CCR population | C-EP5 | M | Should | Needs refinement | 5 |
 | `MET-C-014` | Cancellation chain: originator, manager and supervisor signatures | C-EP6 | M | Should | Ready | 6 |
 | `MET-C-015` | Implementation signers confirm awareness of a cancellation | C-EP6 | M | Should | Blocked | 6 |
 | `MET-C-016` | Register of restrictions in force | C-EP7 | M | Must | Ready | 4 |
@@ -157,7 +157,7 @@ Eleven source stories across five epics require a signature, and none of them sa
 
 ### MET-C-004 · Create a restriction with the required fields
 
-`size:M` `prio:Must` `status:Blocked` `track:frontend` `type:feature` `sprint:3`
+`size:M` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:3`
 
 **As an Originator, I want to create a new Operational Restriction with the required fields, so that it can enter the approval workflow in a structured form.**
 
@@ -173,11 +173,10 @@ Source story C1.1. The fields themselves are the unknown, and they come from the
 **Dependencies**
 
 - Requires C-002.
-- Blocked on the field set from the Metro procedure or form.
 
 **Open questions**
 
-- *[Blocking · Metro]* A copy or photograph of the existing Operational Restriction form would define the field set exactly. Deriving it from interviews will take a sprint and will still miss fields.
+- *[Answered · Metro, August 2026]* A copy of the existing form, to define the field set exactly. **Received in substance**: the August material includes the restriction register for each line and one worked restriction per line, which between them fix the fields: a restriction number, the restriction text, the initials of the originator, a date of implementation and a date of cancellation. One decision to take rather than assume: M1/M2 numbers restrictions as `YYMMDD-NNNN` and M3/M4 as `DD-MM-YYYY-NNNN`, and the product must either impose one scheme or carry both. Anything the team adds beyond the paper fields should be recorded as a deliberate addition.
 
 *Source: C1.1*
 
