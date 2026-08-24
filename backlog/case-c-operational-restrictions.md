@@ -15,7 +15,9 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 
 ## At a glance
 
-**27 items.** Priority: 13 Must, 12 Should, 2 Could. Readiness: 15 ready, 1 needing refinement, 11 blocked on Metro input. Size: 5×S, 16×M, 5×L, 1×XL.
+**27 items.** Priority: 13 Must, 12 Should, 2 Could. Readiness: 16 ready, 2 needing refinement, 9 blocked on Metro input. Size: 5×S, 16×M, 5×L, 1×XL.
+
+> **Updated 24 August 2026.** The written procedure has arrived, with the forms it operates on: the restriction register for each line, the signature sheet, and a worked restriction per line. That releases `MET-C-001` and, with Metro's answer that no regulatory standard applies, `MET-C-003`. Note that the two lines do not share a numbering convention.
 
 **Minimum demonstrable product**, meaning the 7 Must items proposed for sprints 1 to 3: `MET-C-001`, `MET-C-002`, `MET-C-003`, `MET-C-004`, `MET-C-006`, `MET-C-021`, `MET-C-022`. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
@@ -52,7 +54,7 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 | `MET-C-010` | Remote signing from phone, tablet or remote desktop | C-EP3 | L | Must | Blocked | 5 |
 | `MET-C-011` | Operator read-and-sign gate before taking the desk | C-EP4 | L | Must | Ready | 5 |
 | `MET-C-012` | Duty Operations Manager signs the awareness list | C-EP4 | S | Should | Ready | 5 |
-| `MET-C-013` | Shift handover signature completeness view | C-EP5 | M | Should | Ready | 5 |
+| `MET-C-013` | Signature completeness view across the CCR population | C-EP5 | M | Should | Ready | 5 |
 | `MET-C-014` | Cancellation chain: originator, manager and supervisor signatures | C-EP6 | M | Should | Ready | 6 |
 | `MET-C-015` | Implementation signers confirm awareness of a cancellation | C-EP6 | M | Should | Blocked | 6 |
 | `MET-C-016` | Register of restrictions in force | C-EP7 | M | Must | Ready | 4 |
@@ -74,7 +76,7 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 
 ### MET-C-001 · Document the Operational Restriction lifecycle as an explicit state model
 
-`size:M` `prio:Must` `status:Blocked` `track:cross-team` `type:spike` `sprint:1`
+`size:M` `prio:Must` `status:Ready` `track:cross-team` `type:spike` `sprint:1`
 
 **As a team on this product, we want the restriction lifecycle documented as states, transitions, actors and guards, so that twenty backlog items are not each inventing their own version of it.**
 
@@ -90,14 +92,13 @@ The source backlog describes a complete workflow across ten epics and never name
 
 **Dependencies**
 
-- Blocked until the written Operational Restriction procedure is received.
 - Blocks C-002 and everything downstream of it.
 
 **Open questions**
 
-- *[Blocking · Metro]* The written procedure for handling Operational Restrictions is required before this item can start.
+- *[Answered · Metro, August 2026]* The written procedure. **Received**, as OPE-PR-S-400-04 Driftsrestriktioner, together with the restriction register for each line, the signature sheet used for each restriction, and one worked restriction per line. Enough of the state model is visible in the forms to start: a restriction carries a number, a restriction text, the initials of its originator, a date of implementation and a date of cancellation, and the register is closed off with the date and signature of the *vagthavende driftschef*, the DOM role Metro names as the approver. The two lines number restrictions differently, M1/M2 as `YYMMDD-NNNN` and M3/M4 as `DD-MM-YYYY-NNNN`, and their forms differ in layout. Whether the product imposes one scheme or carries both is a design decision to take with Metro rather than by default.
 - *[Blocking · Metro]* The AAU evaluation attached a condition to this case: a structured domain onboarding session of two to three hours in week one, covering the restriction lifecycle, roles and regulatory requirements. Can that be scheduled if the case is activated?
-- *[Blocking · Metro]* How many restrictions are typically in force at once, and how many are raised in a month? Ten and two hundred are different products.
+- *[Answered in part · Metro, August 2026]* How many restrictions are in force at once? **Up to 50.** How many are raised in a month is still unanswered, though the registers supplied give an indication.
 
 *Source: AAU-added. No source story names the state machine that the whole case depends on.*
 
@@ -126,7 +127,7 @@ Follows C-001. Scattering the rules across the features that trigger them is the
 
 ### MET-C-003 · Signature primitive: identity, role, timestamp, immutability
 
-`size:M` `prio:Must` `status:Blocked` `track:backend` `type:tech` `sprint:2`
+`size:M` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:2`
 
 **As a developer on this product, I want one signature mechanism used everywhere, so that every signature in the system carries the same guarantees.**
 
@@ -146,7 +147,7 @@ Eleven source stories across five epics require a signature, and none of them sa
 
 **Open questions**
 
-- *[Blocking · Metro]* What does signing mean today in the paper process, and is there any regulatory standard the electronic equivalent has to satisfy? Students should not invent an assurance level for a safety-critical signature.
+- *[Answered · Metro, August 2026]* What does signing mean, and is there a regulatory standard? **"There is no regulatory standard the electronic equivalent must satisfy."** The signature sheets show what the act means in practice: each signatory initials to confirm having read and understood the restriction and its accompanying documents, and there are two signature moments, implementation and cancellation, recorded side by side for the same person. The duty operations manager puts a fresh sheet out when a new restriction is implemented. So the primitive is an acknowledgement, not an authorisation, and approval by the DOM is a separate act that should not be collapsed into it. With no external standard to inherit, the assurance level is a design decision the team must argue in an ADR: authenticated identity, a server-issued timestamp, an append-only record, and a binding to the exact version of the text that was displayed. Students should not invent an assurance level for a safety-critical signature.
 
 *Source: AAU-added, derived from C1.2, C2.1, C2.2, C3.1, C3.2, C5.1 to C5.4.*
 
@@ -375,9 +376,9 @@ Source story C3.2.
 
 ## C-EP5. Shift handover compliance
 
-### MET-C-013 · Shift handover signature completeness view
+### MET-C-013 · Signature completeness view across the CCR population
 
-`size:M` `prio:Should` `status:Ready` `track:frontend` `type:feature` `sprint:5`
+`size:M` `prio:Should` `status:Needs refinement` `track:frontend` `type:feature` `sprint:5`
 
 **As a Control Room Supervisor, I want to see at a glance whether every operator on shift has signed every restriction in force, so that I can authorise them to take their desk with confidence.**
 
@@ -396,7 +397,8 @@ Source story C4.1, which asks for the state to be shown by colour. Colour alone 
 
 **Open questions**
 
-- *[Blocking · Metro]* Where does the system learn which operators are on shift? There is no story covering rosters, and this view cannot be built without that information.
+- *[Answered · Metro, August 2026]* Where does the system learn which operators are on shift? **"It must be signed by all CCR employees every time."** That removes the dependency rather than satisfying it. The question is not who was on shift but which CCR employees have not yet signed, measured against the whole staff list, which is how the paper sheets work: pre-printed with every employee's initials and left out until all have signed. The item is therefore a completeness view over the CCR population rather than a shift handover view, and its outstanding list has no natural deadline at a shift boundary.
+- *[Blocking · Metro]* What is the source of the CCR employee list? An Entra ID group is the natural candidate given Metro's platform document, and would let the product enumerate the population without holding personnel data itself.
 
 *Source: C4.1*
 

@@ -71,7 +71,7 @@ A shared situational-awareness tool that lets the control room select the active
 
 ### MET-A-001 · Derive the scenario domain model from the Metro alternative-operation presentations
 
-`size:M` `prio:Must` `status:Blocked` `track:cross-team` `type:spike` `sprint:1`
+`size:M` `prio:Must` `status:Ready` `track:cross-team` `type:spike` `sprint:1`
 
 **As a team on this product, we want a documented entity model for emergency scenarios extracted from the two Metro presentations, so that every other item on this backlog has something concrete to build against.**
 
@@ -91,8 +91,8 @@ The source document states that no dataset exists and that the only assets are t
 
 **Open questions**
 
-- *[Blocking · Metro]* The two alternative-operation presentations, one per line, are required before this item can start. Nothing else in Case A can be refined without them.
-- *[Shaping · Metro]* How many distinct scenarios exist per line, and roughly how often is a scenario activated in practice?
+- *[Answered · Metro, August 2026]* The alternative-operation material, required before this item can start. **Received, and more than was asked for.** M1/M2 is documented scenario by scenario: five fallback scenarios named for the section they cover (VAN-FB, FOR-KN, KHC-ISB, KHC-LGP, KHC) and *Hold Alle Tog*, each in a control-room and a steward view, most with separate steward-task and steward-placement documents. M3/M4 came as one presentation, *ATD, Alternativ TogDrift v2.1*. A station list for both lines came with it. Three things to read off the material before modelling: a scenario is defined by a section of line rather than by an incident type; the same scenario is a different document per role, so role is a property of the view rather than a filter over one text; and steward placement and steward tasks are separate concerns in Metro's own material.
+- *[Answered in part · Metro, August 2026]* How many scenarios exist per line? Six for M1/M2 in the material supplied, one general document for M3/M4. How often a scenario is activated in practice is still unanswered.
 
 *Source: AAU-added. The source backlog contains no item for this work, which is the first work any team must do.*
 
@@ -277,8 +277,8 @@ Source story A2.1. Its criterion, that the required stations be identifiable wit
 
 **Open questions**
 
-- *[Blocking · Metro]* What device do stewards actually carry, by make, model and Android version? The use-case material mentions Samsung phones and Case B mentions a PDA, and it is not clear whether these are the same device.
-- *[Shaping · Metro]* A screenshot or photograph of the current PDF as it appears on the steward device would tell the team what they are replacing.
+- *[Answered · Metro, August 2026]* Which device do stewards carry? **Samsung Galaxy A52 to A55, mostly A52 and A55, on Android 14 and 15.** A 6.5 inch mid-range phone held in one hand, outdoors, at night, by somebody who is also walking. Android 14 as the floor puts minSdk at API 34.
+- *[Answered · Metro, August 2026]* The PDF stewards use on their phones today. **Received** with the August material. Worth an hour of the team's time in sprint 1 before designing the replacement.
 
 *Source: A2.1*
 
@@ -303,7 +303,7 @@ Source stories A2.2 and A2.3 combined at the presentation layer. The transport t
 
 **Open questions**
 
-- *[Blocking · Metro]* How many stewards are on duty during an incident, and how many stations does one steward typically cover? A display for six stewards and a display for sixty are different designs.
+- *[Answered in part · Metro, August 2026]* How many stewards are on duty? **Up to 20 on a night shift.** Twenty positions against 46 stations is a scale at which every steward can be individually visible and legible at once, which rules out clustering work a display for sixty would have needed. How many stations one steward covers is still unanswered; Metro asked in return why it is relevant, and the answer worth giving is that it decides whether a steward's position is a point or a span, and therefore whether the operator reads coverage off the screen correctly.
 
 *Source: A2.2, A2.3*
 
@@ -498,7 +498,7 @@ The source document assumes instructions reach stewards but says nothing about h
 
 **Open questions**
 
-- *[Blocking · Metro]* Are the steward devices managed by Metro, and is a push notification service reachable from them? If Google services are unavailable on the device, the design changes.
+- *[Answered in part · Metro, August 2026]* The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble. **Still blocking:** are the phones enrolled in a mobile device management system, and if so which one? That decides whether an app can be pushed to them at all, whether notification permissions can be granted centrally, and whether a managed configuration can be read at install time.
 
 *Source: AAU-added.*
 
@@ -529,7 +529,7 @@ Source story A5.1, restated. The original specified an assistant returning a ran
 
 **Open questions**
 
-- *[Blocking · Metro]* In which language will operators type incident descriptions? Danish free text against Danish scenario material is a different problem from the English equivalent, and the source document does not state a language anywhere.
+- *[Answered · Metro, August 2026]* In which language do operators type? **Danish.** The scenario material supplied in August is Danish throughout. The consequences are concrete: multilingual sentence embeddings rather than English-only models; Danish compounding makes pure lexical matching weak, so a hybrid of lexical and dense retrieval is the safer design; station and line abbreviations must survive tokenisation; and any evaluation set has to be Danish, which makes A-020 the highest-value outstanding request in the case.
 
 *Source: A5.1*
 
@@ -690,7 +690,7 @@ Source story A7.1. The story covers routing to the right interface. Enforcement 
 
 ### MET-A-026 · Role and permission matrix enforced server-side
 
-`size:S` `prio:Should` `status:Blocked` `track:backend` `type:compliance` `sprint:3`
+`size:S` `prio:Should` `status:Ready` `track:backend` `type:compliance` `sprint:3`
 
 **As an administrator, I want each role limited to its permitted actions, so that no user can perform an action outside their responsibility.**
 
@@ -709,7 +709,7 @@ Every case in the source document requires access control and none of them state
 
 **Open questions**
 
-- *[Blocking · Metro]* What roles exist in the control room and among stewards today, and who is permitted to activate or stand down a scenario? The stories name an Operator, a Steward, an Operations Analyst and an Operations Administrator without defining any of them.
+- *[Answered · Metro, August 2026]* What roles exist and who may do what? **"All in CCR can activate a scenario. DOM can approve a restriction. Operation administration can amend the catalogue."** Four actors to model: CCR (the control room, collectively) activates and stands down scenarios; DOM, the *vagthavende driftschef*, approves restrictions; Operation Administration amends the catalogue; the Steward reports position, acknowledges instructions and records patrols. Two things follow. Scenario activation is not individually restricted, which fits an emergency where hesitation costs more than a wrong activation, so the model should not invent an approval step operational practice does not have. And the separation that does exist is between acting and amending the catalogue. The Operations Analyst named in the source stories has no act attached to them and should be dropped rather than given invented permissions.
 
 *Source: A7.1*
 
