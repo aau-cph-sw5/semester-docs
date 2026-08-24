@@ -67,7 +67,7 @@ the next person will too.
 |---|---|
 | **PBI** | Product Backlog Item. One unit of work, identified as `MET-{case}-{number}`. |
 | **Minimum demonstrable product** | The Must items scheduled for sprints 1 to 3 in each backlog. What a team can plausibly show Metro at the fourth sprint review. |
-| **Blocked** | An item that cannot be completed until Metro answers a question. Twenty-six items across the four products are in this state, down from thirty-five before Metro's August answers. |
+| **Blocked** | An item that cannot be completed until Metro answers a question. Twenty-five items across the four products are in this state, down from thirty-five before Metro's August answers. |
 | **Provenance** | Whether an item came from a Metro story, was added by AAU, or is AAU's reconstruction of a missing Metro epic. Visible as a label on every issue. |
 | **Reconstructed** | Four items in Case D, proposed by AAU to fill two epics missing from the delivered material, pending Metro's confirmation. |
 
