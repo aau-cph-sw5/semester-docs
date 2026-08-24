@@ -73,11 +73,13 @@ PositionReport, IncidentEvent.
 
 </details>
 
-Two things to settle before this section is written, both of them blocked on Metro
-and both of them shaping the model rather than decorating it. `MET-B-001` decides
-whether presence is asserted by the system or confirmed by the steward, which
-determines whether a presence record carries a confirmation. `MET-B-003` needs the
-station layout data, which determines how patrol areas relate to stations.
+Both of the questions this section was waiting on were answered in August 2026.
+`MET-B-001` is settled: a record is opened and closed by the steward scanning a bar
+or QR code, at a station level or inside a train, so a presence record carries a
+scanned, timestamped act rather than an inferred detection, and a beacon reading is
+corroborating context. `MET-B-003` has its data: 46 stations across the two lines,
+of which 30 have a concourse as well as a platform, giving 76 patrol levels. The
+level, not the station, is the unit the patrol rule applies to.
 
 Expected entities: Station, PatrolArea, Steward (synthetic identities only, see
 [10-data-handling.md](10-data-handling.md)), Observation, PatrolRecord, Shift,
@@ -97,9 +99,12 @@ from the start, because retrofitting this is expensive.
 
 </details>
 
-Blocked until the written Operational Restriction procedure arrives, which is
-`MET-C-001`. The field set for a restriction comes from the existing paper form
-and should not be invented.
+The written procedure arrived in August 2026, so `MET-C-001` and `MET-C-004` are
+released. The field set comes from the register and the worked restrictions Metro
+supplied: a restriction number, the restriction text, the initials of the
+originator, a date of implementation and a date of cancellation. Note that the two
+lines number restrictions differently, `YYMMDD-NNNN` on M1/M2 and
+`DD-MM-YYYY-NNNN` on M3/M4.
 
 Expected entities: Restriction, RestrictionVersion, Signature, SignatureList,
 StateTransition, Notification, ArchiveEntry, Role.

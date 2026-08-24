@@ -121,7 +121,7 @@ When Metro answers something that changes an assumption, record it. A comment on
 the issue at minimum, an architecture decision record if it changes a design. The
 answer will otherwise live in one student's memory and leave with them.
 
-Thirty-five of the items across the four backlogs are blocked on Metro input. That
+Twenty-three of the items across the four backlogs are blocked on Metro input, down from thirty-five before Metro's August answers. That
 is normal at this stage. It is not normal in November.
 
 ## Estimation
