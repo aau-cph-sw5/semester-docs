@@ -140,7 +140,7 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 - *[Answered · Metro, August 2026]* The station layout data is required before this item can start. **Received**: a per-line list stating for each station whether it has a platform level only or a platform and a concourse level. M1/M2 has 22 stations of which 7 have a concourse, M3/M4 has 24 stations of which 23 do: 46 stations and 76 patrol levels in total. Each station carries a short code (VAN, KGN, CPH) which is the natural primary key. The beacon-to-station mapping was answered "not relevant", which follows from the move to bar and QR codes; what the dataset needs instead is a code identifier per level and per train.
 - *[Shaping · Metro]* How long does a full patrol round take in practice? The station and level counts are now known; the round duration is not, and it is what decides whether the hourly requirement is comfortable or tight.
-- *[Blocking · Metro]* The list of trains on both lines, which the revised user stories name as required data for the case.
+- *[Shaping · Metro]* The list of trains on both lines, which the revised user stories name as required data for the case. A synthetic fleet of the right order of magnitude lets the work proceed, so this shapes the fixture rather than stopping the item.
 
 *Source: B2.1*
 
@@ -171,7 +171,7 @@ Source story B1.1, revised by Metro Service in August 2026, which now specifies 
 
 **Open questions**
 
-- *[Blocking · Metro]* What is the mandatory re-scan interval on a train? The revised story leaves it as *x* minutes.
+- *[Shaping · Metro]* What is the mandatory re-scan interval on a train? The revised story leaves it as *x* minutes. Held as configuration, the item can be built and demonstrated before the value is fixed.
 - *[Shaping · Metro]* Does a missed re-scan end the manning record at the last valid scan, or continue it and flag the gap? The two produce different compliance figures for the same night.
 
 *Source: B1.1, revised August 2026*
@@ -325,7 +325,7 @@ Source story B3.2, raised from Won't to Should. As a Won't it removes the interf
 **Open questions**
 
 - *[Answered · Metro, August 2026]* Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so train beacons (B-024) become one implementation behind this interface rather than the precondition for the feature.
-- *[Blocking · Metro]* How many trains run at night per line, and where does the list of running trains come from today?
+- *[Shaping · Metro]* How many trains run at night per line, and where does the list of running trains come from today? The abstraction can be built and demonstrated against a synthetic fleet, so this shapes the fixture rather than stopping the item.
 
 *Source: B3.2, priority raised from Won't to Should by AAU*
 
