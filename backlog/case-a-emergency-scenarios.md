@@ -13,7 +13,7 @@ A shared situational-awareness tool that lets the control room select the active
 
 ## At a glance
 
-**28 items.** Priority: 13 Must, 13 Should, 2 Could. Readiness: 20 ready, 5 needing refinement, 3 blocked on Metro input. Size: 7×S, 12×M, 9×L.
+**28 items.** Priority: 13 Must, 13 Should, 2 Could. Readiness: 21 ready, 5 needing refinement, 2 blocked on Metro input. Size: 7×S, 12×M, 9×L.
 
 > **Updated 24 August 2026** against Metro Service's answers. The alternative-operation material for both lines has arrived, which releases `MET-A-001` and with it the whole case. The steward device is a Samsung Galaxy A52 to A55 on Android 14 or 15, operators type in Danish, and the role model is settled: CCR activates scenarios, DOM approves restrictions, Operation Administration amends the catalogue.
 
@@ -39,7 +39,7 @@ A shared situational-awareness tool that lets the control room select the active
 | ID | Title | Epic | Size | Priority | Readiness | Sprint |
 |---|---|---|---|---|---|---|
 | `MET-A-001` | Derive the scenario domain model from the Metro alternative-operation presentations | A-EP1 | M | Must | Ready | 1 |
-| `MET-A-002` | Scenario reference data schema, persistence and seed loader | A-EP1 | L | Must | Blocked | 2 |
+| `MET-A-002` | Scenario reference data schema, persistence and seed loader | A-EP1 | L | Must | Ready | 2 |
 | `MET-A-003` | Scenario state contract published and versioned | A-EP1 | M | Must | Ready | 1 |
 | `MET-A-004` | Real-time propagation of scenario and position changes to connected clients | A-EP3 | L | Must | Ready | 2 |
 | `MET-A-005` | Active scenario and own assignment readable with no network | A-EP9 | L | Must | Ready | 3 |
@@ -100,7 +100,7 @@ The source document states that no dataset exists and that the only assets are t
 
 ### MET-A-002 · Scenario reference data schema, persistence and seed loader
 
-`size:L` `prio:Must` `status:Blocked` `track:backend` `type:data` `sprint:2`
+`size:L` `prio:Must` `status:Ready` `track:backend` `type:data` `sprint:2`
 
 **As a developer on any team, I want scenarios held as structured reference data loaded from a versioned source, so that scenario content can be corrected without a code change.**
 
@@ -116,7 +116,7 @@ Follows A-001. The scenarios are reference data maintained by Metro operations, 
 
 **Dependencies**
 
-- Requires A-001.
+- Requires A-001, which the August material released.
 - Schema reviewed with the front-end team before implementation, since it constrains A-003.
 
 **Open questions**
@@ -500,7 +500,8 @@ The source document assumes instructions reach stewards but says nothing about h
 
 **Open questions**
 
-- *[Answered in part · Metro, August 2026]* The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble. **Still blocking:** are the phones enrolled in a mobile device management system, and if so which one? That decides whether an app can be pushed to them at all, whether notification permissions can be granted centrally, and whether a managed configuration can be read at install time.
+- *[Answered in part · Metro, August 2026]* Which device, and is a push service reachable? The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble.
+- *[Blocking · Metro]* Are the phones enrolled in a mobile device management system, and if so which one? That decides whether an app can be pushed to them at all, whether notification permissions can be granted centrally, and whether a managed configuration can be read at install time. It is a one-sentence answer and the only thing still stopping this item.
 
 *Source: AAU-added.*
 

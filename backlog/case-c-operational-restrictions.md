@@ -15,7 +15,7 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 
 ## At a glance
 
-**27 items.** Priority: 13 Must, 12 Should, 2 Could. Readiness: 17 ready, 2 needing refinement, 8 blocked on Metro input. Size: 5×S, 16×M, 5×L, 1×XL.
+**27 items.** Priority: 13 Must, 12 Should, 2 Could. Readiness: 18 ready, 2 needing refinement, 7 blocked on Metro input. Size: 5×S, 16×M, 5×L, 1×XL.
 
 > **Updated 24 August 2026.** The written procedure has arrived, with the forms it operates on: the restriction register for each line, the signature sheet, and a worked restriction per line. That releases `MET-C-001`, `MET-C-004`, whose field set the worked restrictions now define, and, with Metro's answer that no regulatory standard applies, `MET-C-003`. Note that the two lines do not share a numbering convention.
 
@@ -43,7 +43,7 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 | ID | Title | Epic | Size | Priority | Readiness | Sprint |
 |---|---|---|---|---|---|---|
 | `MET-C-001` | Document the Operational Restriction lifecycle as an explicit state model | C-EP1 | M | Must | Ready | 1 |
-| `MET-C-002` | State machine implementation with guarded transitions | C-EP1 | XL | Must | Blocked | 2 |
+| `MET-C-002` | State machine implementation with guarded transitions | C-EP1 | XL | Must | Ready | 2 |
 | `MET-C-003` | Signature primitive: identity, role, timestamp, immutability | C-EP1 | M | Must | Ready | 2 |
 | `MET-C-004` | Create a restriction with the required fields | C-EP2 | M | Must | Ready | 3 |
 | `MET-C-005` | Validation blocks submission of an incomplete restriction | C-EP2 | S | Should | Ready | 3 |
@@ -97,14 +97,14 @@ The source backlog describes a complete workflow across ten epics and never name
 **Open questions**
 
 - *[Answered · Metro, August 2026]* The written procedure. **Received**, as OPE-PR-S-400-04 Driftsrestriktioner, together with the restriction register for each line, the signature sheet used for each restriction, and one worked restriction per line. Enough of the state model is visible in the forms to start: a restriction carries a number, a restriction text, the initials of its originator, a date of implementation and a date of cancellation, and the register is closed off with the date and signature of the *vagthavende driftschef*, the DOM role Metro names as the approver. The two lines number restrictions differently, M1/M2 as `YYMMDD-NNNN` and M3/M4 as `DD-MM-YYYY-NNNN`, and their forms differ in layout. Whether the product imposes one scheme or carries both is a design decision to take with Metro rather than by default.
-- *[Blocking · Metro]* The AAU evaluation attached a condition to this case: a structured domain onboarding session of two to three hours in week one, covering the restriction lifecycle, roles and regulatory requirements. Can that be scheduled if the case is activated?
+- *[Shaping · Metro]* The AAU evaluation attached a condition to this case: a structured domain onboarding session of two to three hours in week one, covering the restriction lifecycle, roles and regulatory requirements. Can that be scheduled if the case is activated? Now that the written procedure has arrived the item can proceed without it, but the session remains the single most useful thing Metro could give this case.
 - *[Answered in part · Metro, August 2026]* How many restrictions are in force at once? **Up to 50.** How many are raised in a month is still unanswered, though the registers supplied give an indication.
 
 *Source: AAU-added. No source story names the state machine that the whole case depends on.*
 
 ### MET-C-002 · State machine implementation with guarded transitions
 
-`size:XL` `prio:Must` `status:Blocked` `track:backend` `type:tech` `sprint:2`
+`size:XL` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:2`
 
 **As a developer on this product, I want the lifecycle enforced in one place, so that no feature can move a restriction into a state the procedure does not allow.**
 
@@ -120,7 +120,7 @@ Follows C-001. Scattering the rules across the features that trigger them is the
 
 **Dependencies**
 
-- Requires C-001.
+- Requires C-001, which the arrival of the written procedure released.
 - Blocks C-004 through C-018.
 
 *Source: AAU-added, derived from C1 through C8.*
@@ -397,7 +397,7 @@ Source story C4.1, which asks for the state to be shown by colour. Colour alone 
 **Open questions**
 
 - *[Answered · Metro, August 2026]* Where does the system learn which operators are on shift? **"It must be signed by all CCR employees every time."** That removes the dependency rather than satisfying it. The question is not who was on shift but which CCR employees have not yet signed, measured against the whole staff list, which is how the paper sheets work: pre-printed with every employee's initials and left out until all have signed. The item is therefore a completeness view over the CCR population rather than a shift handover view, and its outstanding list has no natural deadline at a shift boundary.
-- *[Blocking · Metro]* What is the source of the CCR employee list? An Entra ID group is the natural candidate given Metro's platform document, and would let the product enumerate the population without holding personnel data itself.
+- *[Shaping · Metro]* What is the source of the CCR employee list? An Entra ID group is the natural candidate given Metro's platform document, and would let the product enumerate the population without holding personnel data itself. The view can be built against a synthetic population in the meantime, which is why this shapes the design rather than stopping it.
 
 *Source: C4.1*
 
@@ -745,7 +745,7 @@ This case carries more domain knowledge than the other three, and that knowledge
 
 **Open questions**
 
-- *[Shaping · Metro]* A glossary of the Danish operational terms used across the cases would serve every product, and this case most of all. Two pages would save each team a week.
+- *[Answered · Metro, August 2026]* A glossary of the Danish operational terms. **An abbreviation list was supplied** and is transcribed in [docs/12-glossary.md](../docs/12-glossary.md). It expands abbreviations rather than defining the operational terms themselves, so the semester glossary remains the place where meanings are recorded as teams learn them.
 
 *Source: AAU-added.*
 
