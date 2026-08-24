@@ -25,7 +25,7 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 - `MET-C-021` Versioned audit trail of every restriction and signature
 - `MET-C-022` Role-based access control across the workflow
 
-**8 items are blocked** on an answer from Metro Service, down from eleven before Metro's August answers. They are not dead: read them, and bring the question to the next sprint review. Filter the issues by `needs:metro` to see them.
+**7 items are blocked** on an answer from Metro Service, down from eleven before Metro's August answers. They are not dead: read them, and bring the question to the next sprint review. Filter the issues by `status:blocked` to see them, and by `needs:metro` for everything that still carries a question for Metro.
 
 ## Getting it running
 
