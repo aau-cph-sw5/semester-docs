@@ -1,6 +1,6 @@
-> **Steward Localization (Case B)** · Epic B-EP4: Train manning coverage
+> **Manning/patrol requirement (Case B)** · Epic B-EP4: Train manning coverage
 
-**Size** M · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 4
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 4
 
 ## User story
 
@@ -22,7 +22,7 @@ Source story B3.2, raised from Won't to Should. As a Won't it removes the interf
 
 ## Open questions
 
-- **[Shaping · Metro]** Is the raised priority accepted? As a Won't, source story B3.1 has no input and the 70 percent requirement cannot be demonstrated at all.
+- **[Answered · Metro, August 2026]** Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so train beacons (B-024) become one implementation behind this interface rather than the precondition for the feature.
 - **[Blocking · Metro]** How many trains run at night per line, and where does the list of running trains come from today?
 
 ## Provenance

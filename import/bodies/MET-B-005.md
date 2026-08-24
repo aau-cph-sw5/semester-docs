@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP2: Presence and patrol capture
+> **Manning/patrol requirement (Case B)** · Epic B-EP2: Presence and patrol capture
 
 **Size** S · **Priority** Should · **Readiness** Ready · **Track** mobile · **Type** feature · **Proposed sprint** 3
 

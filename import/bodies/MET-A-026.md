@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP8: Access, roles and identity
 
-**Size** S · **Priority** Should · **Readiness** Blocked · **Track** backend · **Type** compliance · **Proposed sprint** 3
+**Size** S · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** compliance · **Proposed sprint** 3
 
 ## User story
 
@@ -23,7 +23,7 @@ Every case in the source document requires access control and none of them state
 
 ## Open questions
 
-- **[Blocking · Metro]** What roles exist in the control room and among stewards today, and who is permitted to activate or stand down a scenario? The stories name an Operator, a Steward, an Operations Analyst and an Operations Administrator without defining any of them.
+- **[Answered · Metro, August 2026]** What roles exist and who may do what? **"All in CCR can activate a scenario. DOM can approve a restriction. Operation administration can amend the catalogue."** Four actors to model: CCR (the control room, collectively) activates and stands down scenarios; DOM, the *vagthavende driftschef*, approves restrictions; Operation Administration amends the catalogue; the Steward reports position, acknowledges instructions and records patrols. Two things follow. Scenario activation is not individually restricted, which fits an emergency where hesitation costs more than a wrong activation, so the model should not invent an approval step operational practice does not have. And the separation that does exist is between acting and amending the catalogue. The Operations Analyst named in the source stories has no act attached to them and should be dropped rather than given invented permissions.
 
 ## Provenance
 

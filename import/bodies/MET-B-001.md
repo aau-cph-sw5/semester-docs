@@ -1,6 +1,6 @@
-> **Steward Localization (Case B)** · Epic B-EP1: Foundation: positioning abstraction and station reference data
+> **Manning/patrol requirement (Case B)** · Epic B-EP1: Foundation: positioning abstraction and station reference data
 
-**Size** S · **Priority** Must · **Readiness** Blocked · **Track** cross-team · **Type** spike · **Proposed sprint** 1
+**Size** S · **Priority** Must · **Readiness** Ready · **Track** cross-team · **Type** spike · **Proposed sprint** 1
 
 ## User story
 
@@ -23,7 +23,7 @@ Source story B1.1 asks for both designs at once. Its title specifies automatic r
 
 ## Open questions
 
-- **[Blocking · Metro]** Is a patrol record created automatically when a steward is detected at a station, or does the steward confirm it, or both? Story B1.1 specifies automatic registration in its title and a single tap in its first criterion.
+- **[Answered · Metro, August 2026]** Is a patrol record created automatically, or does the steward confirm it? **"The steward confirms it or starts/stops the record."** The revised story B1.1 specifies the mechanism: the steward presses Start/Fortsæt and scans a bar or QR code to open a record, and Stop plus a scan to close it, on a station level and inside a train. The evidence rule to record in the ADR is therefore that a record is created by a scanned, timestamped act of the steward, with a beacon reading as corroborating context rather than evidence.
 
 ## Provenance
 

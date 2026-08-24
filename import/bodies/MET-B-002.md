@@ -1,4 +1,4 @@
-> **Steward Localization (Case B)** · Epic B-EP1: Foundation: positioning abstraction and station reference data
+> **Manning/patrol requirement (Case B)** · Epic B-EP1: Foundation: positioning abstraction and station reference data
 
 **Size** M · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 1
 
