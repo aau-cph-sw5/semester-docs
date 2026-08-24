@@ -1,6 +1,6 @@
 id	case	title	labels	milestone	body_file
 MET-A-001	A	Derive the scenario domain model from the Metro alternative-operation presentations	case:A,epic:A-EP1,track:cross-team,type:spike,size:M,prio:must,status:ready,provenance:aau-added	Sprint 1	bodies/MET-A-001.md
-MET-A-002	A	Scenario reference data schema, persistence and seed loader	case:A,epic:A-EP1,track:backend,type:data,size:L,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 2	bodies/MET-A-002.md
+MET-A-002	A	Scenario reference data schema, persistence and seed loader	case:A,epic:A-EP1,track:backend,type:data,size:L,prio:must,status:ready,needs:metro,provenance:aau-added	Sprint 2	bodies/MET-A-002.md
 MET-A-003	A	Scenario state contract published and versioned	case:A,epic:A-EP1,track:cross-team,type:contract,size:M,prio:must,status:ready,provenance:aau-added	Sprint 1	bodies/MET-A-003.md
 MET-A-004	A	Real-time propagation of scenario and position changes to connected clients	case:A,epic:A-EP3,track:backend,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 2	bodies/MET-A-004.md
 MET-A-005	A	Active scenario and own assignment readable with no network	case:A,epic:A-EP9,track:mobile,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:aau-added	Sprint 3	bodies/MET-A-005.md
@@ -52,7 +52,7 @@ MET-B-022	B	Data-protection statement as a project deliverable	case:B,epic:B-EP7
 MET-B-023	B	Roles, access control and synthetic identity fixtures	case:B,epic:B-EP9,track:backend,type:feature,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-B-023.md
 MET-B-024	B	Inheritance package for the 2027 cohort	case:B,epic:B-EP10,track:cross-team,type:tech,size:L,prio:must,status:ready,provenance:aau-added	Sprint 7	bodies/MET-B-024.md
 MET-C-001	C	Document the Operational Restriction lifecycle as an explicit state model	case:C,epic:C-EP1,track:cross-team,type:spike,size:M,prio:must,status:ready,needs:metro,provenance:aau-added	Sprint 1	bodies/MET-C-001.md
-MET-C-002	C	State machine implementation with guarded transitions	case:C,epic:C-EP1,track:backend,type:tech,size:XL,prio:must,status:blocked,provenance:aau-added	Sprint 2	bodies/MET-C-002.md
+MET-C-002	C	State machine implementation with guarded transitions	case:C,epic:C-EP1,track:backend,type:tech,size:XL,prio:must,status:ready,provenance:aau-added	Sprint 2	bodies/MET-C-002.md
 MET-C-003	C	Signature primitive: identity, role, timestamp, immutability	case:C,epic:C-EP1,track:backend,type:tech,size:M,prio:must,status:ready,provenance:aau-added	Sprint 2	bodies/MET-C-003.md
 MET-C-004	C	Create a restriction with the required fields	case:C,epic:C-EP2,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 3	bodies/MET-C-004.md
 MET-C-005	C	Validation blocks submission of an incomplete restriction	case:C,epic:C-EP2,track:frontend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 3	bodies/MET-C-005.md
@@ -77,7 +77,7 @@ MET-C-023	C	Automatic archiving and five-year retention	case:C,epic:C-EP9,track:
 MET-C-024	C	Assisted drafting of restriction text from structured input	case:C,epic:C-EP10,track:frontend,type:feature,size:M,prio:could,status:refine,provenance:metro	-	bodies/MET-C-024.md
 MET-C-025	C	Conflict detection against restrictions in force	case:C,epic:C-EP10,track:backend,type:feature,size:L,prio:could,status:blocked,needs:metro,provenance:metro	-	bodies/MET-C-025.md
 MET-C-026	C	Degraded behaviour for remote signing and register access	case:C,epic:C-EP7,track:cross-team,type:feature,size:M,prio:should,status:ready,provenance:aau-added	Sprint 6	bodies/MET-C-026.md
-MET-C-027	C	Inheritance package for the 2027 cohort	case:C,epic:C-EP12,track:cross-team,type:tech,size:L,prio:must,status:ready,needs:metro,provenance:aau-added	Sprint 7	bodies/MET-C-027.md
+MET-C-027	C	Inheritance package for the 2027 cohort	case:C,epic:C-EP12,track:cross-team,type:tech,size:L,prio:must,status:ready,provenance:aau-added	Sprint 7	bodies/MET-C-027.md
 MET-D-001	D	Data quality assessment of the Destination ID catalogue	case:D,epic:D-EP1,track:backend,type:data,size:M,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 1	bodies/MET-D-001.md
 MET-D-002	D	Catalogue data model with route attributes	case:D,epic:D-EP1,track:backend,type:data,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 2	bodies/MET-D-002.md
 MET-D-003	D	Import the catalogue and image set	case:D,epic:D-EP1,track:backend,type:feature,size:L,prio:must,status:blocked,provenance:metro	Sprint 2	bodies/MET-D-003.md
