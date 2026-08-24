@@ -2,7 +2,7 @@
 
 Generated from the same dataset as the backlogs, so it cannot drift from them.
 
-**72 open questions across 63 items. Twenty were answered by Metro Service in August 2026** and are kept below, marked *Answered*, with the answer attached. Twenty-six items remain blocked, meaning the item cannot be completed without an answer.
+**72 open questions across 63 items. Twenty were answered by Metro Service in August 2026** and are kept below, marked *Answered*, with the answer attached. Twenty-five items remain blocked, meaning the item cannot be completed without an answer.
 
 The fifteen questions we put to Metro in the July note were answered in full or in part, together with the material several items were waiting for: the alternative-operation scenarios for both lines, the written Operational Restriction procedure and its forms, the station list, and an abbreviation glossary. Case D was answered with the observation that it is the case Metro does not prioritise, so its questions stand as they were.
 
@@ -64,7 +64,7 @@ The fifteen questions we put to Metro in the July note were answered in full or 
 
 ## Case C. Operational Restrictions
 
-9 of 27 items are blocked. 17 open questions, 6 of them answered in August.
+8 of 27 items are blocked. 17 open questions, 6 of them answered in August.
 
 | Item | Impact | Owner | Question |
 |---|---|---|---|

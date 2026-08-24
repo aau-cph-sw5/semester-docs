@@ -30,12 +30,12 @@ cohort. Which three is decided at the August backlog session.
 |---|---|---|---|---|---|
 | A | Emergency Scenarios | 28 | 3 | [backlog](backlog/case-a-emergency-scenarios.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/3) |
 | B | Manning/patrol requirement | 24 | 3 | [backlog](backlog/case-b-manning-patrol.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/4) |
-| C | Operational Restrictions | 27 | 9 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
+| C | Operational Restrictions | 27 | 8 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
 | D | DID Master | 24 | 11 | [backlog](backlog/case-d-did-master.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/6) |
 
 > **Updated 24 August 2026.** Metro Service returned answers to the questions we
 > put to them in July, together with revised user stories and the operational
-> material several items were waiting for. Blocked items fall from 35 to 26.
+> material several items were waiting for. Blocked items fall from 35 to 25.
 > Case B has been renamed by Metro from *Steward Localization* to *Manning/patrol
 > requirement*, and its repository is now `case-b-manning-patrol`; the old URL
 > redirects, but update your remote if you have already cloned it. Case D is the
