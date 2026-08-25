@@ -5,6 +5,28 @@ that are not are the parts that block everything else.
 
 ---
 
+## 0. Who is who
+
+Four roles are named throughout these guides. They are different people and they
+answer different questions.
+
+| Role | Who | What they are for |
+|---|---|---|
+| **Semester coordinator** | *(name, email)* | The semester as a whole: structure, cases, teams, anything that affects more than one product |
+| **AAU Product Owner** | *(name, email; one per product)* | Your single route to Metro between reviews, backlog priority and refinement, organisation access |
+| **Team supervisor** | *(assigned at semester start)* | Your team's technical and academic guidance, and the person who answers questions about the report and the examination |
+| **Metro domain expert** | Karsten Juhl, kju@metroservice.dk | Questions about how the metro actually works, and only those |
+
+*This table is filled in before the semester starts. If you are reading it with
+the names still missing, ask at the first lecture and it is a bug in this
+repository.*
+
+The Product Owner appears first because organisation access runs through them:
+they invite you to `aau-cph-sw5` and without that nothing else in this guide
+works.
+
+---
+
 ## 1. Access
 
 | What | How | Blocked without it |
@@ -73,25 +95,40 @@ history that should not be there.
 - [ ] I can run the project locally and its tests pass
 - [ ] I have met the other teams on my product, by name
 - [ ] I know who my Product Owner is and how to reach the Metro contact
+- [ ] I have read [14-assessment.md](14-assessment.md) and I know what the examination assesses
 
 ## 6. Track-specific notes
 
-**Front-end track (DSNSWCB520).** Two of the four products carry both a web
-surface and a mobile surface. Whether a mobile-only deliverable satisfies the
-module's learning objectives is a question for your supervisor, not for the team,
-and it is worth asking in week one rather than week fourteen.
+**Read this first: teams work full-stack.** Your project module is either
+*Kompleks Front-end Software* (DSNSWCB520) or *Kompleks Back-end Software*
+(DSNSWCB521), and in practice almost every team builds across the whole product
+rather than splitting along that line. The `track:` label on an item says where
+the work sits in the system, not who is allowed to do it, and it is there to help
+a team distribute work and spot dependencies between teams.
 
-**Back-end track (DSNSWCB521).** You own the contracts. Every product has at least
-one interface that another team consumes, and the contract items are scheduled in
+What follows from that is the one thing to take seriously: at an oral examination
+you answer for what you personally did and can justify. So make sure that over the
+semester you have worked on, and can defend, something substantial on the side of
+the system your module names. Nobody will stop you doing the rest, and you should.
+
+**Front-end work.** Every product has a control-room web surface. Case A and
+Case B also have an Android surface for stewards, and Case B is the most
+back-end-heavy of the running products: if the interface is what you came for, know
+that before you choose it.
+
+**Back-end work.** Somebody owns the contracts. Every product has at least one
+interface that another team consumes, and the contract items are scheduled in
 sprint 1 for that reason. Publish it early even if it is wrong; a wrong contract
 that everyone can see is worth more than a right one in your head.
 
-**Machine Intelligence (DSNSWCB513).** Three products have items that involve
-ranking, classification or forecasting. No external model is supplied. You build
-and measure the method yourself, against a labelled set and a deterministic
-baseline, and the measurement is the deliverable as much as the method is. Start
-with the baseline. It guarantees a working product and it is the control condition
-you compare against.
+**Machine Intelligence (DSNSWCB513).** In Case A this is now a Must, not a
+garnish: `MET-A-019` turns a free-text incident description into a ranked
+shortlist of scenarios, and `MET-A-020` measures it against expert-labelled
+examples. Cases B and C carry optional forecasting and drafting items. No external
+model is supplied. You build and measure the method yourself, against a labelled
+set and a deterministic baseline, and the measurement is the deliverable as much
+as the method is. Start with the baseline. It guarantees a working product and it
+is the control condition you compare against.
 
 ## 7. What good looks like by the end of sprint 1
 

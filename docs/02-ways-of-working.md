@@ -97,8 +97,14 @@ compounds daily.
 ## Definition of Ready
 
 An item may be pulled into a sprint when it has a user story, acceptance criteria
-that can each fail, a size below L or an explicit plan to split it, named
-dependencies, and no unanswered Blocking question.
+that can each fail, a size of at most L, named dependencies, and no unanswered
+Blocking question. An L item may be pulled if the team can say at planning why it
+is not being split; XL and XXL are split first.
+
+The sprint number on an item is a proposal about sequence, not permission to pull
+it. Blocked items carry sprint numbers too, because the product needs them; they
+wait for an answer. [CONVENTIONS.md](../CONVENTIONS.md) is the authority on both
+definitions, and this page repeats them for convenience only.
 
 ## Definition of Done
 
@@ -110,9 +116,16 @@ documentation that the change makes wrong, corrected in the same pull request.
 
 ## Working with Metro Service
 
-Metro attends the sprint reviews. Between reviews, questions go through the AAU
-Product Owner rather than directly, so that the domain expert receives one
-coherent list rather than nine.
+Metro attends the sprint reviews. Between reviews there is one address, and Metro
+named it themselves in August: **Karsten Juhl, kju@metroservice.dk**, the domain
+expert. Write to him directly when a question is blocking your sprint, and copy
+your AAU Product Owner so that the answer reaches the item and the other teams.
+
+Anything that is not a question about the domain, and in particular anything about
+scope, priority, access, data or the collaboration itself, goes to the AAU Product
+Owner and not to Metro. Other Metro names appear in the backlog headers as the
+people who own each case inside Metro Service; they are not there as an address
+for student questions.
 
 Ask early. A question asked in September changes what gets built; the same
 question asked in November corrects something already built.
