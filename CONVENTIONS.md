@@ -88,8 +88,20 @@ glance what came from them and what did not.
 ## Definition of Ready
 
 An item may be pulled into a sprint when it has a user story, acceptance criteria
-that meet the standard above, a size below L or a plan to split it, named
-dependencies, and no unanswered blocking question.
+that meet the standard above, a size of at most L, named dependencies, and no
+unanswered blocking question. An L item may be pulled, but the team says at
+planning why it is not being split; an XL or XXL item is split first, always.
+
+The **Sprint** column in each backlog is a proposal about sequence, not a
+decision that the item is pullable in that sprint. `MET-C-002` is proposed for
+sprint 2 and is XL: what enters sprint 2 is the set of items it is split into at
+the refinement before that sprint. Read the column as "not before this sprint".
+
+An item that is Blocked may still appear in a proposed sprint and in a minimum
+demonstrable product, because the product is incomplete without it. It cannot be
+pulled until the question is answered. If a blocked item is the next thing your
+team needs, that is the signal to raise it at the sprint review rather than to
+start it quietly.
 
 ## Definition of Done
 

@@ -12,14 +12,15 @@ that applies to more than one team lives here.
 
 ## Start here
 
-If you are a student and it is the first week, read these three, in this order.
-They take about forty minutes together and they will save you a fortnight.
+If you are a student and it is the first week, read these four, in this order.
+They take about fifty minutes together and they will save you a fortnight.
 
 | | |
 |---|---|
 | [CONTRIBUTING.md](CONTRIBUTING.md) | What to do on day one, how work flows from backlog item to merged code |
-| [docs/01-onboarding.md](docs/01-onboarding.md) | Accounts, access, environment, and the first-week checklist for your track |
+| [docs/01-onboarding.md](docs/01-onboarding.md) | Who is who, accounts, access, environment, and the first-week checklist |
 | [docs/02-ways-of-working.md](docs/02-ways-of-working.md) | The sprint rhythm, the ceremonies, and how teams that share a codebase avoid ruining each other's week |
+| [docs/14-assessment.md](docs/14-assessment.md) | What the examination assesses, and how the board relates to the report |
 
 ## The backlogs
 
@@ -66,6 +67,7 @@ size scale means, and what makes an acceptance criterion acceptable.
 | [12-glossary.md](docs/12-glossary.md) | Every time a Dane says a word you do not know |
 | [13-handover.md](docs/13-handover.md) | Sprint 1, so you know what you are aiming at, and sprint 7, when you write it |
 | [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md) | Now, and if anything goes wrong |
+| [14-assessment.md](docs/14-assessment.md) | Week one, and again when you start the report. What you are graded on. |
 | [00-what-we-inherited.md](docs/00-what-we-inherited.md) | If you want to know why these guides say what they say |
 
 ## Templates
@@ -77,8 +79,9 @@ size scale means, and what makes an acceptance criterion acceptable.
 | [templates/retrospective.md](templates/retrospective.md) | The team's own retrospective |
 | [templates/handover-note.md](templates/handover-note.md) | The final deliverable to the 2027 cohort |
 
-Issue and pull request templates live in `.github/` and are installed into every
-product repository by `import/push-templates.sh`.
+Issue and pull request templates are not in this repository. They live in the
+`.github/` directory of each product repository, installed there by
+`import/push-templates.sh`.
 
 ---
 
