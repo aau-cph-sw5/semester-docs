@@ -2,6 +2,8 @@
 
 *Manning og patruljering, previously STW-lokalisering*  ·  5th Semester, BSc Software Engineering, AAU Copenhagen  ·  Autumn 2026
 
+Teams on this product work full-stack. The `track:` labels say where an item sits in the system, not who may pick it up; the split of this case is back-end heavy, with an Android surface for stewards and a control-room dashboard. See [onboarding, section 6](https://github.com/aau-cph-sw5/semester-docs/blob/main/docs/01-onboarding.md).
+
 A compliance-grade system documenting that stewards are present and active during night operation, against a contractual requirement that trains are manned at least 70 percent of their running time and that every station level is patrolled at least once per rolling sixty minutes, with a verifiable real-time and historical record.
 
 > **Renamed by Metro Service in August 2026.** The case was called *Steward Localization*; it is now *Manning/patrol requirement*, and this repository moved from `case-b-steward-localization` to `case-b-manning-patrol`. The old URL redirects, but update your remote if you cloned before the change.
@@ -27,7 +29,10 @@ A compliance-grade system documenting that stewards are present and active durin
 - `MET-B-008` Overdue and at-risk station indication
 - `MET-B-018` Steward transparency view
 - `MET-B-020` Append-only event store for presence and patrol records
-- `MET-B-023` Roles, access control and synthetic identity fixtures
+- `MET-B-023` Roles, access control and synthetic identity fixtures **(blocked)**
+
+Items marked **(blocked)** are in this set because the product is incomplete without them, not because they can be pulled today: they need an answer from Metro first. The rule in CONTRIBUTING.md stands, and a blocked item that your team needs next is something to raise at the sprint review.
+
 
 **3 items are blocked** on an answer from Metro Service, down from eight before Metro's August answers. They are not dead: read them, and bring the question to the next sprint review. Filter the issues by `status:blocked` to see them, and by `needs:metro` for everything that still carries a question for Metro.
 
