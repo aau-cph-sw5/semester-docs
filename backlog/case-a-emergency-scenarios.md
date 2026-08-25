@@ -13,7 +13,9 @@ A shared situational-awareness tool that lets the control room select the active
 
 ## At a glance
 
-**28 items.** Priority: 13 Must, 13 Should, 2 Could. Readiness: 21 ready, 5 needing refinement, 2 blocked on Metro input. Size: 7×S, 12×M, 9×L.
+**28 items.** Priority: 15 Must, 12 Should, 1 Could. Readiness: 21 ready, 5 needing refinement, 2 blocked on Metro input. Size: 7×S, 12×M, 9×L.
+
+> **Updated 25 August 2026.** `MET-A-019` and `MET-A-020` were raised to Must: with Case D deprioritised by Metro, the scenario-suggestion feature and its measured evaluation are what connect this semester's project work to the Machine Intelligence course.
 
 > **Updated 24 August 2026** against Metro Service's answers. The alternative-operation material for both lines has arrived, which releases `MET-A-001` and with it the whole case. The steward device is a Samsung Galaxy A52 to A55 on Android 14 or 15, operators type in Danish, and the role model is settled: CCR activates scenarios, DOM approves restrictions, Operation Administration amends the catalogue.
 
@@ -56,8 +58,8 @@ A shared situational-awareness tool that lets the control room select the active
 | `MET-A-016` | Operator sends a dispatch instruction to selected stewards | A-EP5 | M | Should | Ready | 4 |
 | `MET-A-017` | Steward acknowledges a received instruction | A-EP5 | S | Should | Ready | 4 |
 | `MET-A-018` | Notification delivery decision and implementation for dispatch | A-EP5 | M | Should | Blocked | 4 |
-| `MET-A-019` | Scenario suggestion from a free-text incident description | A-EP6 | L | Should | Needs refinement | 4 |
-| `MET-A-020` | Evaluation set and measured accuracy for scenario suggestion | A-EP6 | M | Could | Blocked | 5 |
+| `MET-A-019` | Scenario suggestion from a free-text incident description | A-EP6 | L | Must | Needs refinement | 4 |
+| `MET-A-020` | Evaluation set and measured accuracy for scenario suggestion | A-EP6 | M | Must | Blocked | 5 |
 | `MET-A-021` | Response checklist for the active scenario | A-EP6 | M | Should | Needs refinement | 4 |
 | `MET-A-022` | Dispatch message drafting from scenario templates | A-EP6 | S | Could | Needs refinement | - |
 | `MET-A-023` | Append-only incident event log with actor and timestamp | A-EP7 | L | Must | Ready | 2 |
@@ -262,7 +264,7 @@ Source stories A1.1 and A2.3 state this requirement in one clause each. Behind i
 
 **As a Steward, I want a clear graphical overview of the active scenario on my phone, so that I no longer have to navigate a document that is hard to read during a stressful situation.**
 
-Source story A2.1. Its criterion, that the required stations be identifiable within a few seconds, is a human-factors outcome rather than a system property. It cannot be asserted by the team that built the screen, so it has been moved to a measured test in A-028 and the system-level properties are specified here.
+Source story A2.1. Its criterion, that the required stations be identifiable within a few seconds, is a human-factors outcome rather than a system property. It cannot be asserted by the team that built the screen, so it has been moved to a measured test in A-027 and the system-level properties are specified here.
 
 **Acceptance criteria**
 
@@ -275,7 +277,7 @@ Source story A2.1. Its criterion, that the required stations be identifiable wit
 **Dependencies**
 
 - Requires A-003 and A-005.
-- Design input needed from A-028.
+- Design input needed from A-027.
 
 **Open questions**
 
@@ -511,11 +513,11 @@ The source document assumes instructions reach stewards but says nothing about h
 
 ### MET-A-019 · Scenario suggestion from a free-text incident description
 
-`size:L` `prio:Should` `status:Needs refinement` `track:backend` `type:feature` `sprint:4`
+`size:L` `prio:Must` `status:Needs refinement` `track:backend` `type:feature` `sprint:4`
 
 **As a Control Room Operator, I want to describe an incident in my own words and be offered a ranked shortlist of candidate scenarios, so that I can activate the right plan faster.**
 
-Source story A5.1, restated. The original specified an assistant returning a ranked shortlist, which any prompt satisfies and which no examiner can assess. Since no external model is supplied, the students implement the classifier themselves and measure it against A-020. The operator confirms before anything is activated, so the failure mode of a wrong suggestion is a wasted second rather than a wrong plan.
+Source story A5.1, restated, and raised to Must in August 2026. Metro has said that Case D, the case the AAU evaluation called the best fit for the Machine Intelligence course, is the one they do not prioritise. This item and A-020 are therefore what connects the semester's project work to that course, and they are scheduled accordingly. The original story specified an assistant returning a ranked shortlist, which any prompt satisfies and which no examiner can assess. Since no external model is supplied, the students implement the classifier themselves and measure it against A-020. The operator confirms before anything is activated, so the failure mode of a wrong suggestion is a wasted second rather than a wrong plan.
 
 **Acceptance criteria**
 
@@ -538,11 +540,13 @@ Source story A5.1, restated. The original specified an assistant returning a ran
 
 ### MET-A-020 · Evaluation set and measured accuracy for scenario suggestion
 
-`size:M` `prio:Could` `status:Blocked` `track:backend` `type:evaluation` `sprint:5`
+`size:M` `prio:Must` `status:Blocked` `track:backend` `type:evaluation` `sprint:5`
 
 **As a supervisor, I want the scenario suggestion measured against expert-labelled examples, so that a claim about it can be examined rather than demonstrated.**
 
-Nothing in the source document asks for a measured result anywhere, which is why the AI stories as written are satisfied by a decorative implementation. This item is what makes the work assessable under the Machine Intelligence course and it is also what produces comparable data across teams.
+Nothing in the source document asks for a measured result anywhere, which is why the AI stories as written are satisfied by a decorative implementation. This item is what makes the work assessable under the Machine Intelligence course and it is also what produces comparable data across teams. Raised to Must in August 2026 for the same reason as A-019.
+
+If the labelled examples do not arrive, the item is not abandoned. The team builds the evaluation set itself, from the scenario material, and reports it as a self-labelled set with the weaker claim that implies. That fallback is worse than expert labels and should be stated as such at the review, but it keeps the measurement in the semester.
 
 **Acceptance criteria**
 
@@ -558,7 +562,7 @@ Nothing in the source document asks for a measured result anywhere, which is why
 
 **Open questions**
 
-- *[Blocking · Metro]* Would the domain expert provide 40 to 60 short incident descriptions with the scenario each should trigger? This is the single most valuable artefact for the Machine Intelligence part of the semester and it does not exist today.
+- *[Blocking · Metro]* Would the domain expert provide 40 to 60 short incident descriptions with the scenario each should trigger? This is the single most valuable artefact for the Machine Intelligence part of the semester and it does not exist today. It is the one request to convert into a dated commitment at the August session: with Case D deprioritised, the measurable machine-intelligence content of the whole semester rests on this item.
 
 *Source: AAU-added.*
 
@@ -579,7 +583,7 @@ Source story A5.2. Whether checklists exist today as written artefacts determine
 
 **Dependencies**
 
-- Requires A-002 and A-024.
+- Requires A-002 and A-023.
 
 **Open questions**
 
@@ -618,6 +622,8 @@ Source story A5.3, restated as template composition rather than generation, sinc
 **As an Operations Administrator, I want every scenario activation, staffing event and message recorded with a timestamp and an actor, so that the incident can be analysed afterwards.**
 
 Source story A6.1, raised from Should to Must. Eight other items on this backlog write to this log, so it cannot be built late without those items being rewritten. Raising the priority is an AAU judgement and should be confirmed with Metro rather than assumed.
+
+The requirement is that the record of what happened during an incident cannot be silently altered after the fact. An append-only event log is the candidate design and the one the criteria below are written against. A team that prefers a different mechanism, an audited mutable table with a change history for instance, may propose it, provided the architecture decision record argues why it meets the same requirement. What is not open is shipping a design in which a record can be changed and leave no trace.
 
 **Acceptance criteria**
 
