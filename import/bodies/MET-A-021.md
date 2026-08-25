@@ -19,7 +19,7 @@ Source story A5.2. Whether checklists exist today as written artefacts determine
 
 ## Dependencies
 
-- Requires A-002 and A-024.
+- Requires A-002 and A-023.
 
 ## Open questions
 

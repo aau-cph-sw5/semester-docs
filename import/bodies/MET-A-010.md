@@ -8,7 +8,7 @@ As a Steward, I want a clear graphical overview of the active scenario on my pho
 
 ## Context
 
-Source story A2.1. Its criterion, that the required stations be identifiable within a few seconds, is a human-factors outcome rather than a system property. It cannot be asserted by the team that built the screen, so it has been moved to a measured test in A-028 and the system-level properties are specified here.
+Source story A2.1. Its criterion, that the required stations be identifiable within a few seconds, is a human-factors outcome rather than a system property. It cannot be asserted by the team that built the screen, so it has been moved to a measured test in A-027 and the system-level properties are specified here.
 
 ## Acceptance criteria
 
@@ -21,7 +21,7 @@ Source story A2.1. Its criterion, that the required stations be identifiable wit
 ## Dependencies
 
 - Requires A-003 and A-005.
-- Design input needed from A-028.
+- Design input needed from A-027.
 
 ## Open questions
 

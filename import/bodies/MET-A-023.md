@@ -10,6 +10,8 @@ As an Operations Administrator, I want every scenario activation, staffing event
 
 Source story A6.1, raised from Should to Must. Eight other items on this backlog write to this log, so it cannot be built late without those items being rewritten. Raising the priority is an AAU judgement and should be confirmed with Metro rather than assumed.
 
+The requirement is that the record of what happened during an incident cannot be silently altered after the fact. An append-only event log is the candidate design and the one the criteria below are written against. A team that prefers a different mechanism, an audited mutable table with a change history for instance, may propose it, provided the architecture decision record argues why it meets the same requirement. What is not open is shipping a design in which a record can be changed and leave no trace.
+
 ## Acceptance criteria
 
 - [ ] Every state-changing action in the product writes an event carrying type, actor, subject, payload and server timestamp.
