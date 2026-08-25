@@ -17,8 +17,8 @@ MET-A-015	A	Steward status transitions	case:A,epic:A-EP4,track:mobile,type:featu
 MET-A-016	A	Operator sends a dispatch instruction to selected stewards	case:A,epic:A-EP5,track:backend,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-A-016.md
 MET-A-017	A	Steward acknowledges a received instruction	case:A,epic:A-EP5,track:mobile,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 4	bodies/MET-A-017.md
 MET-A-018	A	Notification delivery decision and implementation for dispatch	case:A,epic:A-EP5,track:mobile,type:tech,size:M,prio:should,status:blocked,needs:metro,provenance:aau-added	Sprint 4	bodies/MET-A-018.md
-MET-A-019	A	Scenario suggestion from a free-text incident description	case:A,epic:A-EP6,track:backend,type:feature,size:L,prio:should,status:refine,provenance:metro	Sprint 4	bodies/MET-A-019.md
-MET-A-020	A	Evaluation set and measured accuracy for scenario suggestion	case:A,epic:A-EP6,track:backend,type:evaluation,size:M,prio:could,status:blocked,needs:metro,provenance:aau-added	Sprint 5	bodies/MET-A-020.md
+MET-A-019	A	Scenario suggestion from a free-text incident description	case:A,epic:A-EP6,track:backend,type:feature,size:L,prio:must,status:refine,provenance:metro	Sprint 4	bodies/MET-A-019.md
+MET-A-020	A	Evaluation set and measured accuracy for scenario suggestion	case:A,epic:A-EP6,track:backend,type:evaluation,size:M,prio:must,status:blocked,needs:metro,provenance:aau-added	Sprint 5	bodies/MET-A-020.md
 MET-A-021	A	Response checklist for the active scenario	case:A,epic:A-EP6,track:frontend,type:feature,size:M,prio:should,status:refine,needs:metro,provenance:metro	Sprint 4	bodies/MET-A-021.md
 MET-A-022	A	Dispatch message drafting from scenario templates	case:A,epic:A-EP6,track:frontend,type:feature,size:S,prio:could,status:refine,provenance:metro	-	bodies/MET-A-022.md
 MET-A-023	A	Append-only incident event log with actor and timestamp	case:A,epic:A-EP7,track:backend,type:tech,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 2	bodies/MET-A-023.md
