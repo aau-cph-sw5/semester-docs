@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP6: Decision support: classification and checklists
 
-**Size** L · **Priority** Should · **Readiness** Needs refinement · **Track** backend · **Type** feature · **Proposed sprint** 4
+**Size** L · **Priority** Must · **Readiness** Needs refinement · **Track** backend · **Type** feature · **Proposed sprint** 4
 
 ## User story
 
@@ -8,7 +8,7 @@ As a Control Room Operator, I want to describe an incident in my own words and b
 
 ## Context
 
-Source story A5.1, restated. The original specified an assistant returning a ranked shortlist, which any prompt satisfies and which no examiner can assess. Since no external model is supplied, the students implement the classifier themselves and measure it against A-020. The operator confirms before anything is activated, so the failure mode of a wrong suggestion is a wasted second rather than a wrong plan.
+Source story A5.1, restated, and raised to Must in August 2026. Metro has said that Case D, the case the AAU evaluation called the best fit for the Machine Intelligence course, is the one they do not prioritise. This item and A-020 are therefore what connects the semester's project work to that course, and they are scheduled accordingly. The original story specified an assistant returning a ranked shortlist, which any prompt satisfies and which no examiner can assess. Since no external model is supplied, the students implement the classifier themselves and measure it against A-020. The operator confirms before anything is activated, so the failure mode of a wrong suggestion is a wasted second rather than a wrong plan.
 
 ## Acceptance criteria
 

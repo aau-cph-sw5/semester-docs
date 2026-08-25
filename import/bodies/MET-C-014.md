@@ -16,7 +16,7 @@ Source stories C5.1, C5.2 and C5.3, combined into one item. They are three signa
 - [ ] The Duty Operations Manager confirms the cause is resolved and signs, moving it to control-room cancellation.
 - [ ] The Control Room Supervisor signs to take it out of force.
 - [ ] Each step is refused unless the previous one is complete, enforced by the state machine of C-002.
-- [ ] A restriction out of force no longer appears in the register of C-017.
+- [ ] A restriction out of force no longer appears in the register of C-016.
 
 ## Dependencies
 

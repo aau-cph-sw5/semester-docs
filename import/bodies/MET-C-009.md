@@ -12,7 +12,7 @@ Source story C2.2. This transition is the one that changes what operators must d
 
 ## Acceptance criteria
 
-- [ ] Signing for implementation moves the restriction into force and adds it to the register of C-017.
+- [ ] Signing for implementation moves the restriction into force and adds it to the register of C-016.
 - [ ] Every operator who must read and sign it is determined at this moment and recorded.
 - [ ] The transition notifies those operators per C-019.
 - [ ] A restriction in force cannot be edited, only cancelled.
@@ -23,7 +23,7 @@ Source story C2.2. This transition is the one that changes what operators must d
 
 ## Open questions
 
-- **[Blocking · Metro]** When a restriction comes into force, is the set of operators required to sign it fixed at that moment, or does it include operators who join a later shift? The answer changes what the completeness view of C-016 can ever show as complete.
+- **[Blocking · Metro]** When a restriction comes into force, is the set of operators required to sign it fixed at that moment, or does it include operators who join a later shift? The answer changes what the completeness view of C-013 can ever show as complete.
 
 ## Provenance
 

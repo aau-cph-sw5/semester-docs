@@ -8,7 +8,7 @@ As a Control Room Operator, I want to filter and sort Destination IDs by route a
 
 ## Context
 
-Source story D2.1. This is also the fallback the ranking work of D-017 depends on: when no confident match exists, the operator is returned here rather than given a poor ranking.
+Source story D2.1. This is also the fallback the ranking work of D-010 depends on: when no confident match exists, the operator is returned here rather than given a poor ranking.
 
 ## Acceptance criteria
 

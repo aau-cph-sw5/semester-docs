@@ -13,13 +13,14 @@ Source story B6.1. Together with B-005 this is where the ethical condition Metro
 ## Acceptance criteria
 
 - [ ] The view lists every category of data stored about the steward, in plain language rather than field names.
-- [ ] The retention period for each category is stated.
+- [ ] The retention period for each category is stated, and a period Metro has not yet confirmed is shown as provisional rather than as an agreed figure.
 - [ ] The steward can see who is able to access each category.
 - [ ] The view is reachable from the main screen without a search.
 
 ## Dependencies
 
-- Requires B-019.
+- Requires B-020 for the categories of record.
+- The retention values come from B-019, which is blocked on Metro. This item does not wait for it: until the periods are confirmed the view marks them provisional, and B-019 replaces the provisional values when it lands.
 
 ## Open questions
 
