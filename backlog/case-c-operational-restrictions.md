@@ -19,7 +19,7 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 
 > **Updated 24 August 2026.** The written procedure has arrived, with the forms it operates on: the restriction register for each line, the signature sheet, and a worked restriction per line. That releases `MET-C-001`, `MET-C-004`, whose field set the worked restrictions now define, and, with Metro's answer that no regulatory standard applies, `MET-C-003`. Note that the two lines do not share a numbering convention.
 
-**Minimum demonstrable product**, meaning the 7 Must items proposed for sprints 1 to 3: `MET-C-001`, `MET-C-002`, `MET-C-003`, `MET-C-004`, `MET-C-006`, `MET-C-021`, `MET-C-022`. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
+**Minimum demonstrable product**, meaning the 7 Must items proposed for sprints 1 to 3: `MET-C-001`, `MET-C-002`, `MET-C-003`, `MET-C-004`, `MET-C-006`, `MET-C-021`, `MET-C-022` (blocked). Items marked (blocked) are in the set because the product is incomplete without them, not because they can be pulled: they need an answer from Metro first, and the rule in CONTRIBUTING.md stands. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
 ## Epics
 
@@ -280,7 +280,7 @@ Source story C2.2. This transition is the one that changes what operators must d
 
 **Acceptance criteria**
 
-- [ ] Signing for implementation moves the restriction into force and adds it to the register of C-017.
+- [ ] Signing for implementation moves the restriction into force and adds it to the register of C-016.
 - [ ] Every operator who must read and sign it is determined at this moment and recorded.
 - [ ] The transition notifies those operators per C-019.
 - [ ] A restriction in force cannot be edited, only cancelled.
@@ -291,7 +291,7 @@ Source story C2.2. This transition is the one that changes what operators must d
 
 **Open questions**
 
-- *[Blocking · Metro]* When a restriction comes into force, is the set of operators required to sign it fixed at that moment, or does it include operators who join a later shift? The answer changes what the completeness view of C-016 can ever show as complete.
+- *[Blocking · Metro]* When a restriction comes into force, is the set of operators required to sign it fixed at that moment, or does it include operators who join a later shift? The answer changes what the completeness view of C-013 can ever show as complete.
 
 *Source: C2.2*
 
@@ -419,7 +419,7 @@ Source stories C5.1, C5.2 and C5.3, combined into one item. They are three signa
 - [ ] The Duty Operations Manager confirms the cause is resolved and signs, moving it to control-room cancellation.
 - [ ] The Control Room Supervisor signs to take it out of force.
 - [ ] Each step is refused unless the previous one is complete, enforced by the state machine of C-002.
-- [ ] A restriction out of force no longer appears in the register of C-017.
+- [ ] A restriction out of force no longer appears in the register of C-016.
 
 **Dependencies**
 
@@ -438,6 +438,8 @@ Source stories C5.1, C5.2 and C5.3, combined into one item. They are three signa
 **As a Signer who signed the implementation, I want to confirm my awareness of the cancellation, so that the cancellation record matches the implementation record.**
 
 Source story C5.4, and the item with the most awkward failure mode in the case. A cancellation completes only when everyone who signed implementation has confirmed, which means one absent, transferred or departed colleague leaves a restriction permanently incomplete. The source story does not address this and the paper process must have some answer.
+
+This item is scheduled for the last delivery sprint and is blocked on that answer, which is a bad combination. **If the question is still unanswered at the sprint 4 review, do not wait.** Build the documented override in the fourth acceptance criterion as the design: a named role, the duty operations manager on the evidence of the register, may record a confirmation as unobtainable, with a reason and the identity of the person who could not be reached, and the cancellation completes. Metro's answer, when it comes, then adjusts who holds that authority rather than whether the path exists. State the assumption in the architecture decision record so the examiner can see it was a choice.
 
 **Acceptance criteria**
 

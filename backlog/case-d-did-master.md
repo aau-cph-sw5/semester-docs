@@ -17,7 +17,7 @@ Decision support for assigning Destination IDs. The operator describes the inten
 
 **24 items.** Priority: 14 Must, 8 Should, 2 Could. Readiness: 13 ready, 0 needing refinement, 11 blocked on Metro input. Size: 2×S, 15×M, 7×L.
 
-**Minimum demonstrable product**, meaning the 8 Must items proposed for sprints 1 to 3: `MET-D-001`, `MET-D-002`, `MET-D-003`, `MET-D-006`, `MET-D-007`, `MET-D-008`, `MET-D-009`, `MET-D-013`. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
+**Minimum demonstrable product**, meaning the 8 Must items proposed for sprints 1 to 3: `MET-D-001` (blocked), `MET-D-002` (blocked), `MET-D-003` (blocked), `MET-D-006`, `MET-D-007` (blocked), `MET-D-008`, `MET-D-009`, `MET-D-013`. Items marked (blocked) are in the set because the product is incomplete without them, not because they can be pulled: they need an answer from Metro first, and the rule in CONTRIBUTING.md stands. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
 ## Epics
 
@@ -195,7 +195,7 @@ The second half of source story D1.2. The extension is named as 2030, so the req
 
 **As a Control Room Operator, I want to filter and sort Destination IDs by route attributes, so that I can narrow hundreds of options down to the relevant few.**
 
-Source story D2.1. This is also the fallback the ranking work of D-017 depends on: when no confident match exists, the operator is returned here rather than given a poor ranking.
+Source story D2.1. This is also the fallback the ranking work of D-010 depends on: when no confident match exists, the operator is returned here rather than given a poor ranking.
 
 **Acceptance criteria**
 

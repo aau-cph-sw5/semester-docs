@@ -19,7 +19,7 @@ A compliance-grade system documenting that stewards are present and active durin
 
 > **Updated 24 August 2026** against Metro Service's answers and the revised user stories. Five of the eight blocked items are released. What changed most: presence is now recorded by scanning a bar or QR code rather than inferred from a beacon (`MET-B-001`, `MET-B-004`), the seventy percent target is a proportion of running time rather than an instantaneous reading (`MET-B-011`), and the compliance report must be exported to Metro's Databricks lakehouse (`MET-B-013`).
 
-**Minimum demonstrable product**, meaning the 9 Must items proposed for sprints 1 to 3: `MET-B-001`, `MET-B-002`, `MET-B-003`, `MET-B-004`, `MET-B-007`, `MET-B-008`, `MET-B-018`, `MET-B-020`, `MET-B-023`. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
+**Minimum demonstrable product**, meaning the 9 Must items proposed for sprints 1 to 3: `MET-B-001`, `MET-B-002`, `MET-B-003`, `MET-B-004`, `MET-B-007`, `MET-B-008`, `MET-B-018`, `MET-B-020`, `MET-B-023` (blocked). Items marked (blocked) are in the set because the product is incomplete without them, not because they can be pulled: they need an answer from Metro first, and the rule in CONTRIBUTING.md stands. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
 ## Epics
 
@@ -133,8 +133,7 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 **Dependencies**
 
-- Blocked on the station layout data from Metro.
-- Requires B-002.
+- Requires B-002. The station data this item was blocked on arrived with Metro's August material.
 
 **Open questions**
 
@@ -324,7 +323,7 @@ Source story B3.2, raised from Won't to Should. As a Won't it removes the interf
 
 **Open questions**
 
-- *[Answered · Metro, August 2026]* Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so train beacons (B-024) become one implementation behind this interface rather than the precondition for the feature.
+- *[Answered · Metro, August 2026]* Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so a future train-beacon deployment, which source story B3.2 anticipated, becomes one implementation behind this interface rather than the precondition for the feature.
 - *[Shaping · Metro]* How many trains run at night per line, and where does the list of running trains come from today? The abstraction can be built and demonstrated against a synthetic fleet, so this shapes the fixture rather than stopping the item.
 
 *Source: B3.2, priority raised from Won't to Should by AAU*
@@ -520,13 +519,14 @@ Source story B6.1. Together with B-005 this is where the ethical condition Metro
 **Acceptance criteria**
 
 - [ ] The view lists every category of data stored about the steward, in plain language rather than field names.
-- [ ] The retention period for each category is stated.
+- [ ] The retention period for each category is stated, and a period Metro has not yet confirmed is shown as provisional rather than as an agreed figure.
 - [ ] The steward can see who is able to access each category.
 - [ ] The view is reachable from the main screen without a search.
 
 **Dependencies**
 
-- Requires B-019.
+- Requires B-020 for the categories of record.
+- The retention values come from B-019, which is blocked on Metro. This item does not wait for it: until the periods are confirmed the view marks them provisional, and B-019 replaces the provisional values when it lands.
 
 **Open questions**
 
@@ -575,6 +575,7 @@ Source story B6.3. The statement is a student deliverable and a genuine piece of
 - [ ] Every claim in it corresponds to behaviour implemented in B-018, B-019 and B-021, with the item referenced.
 - [ ] The statement records that the semester ran on synthetic identities and states what would change with real data.
 - [ ] The statement is reviewed by the Metro contact before the final report.
+- [ ] The statement contains a short section arguing whether a system that documents the presence of named night staff should exist at all, and on what conditions, rather than only how to build it acceptably. Disagreement inside the team is recorded rather than resolved.
 
 **Dependencies**
 
@@ -598,6 +599,8 @@ Source story B6.3. The statement is a student deliverable and a genuine piece of
 **As an Operations Administrator, I want the underlying record to be append-only, so that the compliance evidence cannot be quietly altered.**
 
 Half of source story B7.1, brought forward. Tamper evidence cannot be added to a mutable store afterwards without rebuilding everything above it, so the storage decision is taken in the second sprint rather than the fifth.
+
+The requirement is that compliance evidence cannot be quietly altered. An append-only event store is the candidate design, and the criteria below are written against it. A team that argues for a different mechanism in an architecture decision record may use it, provided the record meets the same requirement. Shipping a store in which a record can be changed without trace is what is ruled out.
 
 **Acceptance criteria**
 
