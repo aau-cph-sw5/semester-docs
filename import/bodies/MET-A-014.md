@@ -22,7 +22,7 @@ Source story A3.2.
 
 ## Open questions
 
-- **[Shaping · Metro]** May a steward mark a station covered while not physically at it, for example when covering two adjacent stations? The answer determines whether coverage is evidence or intent.
+- **[Answered · Metro, August 2026]** May a steward mark a station covered while not physically at it? **No. The steward must be physically present at the station to perform the tasks.** Coverage is therefore evidence of presence rather than a statement of intent, and the interface must offer no way to mark a station from elsewhere. A steward responsible for two adjacent stations is covering one at a time, which is precisely what the en-route state in A-012 exists to show.
 
 ## Provenance
 

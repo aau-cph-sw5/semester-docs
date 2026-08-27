@@ -22,7 +22,7 @@ A handheld that reconnects after a period underground will deliver observations 
 
 ## Open questions
 
-- **[Shaping · Metro]** If an observation arrives after the compliance report for that night has been produced, should the report be reissued or should the late record be excluded? This is a governance question rather than a technical one.
+- **[Answered · Metro, August 2026]** If an observation arrives after that night's report has been produced, is the report reissued or the record excluded? **Reissued.** The report is therefore a versioned artefact rather than a file produced once: a reissue supersedes the earlier version, the earlier version stays retrievable, and the record shows which observation caused the reissue. That is a stronger requirement than the original acceptance criterion and the right one for a document a contracting authority relies on.
 
 ## Provenance
 

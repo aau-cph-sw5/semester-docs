@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP3: Shared situational overview
 
-**Size** S · **Priority** Should · **Readiness** Needs refinement · **Track** backend · **Type** feature · **Proposed sprint** 3
+**Size** S · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 3
 
 ## User story
 
@@ -22,7 +22,7 @@ The source document treats gap indication as a presentation concern inside A1.2 
 
 ## Open questions
 
-- **[Shaping · Metro]** If a steward reports en route to a station, does that station count as covered for the purpose of the operator overview? The source stories do not say.
+- **[Answered · Metro, August 2026]** Does a station with a steward en route count as covered? **No. Three states, given as colours: a vacant station is red, a manned station is green, a station with a steward on route is yellow.** The four derived states in the acceptance criteria already carry this and the answer fixes their meaning: en route is its own state, so it neither counts towards coverage nor reads as a gap, and the operator sees evidence and intent side by side rather than one number. One confirmation is outstanding, because the short answer reads *Covert* while the colour scheme describes three distinct states; the colour scheme is what we have taken as the answer.
 
 ## Provenance
 

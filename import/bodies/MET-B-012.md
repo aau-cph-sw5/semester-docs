@@ -24,7 +24,8 @@ Source story B4.1. The dashboard is the product as far as the control room is co
 
 ## Open questions
 
-- **[Shaping · Metro]** What screen does the control room use for this, and would the dashboard be displayed continuously or opened when needed?
+- **[Shaping · Metro]** If the dashboard is opened only when needed, how should the control room learn that a station is at risk? A ten-minute warning on a closed screen is not a warning, and the alternative paths are a desktop notification, a radio call from whoever is watching, or accepting that the indicator is consulted rather than delivered.
+- **[Answered · Metro, August 2026]** What screen does the control room use, and is the dashboard continuous or opened when needed? **A standard working PC, opened when needed.** The same answer as A-004, with the same consequence: no wallboard holds the picture, so the dashboard must be legible from a cold open, must show what happened while nobody was looking rather than only the present state, and cannot raise an alarm through a colour change alone. It also puts a question back to Metro, which is how the control room is meant to learn that a station is at risk while the dashboard is closed.
 
 ## Provenance
 

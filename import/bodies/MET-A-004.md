@@ -26,7 +26,7 @@ Source stories A1.1 and A2.3 state this requirement in one clause each. Behind i
 
 ## Open questions
 
-- **[Shaping · Metro]** How many concurrent users would the control-room side have, and is the control room using a desktop or a wall display? A wall display and a desktop are different products.
+- **[Answered · Metro, August 2026]** How many concurrent users, and desktop or wall display? **Four operators per control room, five in rush hour, each opening the material on their own desktop. There is no screen or smartboard in either control room.** The control-room client is a desktop application for at most five concurrent users per line. Two consequences. Real-time propagation is a correctness requirement rather than a scaling one, so this item can be built with the simplest mechanism that is provably consistent, and load testing is not where the effort belongs. And there is no shared display carrying the common picture, so each operator's own screen must be legible on its own, and anything that must be noticed cannot rely on a colour changing on a screen nobody is watching.
 
 ## Provenance
 

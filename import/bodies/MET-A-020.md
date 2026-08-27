@@ -26,7 +26,7 @@ If the labelled examples do not arrive, the item is not abandoned. The team buil
 
 ## Open questions
 
-- **[Blocking · Metro]** Would the domain expert provide 40 to 60 short incident descriptions with the scenario each should trigger? This is the single most valuable artefact for the Machine Intelligence part of the semester and it does not exist today. It is the one request to convert into a dated commitment at the August session: with Case D deprioritised, the measurable machine-intelligence content of the whole semester rests on this item.
+- **[Blocking · Metro]** Would the domain expert provide 40 to 60 short incident descriptions with the scenario each should trigger? **Metro's answer in August was that this item could be deleted. We have kept it and put the request back.** The reason is worth stating plainly. A-019 produces a scenario suggestion from a Danish free-text description. Without labelled descriptions that suggestion can be built and demonstrated but not measured, and no other item in the semester can be measured against real Metro material either: Case D is deprioritised and Case B has no historical night-shift record to evaluate a forecast against, per B-015. Deleting this item does not remove work; it removes the only place where the students can establish whether what they built is any good. The reply proposes a cheaper form of the request: the students draft candidate descriptions from the fallback scenario documents and Metro corrects and labels them, which is a review of sixty lines rather than an authoring task. The item stays blocked until this is settled.
 
 ## Provenance
 

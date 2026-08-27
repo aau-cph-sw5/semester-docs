@@ -24,7 +24,7 @@ The consequence of A-005. Once the client can act offline, it accumulates state 
 
 ## Open questions
 
-- **[Detail · either]** If a steward reports a position against a scenario that has since been stood down, should that report be discarded, or retained for the incident log?
+- **[Answered · Metro, August 2026]** Should a report made against a scenario that has since been stood down be discarded or retained? **Retained, ideally.** A position report is a fact about where a steward was, so the scenario it was made against is metadata on the report rather than a condition of its validity. The rule to implement: the report is written to the incident log with its scenario, and the live coverage view ignores reports whose scenario is no longer active.
 
 ## Provenance
 

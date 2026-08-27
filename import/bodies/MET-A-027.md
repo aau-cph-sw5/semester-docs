@@ -24,7 +24,8 @@ Source story A2.1 requires that required stations be identifiable within a few s
 
 ## Open questions
 
-- **[Shaping · Metro]** Could two or three stewards take part in a 30-minute session at the university or over Teams? Testing with students instead is possible but weaker, and we would report it as such.
+- **[Detail · Metro]** A date for the steward session. Metro has agreed to it in principle, and the evaluation is proposed for sprint 5, so the date needs fixing while the sprint can still be planned around it.
+- **[Answered · Metro, August 2026]** Could two or three stewards take part in a 30-minute session? **Yes, it should be possible.** The usability evaluation can therefore be run with real stewards rather than students standing in for them, which is the difference between a result worth reporting and a result that has to be caveated in the report. What remains is a date, which the reply asks for, so that the session lands inside sprint 5 rather than being arranged after it.
 
 ## Provenance
 

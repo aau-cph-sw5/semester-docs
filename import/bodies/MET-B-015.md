@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP6: Coverage analytics and forecasting
 
-**Size** L · **Priority** Could · **Readiness** Needs refinement · **Track** backend · **Type** feature · **Proposed sprint** unscheduled
+**Size** L · **Priority** Could · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** unscheduled
 
 ## User story
 
@@ -24,7 +24,7 @@ Source story B5.2, restated. This is the strongest Machine Intelligence content 
 
 ## Open questions
 
-- **[Shaping · Metro]** Does any historical record of night-shift coverage exist in any form, even informal? Without it the forecast can only be trained and tested on simulated shifts, which we would state as a limitation.
+- **[Answered · Metro, August 2026]** Does any historical record of night-shift coverage exist? **No. There are no records of this.** The forecast can therefore be trained and tested only on simulated shifts, and that limitation belongs in the report rather than being left for a reader to discover. Two consequences for the semester. This item and B-016 stay Could and stay outside the minimum demonstrable product. And with no real data here and Case D deprioritised, the scenario suggestion in A-019 and its evaluation in A-020 are the only place in the whole semester where a measured result against real Metro material remains possible, which is why A-020 has been kept rather than deleted.
 
 ## Provenance
 
