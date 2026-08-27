@@ -9,13 +9,15 @@ A compliance-grade system documenting that stewards are present and active durin
 | **AAU evaluation** | Recommended by the AAU evaluation, conditional on a written ethical-framing agreement. Metro has confirmed that an ethical guidelines document will follow after the summer vacation. |
 | **Metro contact** | Ian Røpke (IAR@metroservice.dk); domain expert Karsten Juhl (KJU@metroservice.dk) |
 | **Surfaces** | Android handheld for stewards, web dashboard for control room and operations, back-end analytics and reporting. |
-| **Data readiness** | Station list for both lines received in August, stating for each station whether it has a platform level only or a platform and a concourse level: 46 stations, 76 patrol levels. Records are opened and closed by scanning a bar or QR code, at a station level and inside a train; BLE is corroborating context rather than evidence. Still outstanding: the list of trains on both lines. |
+| **Data readiness** | Station list for both lines received in August, stating for each station whether it has a platform level only or a platform and a concourse level: 46 stations, 76 patrol levels. Records are opened and closed by scanning a bar or QR code, at a station level and inside a train; BLE is corroborating context rather than evidence. The fleet is now known: 42 trains on M1/M2, permanent vehicle IDs 001 to 042, and 39 on M3/M4, IDs 001 to 039. Patrol round durations received: two minutes for any platform, seven for a concourse level, held per station so that Metro can adjust them. |
 
 > This product runs on synthetic steward identities for the whole semester. No personal data is transferred to AAU, so no Data Processing Agreement sits on the critical path. The ethical and technical content of the case is unaffected.
 
 ## At a glance
 
-**24 items.** Priority: 15 Must, 7 Should, 2 Could. Readiness: 16 ready, 5 needing refinement, 3 blocked on Metro input. Size: 3×S, 13×M, 8×L.
+**24 items.** Priority: 15 Must, 7 Should, 2 Could. Readiness: 19 ready, 2 needing refinement, 3 blocked on Metro input. Size: 3×S, 13×M, 8×L.
+
+> **Updated 27 August 2026.** Metro answered every remaining Case B question except the ethical guidelines. A platform is patrolled in two minutes and a concourse level in seven, held per station rather than as a constant, against a ten-minute train interval: nine minutes of work in a ten-minute cycle is the slack the whole case runs on, which is why travel time belongs in the at-risk rule of `MET-B-008` and the gap detection of `MET-B-014`. The re-scan interval is configuration with six minutes as the default, a missed re-scan continues the manning record with the gap flagged, a late observation reissues that night's report, and the number of trains in service is set before the shift and must be stored with it, since it is the denominator of the seventy percent figure. No historical night-shift record exists in any form, so the forecast in `MET-B-015` can be trained and tested only on simulated shifts and stays outside the minimum demonstrable product.
 
 > **Updated 24 August 2026** against Metro Service's answers and the revised user stories. Five of the eight blocked items are released. What changed most: presence is now recorded by scanning a bar or QR code rather than inferred from a beacon (`MET-B-001`, `MET-B-004`), the seventy percent target is a proportion of running time rather than an instantaneous reading (`MET-B-011`), and the compliance report must be exported to Metro's Databricks lakehouse (`MET-B-013`).
 
@@ -118,7 +120,7 @@ Source story B1.1 bundles beacon detection, station identification and registrat
 
 ### MET-B-003 · Station reference dataset with concourse and platform areas
 
-`size:M` `prio:Must` `status:Needs refinement` `track:backend` `type:data` `sprint:2`
+`size:M` `prio:Must` `status:Ready` `track:backend` `type:data` `sprint:2`
 
 **As a developer on this product, I want every station in scope modelled with its separate patrol areas, so that coverage can be computed for concourse and platform independently as the requirement demands.**
 
@@ -138,8 +140,8 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 **Open questions**
 
 - *[Answered · Metro, August 2026]* The station layout data is required before this item can start. **Received**: a per-line list stating for each station whether it has a platform level only or a platform and a concourse level. M1/M2 has 22 stations of which 7 have a concourse, M3/M4 has 24 stations of which 23 do: 46 stations and 76 patrol levels in total. Each station carries a short code (VAN, KGN, CPH) which is the natural primary key. The beacon-to-station mapping was answered "not relevant", which follows from the move to bar and QR codes; what the dataset needs instead is a code identifier per level and per train.
-- *[Shaping · Metro]* How long does a full patrol round take in practice? The station and level counts are now known; the round duration is not, and it is what decides whether the hourly requirement is comfortable or tight.
-- *[Shaping · Metro]* The list of trains on both lines, which the revised user stories name as required data for the case. A synthetic fleet of the right order of magnitude lets the work proceed, so this shapes the fixture rather than stopping the item.
+- *[Answered · Metro, August 2026]* How long does a full patrol round take in practice? **Two minutes for any platform. Seven minutes for a concourse level, and Metro would prefer a per-station value it can adjust as it gains experience with the requirement.** Round duration is therefore reference data held on the station level, with seven minutes as the default, not a constant in the code. The arithmetic Metro attaches to it is the design constraint of the whole case: seven plus two is nine minutes against a ten-minute train interval, so a full station consumes almost exactly the time between trains. One minute of slack is what the schedule has, which is why the at-risk rule in B-008 and the gap detection in B-014 must reason about travel time rather than only about time elapsed since the last patrol.
+- *[Answered · Metro, August 2026]* The list of trains on both lines. **Received as counts and identifier ranges: M1/M2 has 42 trains, permanent vehicle IDs 001 to 042; M3/M4 has 39, IDs 001 to 039.** The fixture is now real rather than synthetic, 81 trains in total. The identifier is per line rather than per fleet, so a train key must carry the line to be unique, and the seed data should say so explicitly. Which of them run on a given night is a separate matter, answered under B-010.
 
 *Source: B2.1*
 
@@ -149,7 +151,7 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 ### MET-B-004 · Presence and patrol record capture
 
-`size:M` `prio:Must` `status:Needs refinement` `track:backend` `type:feature` `sprint:2`
+`size:M` `prio:Must` `status:Ready` `track:backend` `type:feature` `sprint:2`
 
 **As a Steward, I want my presence at a station recorded, so that the work I do is documented without a radio call or a paper form.**
 
@@ -170,8 +172,9 @@ Source story B1.1, revised by Metro Service in August 2026, which now specifies 
 
 **Open questions**
 
-- *[Shaping · Metro]* What is the mandatory re-scan interval on a train? The revised story leaves it as *x* minutes. Held as configuration, the item can be built and demonstrated before the value is fixed.
-- *[Shaping · Metro]* Does a missed re-scan end the manning record at the last valid scan, or continue it and flag the gap? The two produce different compliance figures for the same night.
+- *[Shaping · Metro]* What closes a manning record when the steward never scans Stop, for example at the end of a shift or after a maximum duration? Metro has confirmed that a missed re-scan continues the record, so without a closing rule an unclosed record counts as manning for the rest of the night.
+- *[Answered · Metro, August 2026]* What is the mandatory re-scan interval on a train? **Metro asks for it to be an open input field, and six minutes otherwise.** Held as configuration, which is what the item already assumed, with six minutes as the default. One addition: the interval in force must be recorded on the shift, so that a compliance figure can be recomputed later against the value that actually applied rather than against today's setting.
+- *[Answered · Metro, August 2026]* Does a missed re-scan end the manning record, or continue it and flag the gap? **Continue it, and flag the gap.** Metro's reason is operational: the steward may be occupied by a troubling passenger while the train is still manned. So a missed scan does not close the record, the manning time is not interrupted for the compliance calculation, and the gap is recorded and shown. Two things follow: the flag belongs in the exported report as well as on the dashboard, and there must be a rule for when a record closes without a Stop scan, because a record that never ends counts as manning for the rest of the night. That rule has been put back to Metro.
 
 *Source: B1.1, revised August 2026*
 
@@ -215,7 +218,7 @@ A handheld that reconnects after a period underground will deliver observations 
 
 **Open questions**
 
-- *[Shaping · Metro]* If an observation arrives after the compliance report for that night has been produced, should the report be reissued or should the late record be excluded? This is a governance question rather than a technical one.
+- *[Answered · Metro, August 2026]* If an observation arrives after that night's report has been produced, is the report reissued or the record excluded? **Reissued.** The report is therefore a versioned artefact rather than a file produced once: a reissue supersedes the earlier version, the earlier version stays retrievable, and the record shows which observation caused the reissue. That is a stronger requirement than the original acceptance criterion and the right one for a document a contracting authority relies on.
 
 *Source: AAU-added.*
 
@@ -271,7 +274,7 @@ Source stories B2.1 and B4.1 both ask for a flag without saying what triggers it
 
 **Open questions**
 
-- *[Shaping · Metro]* How long before a station falls out of compliance should it be flagged as at risk? Ten minutes and thirty minutes imply different working practices.
+- *[Answered · Metro, August 2026]* How long before a station falls out of compliance should it be flagged as at risk? **Ten minutes, because Metro can get a steward to the location within that time.** The threshold is an operational response time rather than a display preference, which is what makes the indicator worth acting on. It is also one train interval, so the flag appears at the last point where a steward can still reach the station on the next train.
 
 *Source: B2.1, B4.1*
 
@@ -324,7 +327,7 @@ Source story B3.2, raised from Won't to Should. As a Won't it removes the interf
 **Open questions**
 
 - *[Answered · Metro, August 2026]* Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so a future train-beacon deployment, which source story B3.2 anticipated, becomes one implementation behind this interface rather than the precondition for the feature.
-- *[Shaping · Metro]* How many trains run at night per line, and where does the list of running trains come from today? The abstraction can be built and demonstrated against a synthetic fleet, so this shapes the fixture rather than stopping the item.
+- *[Answered · Metro, August 2026]* How many trains run at night, and where does the list come from? **The number varies with the track work done that night and with the day and time of year, and Metro needs to set it before the shift starts.** The expected number of trains in service is therefore shift configuration entered in advance, not something derived from a running-train feed. It is also the denominator of the 70 percent figure in B-011, so it must be stored with the shift and shown on the report. A compliance figure whose denominator was not recorded cannot be recomputed, and a figure that cannot be recomputed is not evidence.
 
 *Source: B3.2, priority raised from Won't to Should by AAU*
 
@@ -380,7 +383,8 @@ Source story B4.1. The dashboard is the product as far as the control room is co
 
 **Open questions**
 
-- *[Shaping · Metro]* What screen does the control room use for this, and would the dashboard be displayed continuously or opened when needed?
+- *[Shaping · Metro]* If the dashboard is opened only when needed, how should the control room learn that a station is at risk? A ten-minute warning on a closed screen is not a warning, and the alternative paths are a desktop notification, a radio call from whoever is watching, or accepting that the indicator is consulted rather than delivered.
+- *[Answered · Metro, August 2026]* What screen does the control room use, and is the dashboard continuous or opened when needed? **A standard working PC, opened when needed.** The same answer as A-004, with the same consequence: no wallboard holds the picture, so the dashboard must be legible from a cold open, must show what happened while nobody was looking rather than only the present state, and cannot raise an alarm through a colour change alone. It also puts a question back to Metro, which is how the control room is meant to learn that a station is at risk while the dashboard is closed.
 
 *Source: B4.1*
 
@@ -439,7 +443,7 @@ Source story B5.1, restated. The original assigned this to an assistant; with no
 
 ### MET-B-015 · End-of-shift compliance forecast from partial-shift data
 
-`size:L` `prio:Could` `status:Needs refinement` `track:backend` `type:feature`
+`size:L` `prio:Could` `status:Ready` `track:backend` `type:feature`
 
 **As a Control Room Operator, I want an estimate of the risk of missing each target by the end of the shift, so that I can intervene rather than react.**
 
@@ -459,7 +463,7 @@ Source story B5.2, restated. This is the strongest Machine Intelligence content 
 
 **Open questions**
 
-- *[Shaping · Metro]* Does any historical record of night-shift coverage exist in any form, even informal? Without it the forecast can only be trained and tested on simulated shifts, which we would state as a limitation.
+- *[Answered · Metro, August 2026]* Does any historical record of night-shift coverage exist? **No. There are no records of this.** The forecast can therefore be trained and tested only on simulated shifts, and that limitation belongs in the report rather than being left for a reader to discover. Two consequences for the semester. This item and B-016 stay Could and stay outside the minimum demonstrable product. And with no real data here and Case D deprioritised, the scenario suggestion in A-019 and its evaluation in A-020 are the only place in the whole semester where a measured result against real Metro material remains possible, which is why A-020 has been kept rather than deleted.
 
 *Source: B5.2*
 
