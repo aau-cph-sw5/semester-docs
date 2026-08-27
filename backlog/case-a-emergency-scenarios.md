@@ -13,7 +13,9 @@ A shared situational-awareness tool that lets the control room select the active
 
 ## At a glance
 
-**28 items.** Priority: 15 Must, 12 Should, 1 Could. Readiness: 21 ready, 5 needing refinement, 2 blocked on Metro input. Size: 7×S, 12×M, 9×L.
+**28 items.** Priority: 15 Must, 11 Should, 1 Could, 1 Won't. Readiness: 23 ready, 3 needing refinement, 1 blocked on Metro input, 1 dropped. Size: 7×S, 12×M, 9×L.
+
+> **Updated 27 August 2026.** Metro answered the remaining Case A questions. `MET-A-018` is released: the steward phones are enrolled in SOTI, running on Metro's own server, so the application can be distributed and notification permission granted centrally. `MET-A-021` is dropped at Metro's request, since no response checklists exist and authoring safety-relevant checklists is not work to give students. `MET-A-020` is not dropped: Metro proposed deleting the evaluation set, and it has been kept and the request restated, because with Case D deprioritised and no historical data in Case B it is the only place in the semester where a result can be measured against real Metro material. Two answers reach past their own item. The control room works from ordinary desktops, four operators and five in rush hour, with no wall display in either room. And operators share one control-room login, which leaves the incident log in `MET-A-023` attributing actions to a position rather than to a person unless Metro decides otherwise.
 
 > **Updated 25 August 2026.** `MET-A-019` and `MET-A-020` were raised to Must: with Case D deprioritised by Metro, the scenario-suggestion feature and its measured evaluation are what connect this semester's project work to the Machine Intelligence course.
 
@@ -95,6 +97,7 @@ The source document states that no dataset exists and that the only assets are t
 
 **Open questions**
 
+- *[Answered · Metro, August 2026]* How is a scenario actually run today, end to end? **Described for both lines, and the two differ.** On M1/M2 the control room opens an Articulate Rise page when starting an emergency scenario, decides the strategy, and instructs the stewards, who open the same page on their own phones and enter the instructed fallback scenario number in the form `xx-xx-STW`. On M3/M4 the control room downloads the Minerva (D4) PowerPoint and runs it in presentation mode, the Control Room Supervisor decides the scenario and tells the other operators, the train dispatcher instructs the stewards over the radio, and the stewards open a second Articulate Rise page and choose the scenario there. Three things follow. The instruction travels by radio and no system carries it, so A-016 fills a gap rather than replacing a channel. The steward view is already addressed by an identifier that names the role, `xx-xx-STW`, so the scenario key and its role suffix are Metro's own convention and should be adopted rather than invented. And today's control-room artefact is a document opened per incident, not a live view, which means shared live state between the two roles is new capability rather than a reimplementation of something that exists.
 - *[Answered · Metro, August 2026]* The alternative-operation material, required before this item can start. **Received, and more than was asked for.** M1/M2 is documented scenario by scenario: five fallback scenarios named for the section they cover (VAN-FB, FOR-KN, KHC-ISB, KHC-LGP, KHC) and *Hold Alle Tog*, each in a control-room and a steward view, most with separate steward-task and steward-placement documents. M3/M4 came as one presentation, *ATD, Alternativ TogDrift v2.1*. A station list for both lines came with it. Three things to read off the material before modelling: a scenario is defined by a section of line rather than by an incident type; the same scenario is a different document per role, so role is a property of the view rather than a filter over one text; and steward placement and steward tasks are separate concerns in Metro's own material.
 - *[Answered in part · Metro, August 2026]* How many scenarios exist per line? Six for M1/M2 in the material supplied, one general document for M3/M4. How often a scenario is activated in practice is still unanswered.
 
@@ -123,7 +126,7 @@ Follows A-001. The scenarios are reference data maintained by Metro operations, 
 
 **Open questions**
 
-- *[Shaping · Metro]* Who in Metro operations owns scenario content, and how are scenarios corrected or added today?
+- *[Answered · Metro, August 2026]* Who owns scenario content, and how is it corrected or added today? **The two Operations Departments own it, one per line, and the practice differs between them.** On M1/M2 that ownership holds. On M3/M4 the control-room presentation was produced by a Control Room Supervisor and the steward training page by the Steward trainer, so one scenario exists today as two artefacts, in two tools, maintained by two people. Three things follow for the schema. Ownership is a property of the line, not of the product. The control-room view and the steward view of one scenario must be editable by different people while remaining versioned as one scenario rather than two documents. And the seed loader should ingest both current artefacts, because removing that duplication is the clearest operational gain this product can offer.
 
 *Source: AAU-added, implied by the absence of a dataset in the source material.*
 
@@ -176,7 +179,7 @@ Source story A1.1, restated with testable criteria. The original criterion, that
 
 **Open questions**
 
-- *[Shaping · Metro]* Can two scenarios be active at the same time on the same line, for example a primary scenario and a local one at a single station? The source stories assume one.
+- *[Answered · Metro, August 2026]* Can two scenarios be active at once on the same line? **Not normal practice, and not excluded.** The way Metro describes it happening is the operative detail: one incident starts, a scenario is run, and a second problem arises at a different location while the first is still running. The control room then runs trains through as much of the line as the incident locations and the available Destination IDs allow. So the model must permit more than one active scenario on a line, and the second normally arrives during the first rather than with it. Two design consequences: activating a scenario must not implicitly stand down what is already active, and where two active scenarios both name a station, the steward's assignment must resolve deterministically and the rule must be visible on the screen rather than buried in the server.
 
 *Source: A1.1*
 
@@ -201,7 +204,7 @@ Source story A1.2. Its criteria used the terms clearly marked and visually disti
 
 **Open questions**
 
-- *[Shaping · Metro]* What roles exist at a station during alternative operation, and can one steward satisfy more than one role at once?
+- *[Answered · Metro, August 2026]* What roles exist at a station, and can one steward hold more than one? **The steward is one role carrying a task list, and Metro has now written the list.** Be present and visible on the platform; inform passengers about train direction, changes of train and replacement services such as buses; manage passenger behaviour, for example spreading passengers along the platform rather than at one door; solve technical problems such as blocked train doors and platform screen doors; and set escalator direction to control the influx. A second steward may work at street level, slowing or preventing access to the platform to prevent overcrowding. The model that fits is a station assignment carrying a placement, platform or street level, and a task list, rather than a set of named roles a steward is matched against. It also confirms that one station can require two stewards at different placements, which is what Metro's own separation of steward-placement and steward-task documents already implied.
 
 *Source: A1.2*
 
@@ -254,7 +257,7 @@ Source stories A1.1 and A2.3 state this requirement in one clause each. Behind i
 
 **Open questions**
 
-- *[Shaping · Metro]* How many concurrent users would the control-room side have, and is the control room using a desktop or a wall display? A wall display and a desktop are different products.
+- *[Answered · Metro, August 2026]* How many concurrent users, and desktop or wall display? **Four operators per control room, five in rush hour, each opening the material on their own desktop. There is no screen or smartboard in either control room.** The control-room client is a desktop application for at most five concurrent users per line. Two consequences. Real-time propagation is a correctness requirement rather than a scaling one, so this item can be built with the simplest mechanism that is provably consistent, and load testing is not where the effort belongs. And there is no shared display carrying the common picture, so each operator's own screen must be legible on its own, and anything that must be noticed cannot rely on a colour changing on a screen nobody is watching.
 
 *Source: A1.1, A2.3*
 
@@ -313,7 +316,7 @@ Source stories A2.2 and A2.3 combined at the presentation layer. The transport t
 
 ### MET-A-012 · Coverage gap rules and derived station state
 
-`size:S` `prio:Should` `status:Needs refinement` `track:backend` `type:feature` `sprint:3`
+`size:S` `prio:Should` `status:Ready` `track:backend` `type:feature` `sprint:3`
 
 **As a Control Room Operator, I want a required station with no steward to be identified as a gap, so that I can see what still needs staffing without working it out myself.**
 
@@ -331,7 +334,7 @@ The source document treats gap indication as a presentation concern inside A1.2 
 
 **Open questions**
 
-- *[Shaping · Metro]* If a steward reports en route to a station, does that station count as covered for the purpose of the operator overview? The source stories do not say.
+- *[Answered · Metro, August 2026]* Does a station with a steward en route count as covered? **No. Three states, given as colours: a vacant station is red, a manned station is green, a station with a steward on route is yellow.** The four derived states in the acceptance criteria already carry this and the answer fixes their meaning: en route is its own state, so it neither counts towards coverage nor reads as a gap, and the operator sees evidence and intent side by side rather than one number. One confirmation is outstanding, because the short answer reads *Covert* while the colour scheme describes three distinct states; the colour scheme is what we have taken as the answer.
 
 *Source: A1.2, A2.2*
 
@@ -357,7 +360,8 @@ Source story A2.1 requires that required stations be identifiable within a few s
 
 **Open questions**
 
-- *[Shaping · Metro]* Could two or three stewards take part in a 30-minute session at the university or over Teams? Testing with students instead is possible but weaker, and we would report it as such.
+- *[Detail · Metro]* A date for the steward session. Metro has agreed to it in principle, and the evaluation is proposed for sprint 5, so the date needs fixing while the sprint can still be planned around it.
+- *[Answered · Metro, August 2026]* Could two or three stewards take part in a 30-minute session? **Yes, it should be possible.** The usability evaluation can therefore be run with real stewards rather than students standing in for them, which is the difference between a result worth reporting and a result that has to be caveated in the report. What remains is a date, which the reply asks for, so that the session lands inside sprint 5 rather than being arranged after it.
 
 *Source: AAU-added, derived from A2.1*
 
@@ -407,7 +411,7 @@ Source story A3.2.
 
 **Open questions**
 
-- *[Shaping · Metro]* May a steward mark a station covered while not physically at it, for example when covering two adjacent stations? The answer determines whether coverage is evidence or intent.
+- *[Answered · Metro, August 2026]* May a steward mark a station covered while not physically at it? **No. The steward must be physically present at the station to perform the tasks.** Coverage is therefore evidence of presence rather than a statement of intent, and the interface must offer no way to mark a station from elsewhere. A steward responsible for two adjacent stations is covering one at a time, which is precisely what the en-route state in A-012 exists to show.
 
 *Source: A3.2*
 
@@ -456,7 +460,7 @@ Source story A4.1. The original criterion, that the instruction be clearly visib
 
 **Open questions**
 
-- *[Shaping · Metro]* Is there an existing radio or briefing protocol that instructions should follow in form or vocabulary? Free text and a structured message are different products.
+- *[Answered · Metro, August 2026]* Is there an existing protocol the instructions should follow? **No. Free text is preferred, and standard texts may come later**: if the function proves useful Metro will develop standard messages to copy in. The item is built as free text. The one decision it forces now is to give the message record a template reference from the start, so that a catalogue of standard texts can be added later without a schema change or a client release. A-022 stays a Could and becomes the place that catalogue would live.
 
 *Source: A4.1*
 
@@ -482,7 +486,7 @@ Source story A4.2.
 
 ### MET-A-018 · Notification delivery decision and implementation for dispatch
 
-`size:M` `prio:Should` `status:Blocked` `track:mobile` `type:tech` `sprint:4`
+`size:M` `prio:Should` `status:Ready` `track:mobile` `type:tech` `sprint:4`
 
 **As a Steward, I want to be alerted when an instruction arrives even if the application is not in the foreground, so that I do not miss a dispatch while doing something else.**
 
@@ -502,8 +506,8 @@ The source document assumes instructions reach stewards but says nothing about h
 
 **Open questions**
 
-- *[Answered in part · Metro, August 2026]* Which device, and is a push service reachable? The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble.
-- *[Blocking · Metro]* Are the phones enrolled in a mobile device management system, and if so which one? That decides whether an app can be pushed to them at all, whether notification permissions can be granted centrally, and whether a managed configuration can be read at install time. It is a one-sentence answer and the only thing still stopping this item.
+- *[Answered · Metro, August 2026]* Which device, and is a push service reachable? The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble.
+- *[Answered · Metro, August 2026]* Are the phones enrolled in a mobile device management system, and which one? **Yes. SOTI, running on Metro's own server.** That closes the item. An application can be distributed to the fleet without the public store, notification permission can be granted centrally rather than requested from a steward at the worst possible moment, and a managed configuration can be read at install time. Two further consequences. Firebase Cloud Messaging remains available, since the handsets are consumer Samsung phones with Google services, so enrolment constrains distribution rather than transport. And managed configuration is the natural carrier of a device's steward identity, which matters because Metro's answer on A-025 is that stewards do not log in at all.
 
 *Source: AAU-added.*
 
@@ -562,13 +566,13 @@ If the labelled examples do not arrive, the item is not abandoned. The team buil
 
 **Open questions**
 
-- *[Blocking · Metro]* Would the domain expert provide 40 to 60 short incident descriptions with the scenario each should trigger? This is the single most valuable artefact for the Machine Intelligence part of the semester and it does not exist today. It is the one request to convert into a dated commitment at the August session: with Case D deprioritised, the measurable machine-intelligence content of the whole semester rests on this item.
+- *[Blocking · Metro]* Would the domain expert provide 40 to 60 short incident descriptions with the scenario each should trigger? **Metro's answer in August was that this item could be deleted. We have kept it and put the request back.** The reason is worth stating plainly. A-019 produces a scenario suggestion from a Danish free-text description. Without labelled descriptions that suggestion can be built and demonstrated but not measured, and no other item in the semester can be measured against real Metro material either: Case D is deprioritised and Case B has no historical night-shift record to evaluate a forecast against, per B-015. Deleting this item does not remove work; it removes the only place where the students can establish whether what they built is any good. The reply proposes a cheaper form of the request: the students draft candidate descriptions from the fallback scenario documents and Metro corrects and labels them, which is a review of sixty lines rather than an authoring task. The item stays blocked until this is settled.
 
 *Source: AAU-added.*
 
 ### MET-A-021 · Response checklist for the active scenario
 
-`size:M` `prio:Should` `status:Needs refinement` `track:frontend` `type:feature` `sprint:4`
+`size:M` `prio:Won't` `status:Dropped` `track:frontend` `type:feature` `sprint:none`
 
 **As a Control Room Operator, I want the response checklist for the active scenario available to me, so that I do not miss steps under pressure.**
 
@@ -587,7 +591,7 @@ Source story A5.2. Whether checklists exist today as written artefacts determine
 
 **Open questions**
 
-- *[Blocking · Metro]* Do response checklists exist today, in the presentations or elsewhere, or would the students be designing them? This changes the item from data modelling to content design.
+- *[Answered · Metro, August 2026]* Do response checklists exist today, or would the students design them? **No, and Metro's answer is that the item could be deleted. Accepted.** Response checklists are content Metro does not hold, and asking students to author safety-relevant checklists for an operational railway is not defensible coursework. The item moves to Won't and its issue is closed with the reason recorded. Nothing else in the backlog depends on it.
 
 *Source: A5.2*
 
@@ -639,7 +643,7 @@ The requirement is that the record of what happened during an incident cannot be
 
 **Open questions**
 
-- *[Shaping · Metro]* Is the raised priority accepted? The alternative is that the log arrives late and several completed items have to be reopened to write to it.
+- *[Answered · Metro, August 2026]* Is the raised priority accepted? **Yes.** The append-only incident log stays a Must in sprint 2, which is the whole point of the raise: everything that has to write to the log is built after the log exists, rather than reopened later to write to it.
 
 *Source: A6.1, priority raised from Should to Must by AAU*
 
@@ -664,7 +668,7 @@ The second half of source story A6.1. Reading the log is a separate deliverable 
 
 **Open questions**
 
-- *[Shaping · Metro]* Who reviews incidents afterwards, and what do they need to answer? The persona list names an Operations Analyst but no story describes their work.
+- *[Answered · Metro, August 2026]* Who reviews incidents afterwards, and what do they need to answer? **The Operations Analyst, and the answer restores the persona.** Metro analyses any incident that was not handled in the most efficient way, and the analyst reads logs from many systems to assemble the entire picture. Two consequences. The analyst is a real read-only actor after all, so the permission matrix in A-026 gains a fourth role with read access to the log and no ability to act on a scenario; the note under A-026 saying the persona should be dropped is superseded. And this timeline is one input among several rather than the record, so it must be correlatable with systems this product does not touch: one time reference, an explicit clock source, and an export a person can align with another system's output.
 
 *Source: A6.1*
 
@@ -693,7 +697,7 @@ Source story A7.1. The story covers routing to the right interface. Enforcement 
 
 **Open questions**
 
-- *[Detail · Metro]* Is there an existing identity system whose role model the students should mirror, even without integrating with it?
+- *[Answered in part · Metro, August 2026]* Is there an existing identity system whose role model the students should mirror? **The intention is three levels of access, and two of them are not personal.** Operators sign in on a common control-room login, stewards start the app with no login at all, and an administrator or analyst account is separate. That is buildable, and it carries one consequence to settle now rather than discover late: an event log whose actor is a shared operator account records what was done and not who decided it, which is exactly what the post-incident review in A-024 needs. Either the log attributes actions to a position and Metro accepts that, or the control room needs individual logins. The question has been put back. On the steward side the absence of a login is workable rather than a gap, because SOTI managed configuration can carry the device's steward identity, so the record stays attributable without asking a steward to type a password on a platform at night.
 
 *Source: A7.1*
 
@@ -718,7 +722,7 @@ Every case in the source document requires access control and none of them state
 
 **Open questions**
 
-- *[Answered · Metro, August 2026]* What roles exist and who may do what? **"All in CCR can activate a scenario. DOM can approve a restriction. Operation administration can amend the catalogue."** Four actors to model: CCR (the control room, collectively) activates and stands down scenarios; DOM, the *vagthavende driftschef*, approves restrictions; Operation Administration amends the catalogue; the Steward reports position, acknowledges instructions and records patrols. Two things follow. Scenario activation is not individually restricted, which fits an emergency where hesitation costs more than a wrong activation, so the model should not invent an approval step operational practice does not have. And the separation that does exist is between acting and amending the catalogue. The Operations Analyst named in the source stories has no act attached to them and should be dropped rather than given invented permissions.
+- *[Answered · Metro, August 2026]* What roles exist and who may do what? **"All in CCR can activate a scenario. DOM can approve a restriction. Operation administration can amend the catalogue."** Four actors to model: CCR (the control room, collectively) activates and stands down scenarios; DOM, the *vagthavende driftschef*, approves restrictions; Operation Administration amends the catalogue; the Steward reports position, acknowledges instructions and records patrols. Two things follow. Scenario activation is not individually restricted, which fits an emergency where hesitation costs more than a wrong activation, so the model should not invent an approval step operational practice does not have. And the separation that does exist is between acting and amending the catalogue. The Operations Analyst named in the source stories had no act attached to them in that answer. Metro's August reply on A-024 supplies one: the analyst reviews incidents afterwards, reading logs from several systems. The matrix therefore carries a fifth actor with read access to the incident log and no power to act on a scenario.
 
 *Source: A7.1*
 
@@ -749,7 +753,7 @@ No story in the source document addresses loss of connectivity, and the words of
 
 **Open questions**
 
-- *[Shaping · Metro]* After how long should a locally held scenario be treated as untrustworthy? A steward underground for 40 minutes is a normal case, so the answer is not obvious.
+- *[Answered in part · Metro, August 2026]* After how long should a locally held scenario be treated as untrustworthy? **Answered in part, and the sentence stops mid-way.** What Metro gives us is the useful half: the radio stays in use throughout, so the steward remains aware of the general situation and the phone is not the only channel. A stale local copy is therefore a degradation rather than a hazard, which argues for showing the age of the held scenario prominently and continuing to work, not for locking the screen. The threshold itself is still unanswered and has been put back to Metro.
 
 *Source: AAU-added. The most consequential gap in the source document.*
 
@@ -775,7 +779,7 @@ The consequence of A-005. Once the client can act offline, it accumulates state 
 
 **Open questions**
 
-- *[Detail · either]* If a steward reports a position against a scenario that has since been stood down, should that report be discarded, or retained for the incident log?
+- *[Answered · Metro, August 2026]* Should a report made against a scenario that has since been stood down be discarded or retained? **Retained, ideally.** A position report is a fact about where a steward was, so the scenario it was made against is metadata on the report rather than a condition of its validity. The rule to implement: the report is written to the incident log with its scenario, and the live coverage view ignores reports whose scenario is no longer active.
 
 *Source: AAU-added.*
 
