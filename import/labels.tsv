@@ -64,9 +64,11 @@ size:XXL	E57373	Larger than a sprint. Must be split before it can enter a sprint
 prio:must	B71C1C	Required for a viable prototype
 prio:should	EF6C00	Important, not vital for the first usable version
 prio:could	9E9E9E	Desirable if capacity allows
+prio:wont	616161	Out of scope for this cohort, kept for traceability
 status:ready	2E7D32	Can be pulled into a sprint as written.
 status:refine	F9A825	Needs an AAU refinement pass. No external input required.
 status:blocked	C62828	Cannot be completed without input from Metro Service.
+status:dropped	424242	Removed from scope by Metro Service, kept for traceability
 needs:metro	6A1B9A	Carries an open question for Metro Service
 provenance:metro	455A64	Derived from a Metro user story
 provenance:aau-added	00695C	Added by AAU; no source story exists

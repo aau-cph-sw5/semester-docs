@@ -10,16 +10,16 @@ MET-A-008	A	M	Must	frontend	Ready	A-EP2	Sprint 2
 MET-A-009	A	S	Should	frontend	Ready	A-EP2	Sprint 3
 MET-A-010	A	L	Must	mobile	Needs refinement	A-EP3	Sprint 3
 MET-A-011	A	L	Must	frontend	Ready	A-EP3	Sprint 3
-MET-A-012	A	S	Should	backend	Needs refinement	A-EP3	Sprint 3
+MET-A-012	A	S	Should	backend	Ready	A-EP3	Sprint 3
 MET-A-013	A	M	Must	mobile	Ready	A-EP4	Sprint 3
 MET-A-014	A	S	Should	mobile	Ready	A-EP4	Sprint 3
 MET-A-015	A	S	Should	mobile	Ready	A-EP4	Sprint 4
 MET-A-016	A	M	Should	backend	Ready	A-EP5	Sprint 4
 MET-A-017	A	S	Should	mobile	Ready	A-EP5	Sprint 4
-MET-A-018	A	M	Should	mobile	Blocked	A-EP5	Sprint 4
+MET-A-018	A	M	Should	mobile	Ready	A-EP5	Sprint 4
 MET-A-019	A	L	Must	backend	Needs refinement	A-EP6	Sprint 4
 MET-A-020	A	M	Must	backend	Blocked	A-EP6	Sprint 5
-MET-A-021	A	M	Should	frontend	Needs refinement	A-EP6	Sprint 4
+MET-A-021	A	M	Won't	frontend	Dropped	A-EP6	-
 MET-A-022	A	S	Could	frontend	Needs refinement	A-EP6	Unscheduled
 MET-A-023	A	L	Must	backend	Ready	A-EP7	Sprint 2
 MET-A-024	A	M	Should	frontend	Ready	A-EP7	Sprint 5
@@ -29,8 +29,8 @@ MET-A-027	A	M	Should	cross-team	Ready	A-EP3	Sprint 5
 MET-A-028	A	L	Must	cross-team	Ready	A-EP10	Sprint 7
 MET-B-001	B	S	Must	cross-team	Ready	B-EP1	Sprint 1
 MET-B-002	B	M	Must	backend	Ready	B-EP1	Sprint 1
-MET-B-003	B	M	Must	backend	Needs refinement	B-EP1	Sprint 2
-MET-B-004	B	M	Must	backend	Needs refinement	B-EP2	Sprint 2
+MET-B-003	B	M	Must	backend	Ready	B-EP1	Sprint 2
+MET-B-004	B	M	Must	backend	Ready	B-EP2	Sprint 2
 MET-B-005	B	S	Should	mobile	Ready	B-EP2	Sprint 3
 MET-B-006	B	S	Should	backend	Ready	B-EP2	Sprint 2
 MET-B-007	B	L	Must	backend	Ready	B-EP3	Sprint 3
@@ -41,7 +41,7 @@ MET-B-011	B	M	Must	backend	Ready	B-EP4	Sprint 4
 MET-B-012	B	L	Must	frontend	Ready	B-EP5	Sprint 4
 MET-B-013	B	L	Must	backend	Needs refinement	B-EP5	Sprint 5
 MET-B-014	B	M	Should	backend	Ready	B-EP6	Sprint 5
-MET-B-015	B	L	Could	backend	Needs refinement	B-EP6	Unscheduled
+MET-B-015	B	L	Could	backend	Ready	B-EP6	Unscheduled
 MET-B-016	B	M	Could	backend	Needs refinement	B-EP6	Unscheduled
 MET-B-017	B	M	Should	backend	Ready	B-EP6	Sprint 5
 MET-B-018	B	M	Must	mobile	Ready	B-EP7	Sprint 3
