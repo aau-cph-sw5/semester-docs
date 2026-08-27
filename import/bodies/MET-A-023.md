@@ -26,7 +26,7 @@ The requirement is that the record of what happened during an incident cannot be
 
 ## Open questions
 
-- **[Shaping · Metro]** Is the raised priority accepted? The alternative is that the log arrives late and several completed items have to be reopened to write to it.
+- **[Answered · Metro, August 2026]** Is the raised priority accepted? **Yes.** The append-only incident log stays a Must in sprint 2, which is the whole point of the raise: everything that has to write to the log is built after the log exists, rather than reopened later to write to it.
 
 ## Provenance
 

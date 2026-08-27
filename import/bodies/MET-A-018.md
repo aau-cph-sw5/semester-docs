@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP5: Low-radio dispatch
 
-**Size** M · **Priority** Should · **Readiness** Blocked · **Track** mobile · **Type** tech · **Proposed sprint** 4
+**Size** M · **Priority** Should · **Readiness** Ready · **Track** mobile · **Type** tech · **Proposed sprint** 4
 
 ## User story
 
@@ -24,8 +24,8 @@ The source document assumes instructions reach stewards but says nothing about h
 
 ## Open questions
 
-- **[Answered in part · Metro, August 2026]** Which device, and is a push service reachable? The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble.
-- **[Blocking · Metro]** Are the phones enrolled in a mobile device management system, and if so which one? That decides whether an app can be pushed to them at all, whether notification permissions can be granted centrally, and whether a managed configuration can be read at install time. It is a one-sentence answer and the only thing still stopping this item.
+- **[Answered · Metro, August 2026]** Which device, and is a push service reachable? The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble.
+- **[Answered · Metro, August 2026]** Are the phones enrolled in a mobile device management system, and which one? **Yes. SOTI, running on Metro's own server.** That closes the item. An application can be distributed to the fleet without the public store, notification permission can be granted centrally rather than requested from a steward at the worst possible moment, and a managed configuration can be read at install time. Two further consequences. Firebase Cloud Messaging remains available, since the handsets are consumer Samsung phones with Google services, so enrolment constrains distribution rather than transport. And managed configuration is the natural carrier of a device's steward identity, which matters because Metro's answer on A-025 is that stewards do not log in at all.
 
 ## Provenance
 

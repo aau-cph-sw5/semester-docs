@@ -23,7 +23,7 @@ Source story B3.2, raised from Won't to Should. As a Won't it removes the interf
 ## Open questions
 
 - **[Answered · Metro, August 2026]** Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so a future train-beacon deployment, which source story B3.2 anticipated, becomes one implementation behind this interface rather than the precondition for the feature.
-- **[Shaping · Metro]** How many trains run at night per line, and where does the list of running trains come from today? The abstraction can be built and demonstrated against a synthetic fleet, so this shapes the fixture rather than stopping the item.
+- **[Answered · Metro, August 2026]** How many trains run at night, and where does the list come from? **The number varies with the track work done that night and with the day and time of year, and Metro needs to set it before the shift starts.** The expected number of trains in service is therefore shift configuration entered in advance, not something derived from a running-train feed. It is also the denominator of the 70 percent figure in B-011, so it must be stored with the shift and shown on the report. A compliance figure whose denominator was not recorded cannot be recomputed, and a figure that cannot be recomputed is not evidence.
 
 ## Provenance
 

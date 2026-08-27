@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP6: Decision support: classification and checklists
 
-**Size** M · **Priority** Should · **Readiness** Needs refinement · **Track** frontend · **Type** feature · **Proposed sprint** 4
+**Size** M · **Priority** Won't · **Readiness** Dropped · **Track** frontend · **Type** feature · **Proposed sprint** none
 
 ## User story
 
@@ -23,7 +23,7 @@ Source story A5.2. Whether checklists exist today as written artefacts determine
 
 ## Open questions
 
-- **[Blocking · Metro]** Do response checklists exist today, in the presentations or elsewhere, or would the students be designing them? This changes the item from data modelling to content design.
+- **[Answered · Metro, August 2026]** Do response checklists exist today, or would the students design them? **No, and Metro's answer is that the item could be deleted. Accepted.** Response checklists are content Metro does not hold, and asking students to author safety-relevant checklists for an operational railway is not defensible coursework. The item moves to Won't and its issue is closed with the reason recorded. Nothing else in the backlog depends on it.
 
 ## Provenance
 

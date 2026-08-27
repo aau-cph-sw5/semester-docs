@@ -23,7 +23,7 @@ Source stories B2.1 and B4.1 both ask for a flag without saying what triggers it
 
 ## Open questions
 
-- **[Shaping · Metro]** How long before a station falls out of compliance should it be flagged as at risk? Ten minutes and thirty minutes imply different working practices.
+- **[Answered · Metro, August 2026]** How long before a station falls out of compliance should it be flagged as at risk? **Ten minutes, because Metro can get a steward to the location within that time.** The threshold is an operational response time rather than a display preference, which is what makes the indicator worth acting on. It is also one train interval, so the flag appears at the last point where a steward can still reach the station on the next train.
 
 ## Provenance
 

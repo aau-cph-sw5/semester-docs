@@ -25,7 +25,7 @@ Follows A-001. The scenarios are reference data maintained by Metro operations, 
 
 ## Open questions
 
-- **[Shaping · Metro]** Who in Metro operations owns scenario content, and how are scenarios corrected or added today?
+- **[Answered · Metro, August 2026]** Who owns scenario content, and how is it corrected or added today? **The two Operations Departments own it, one per line, and the practice differs between them.** On M1/M2 that ownership holds. On M3/M4 the control-room presentation was produced by a Control Room Supervisor and the steward training page by the Steward trainer, so one scenario exists today as two artefacts, in two tools, maintained by two people. Three things follow for the schema. Ownership is a property of the line, not of the product. The control-room view and the steward view of one scenario must be editable by different people while remaining versioned as one scenario rather than two documents. And the seed loader should ingest both current artefacts, because removing that duplication is the clearest operational gain this product can offer.
 
 ## Provenance
 

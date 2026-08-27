@@ -25,7 +25,7 @@ No story in the source document addresses loss of connectivity, and the words of
 
 ## Open questions
 
-- **[Shaping · Metro]** After how long should a locally held scenario be treated as untrustworthy? A steward underground for 40 minutes is a normal case, so the answer is not obvious.
+- **[Answered in part · Metro, August 2026]** After how long should a locally held scenario be treated as untrustworthy? **Answered in part, and the sentence stops mid-way.** What Metro gives us is the useful half: the radio stays in use throughout, so the steward remains aware of the general situation and the phone is not the only channel. A stale local copy is therefore a degradation rather than a hazard, which argues for showing the age of the held scenario prominently and continuing to work, not for locking the screen. The threshold itself is still unanswered and has been put back to Metro.
 
 ## Provenance
 

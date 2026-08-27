@@ -24,7 +24,7 @@ Source story A1.1, restated with testable criteria. The original criterion, that
 
 ## Open questions
 
-- **[Shaping · Metro]** Can two scenarios be active at the same time on the same line, for example a primary scenario and a local one at a single station? The source stories assume one.
+- **[Answered · Metro, August 2026]** Can two scenarios be active at once on the same line? **Not normal practice, and not excluded.** The way Metro describes it happening is the operative detail: one incident starts, a scenario is run, and a second problem arises at a different location while the first is still running. The control room then runs trains through as much of the line as the incident locations and the available Destination IDs allow. So the model must permit more than one active scenario on a line, and the second normally arrives during the first rather than with it. Two design consequences: activating a scenario must not implicitly stand down what is already active, and where two active scenarios both name a station, the steward's assignment must resolve deterministically and the rule must be visible on the screen rather than buried in the server.
 
 ## Provenance
 

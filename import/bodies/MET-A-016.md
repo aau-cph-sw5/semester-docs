@@ -23,7 +23,7 @@ Source story A4.1. The original criterion, that the instruction be clearly visib
 
 ## Open questions
 
-- **[Shaping · Metro]** Is there an existing radio or briefing protocol that instructions should follow in form or vocabulary? Free text and a structured message are different products.
+- **[Answered · Metro, August 2026]** Is there an existing protocol the instructions should follow? **No. Free text is preferred, and standard texts may come later**: if the function proves useful Metro will develop standard messages to copy in. The item is built as free text. The one decision it forces now is to give the message record a template reference from the start, so that a catalogue of standard texts can be added later without a schema change or a client release. A-022 stays a Could and becomes the place that catalogue would live.
 
 ## Provenance
 
