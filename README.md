@@ -29,10 +29,15 @@ cohort. Which three is decided at the August backlog session.
 
 | Case | Product | Items | Blocked | Backlog | Board |
 |---|---|---|---|---|---|
-| A | Emergency Scenarios | 28 | 2 | [backlog](backlog/case-a-emergency-scenarios.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/3) |
+| A | Emergency Scenarios | 28 | 1 | [backlog](backlog/case-a-emergency-scenarios.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/3) |
 | B | Manning/patrol requirement | 24 | 3 | [backlog](backlog/case-b-manning-patrol.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/4) |
 | C | Operational Restrictions | 27 | 7 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
 | D | DID Master | 24 | 11 | [backlog](backlog/case-d-did-master.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/6) |
+
+> **Updated 27 August 2026.** A second batch of answers from Metro Service closes almost every remaining question in Case A
+> and Case B. Blocked items fall from 23 to 22. `MET-A-021` is dropped at Metro's request. `MET-A-020`, the labelled evaluation
+> set for scenario suggestion, is the one deletion Metro proposed that we have not accepted; it is kept and the request has been
+> put back, because it is the only measurable use of real Metro material left in the semester.
 
 > **Updated 24 August 2026.** Metro Service returned answers to the questions we
 > put to them in July, together with revised user stories and the operational
@@ -135,3 +140,12 @@ repository. Leaving it is not neutral.
 The backlogs, the conventions file and the clarifications register are generated
 from a single dataset and should not be edited by hand. Everything else is
 ordinary prose and is yours to improve.
+
+One exception is on record. The answers Metro Service sent on 27 August 2026 were
+applied directly to `CLARIFICATIONS.md`, the two backlog files and `import/`,
+because the generator source sits outside this repository. Re-sync that source
+before the next generated update, or this change is lost the next time the files
+are produced. `import/sync-issues.sh` carries the same change on to the issues
+that already exist: it rewrites each body from `import/bodies/`, reconciles labels
+and milestone against `import/issues.tsv`, and closes anything marked
+`status:dropped`. Run `DRY=1 import/sync-issues.sh` first.
