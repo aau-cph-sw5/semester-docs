@@ -102,9 +102,13 @@ from the start, because retrofitting this is expensive.
 The written procedure arrived in August 2026, so `MET-C-001` and `MET-C-004` are
 released. The field set comes from the register and the worked restrictions Metro
 supplied: a restriction number, the restriction text, the initials of the
-originator, a date of implementation and a date of cancellation. Note that the two
-lines number restrictions differently, `YYMMDD-NNNN` on M1/M2 and
-`DD-MM-YYYY-NNNN` on M3/M4.
+originator, a date of implementation and a date of cancellation. Note that the two lines number restrictions differently in the legacy registers,
+`DDMMYY-NNNN` on M1/M2 and `DD-MM-YYYY-NNNN` on M3/M4, while the unified
+procedure I3.4456 prescribes `DDMMYYYY-XXXX` for both lines going forward, unique
+per line. The application template of I3.4456 adds to the field set: the line, an
+expiry time, three structured text sections—the situation, the restriction
+itself, what lifting it requires—and typed attachments (resources, equipment,
+training, action cards) with a document count.
 
 Expected entities: Restriction, RestrictionVersion, Signature, SignatureList,
 StateTransition, Notification, ArchiveEntry, Role.

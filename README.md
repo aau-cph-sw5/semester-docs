@@ -31,8 +31,13 @@ cohort. Which three is decided at the August backlog session.
 |---|---|---|---|---|---|
 | A | Emergency Scenarios | 28 | 1 | [backlog](backlog/case-a-emergency-scenarios.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/3) |
 | B | Manning/patrol requirement | 24 | 3 | [backlog](backlog/case-b-manning-patrol.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/4) |
-| C | Operational Restrictions | 27 | 7 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
+| C | Operational Restrictions | 27 | 4 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
 | D | DID Master | 24 | 11 | [backlog](backlog/case-d-did-master.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/6) |
+
+> **Updated 28 August 2026.** A meeting with Metro Service and the Case C source folder—the unified procedure I3.4456, the
+> registers, the signature sheets and one worked restriction per line—answer six more Case C questions. `MET-C-015`,
+> `MET-C-018` and `MET-C-022` unblock; blocked items fall from 22 to 19. One correction on record: the M1/M2 legacy numbering
+> is `DDMMYY-NNNN`, not `YYMMDD-NNNN` as the August answers recorded.
 
 > **Updated 27 August 2026.** A second batch of answers from Metro Service closes almost every remaining question in Case A
 > and Case B. Blocked items fall from 23 to 22. `MET-A-021` is dropped at Metro's request. `MET-A-020`, the labelled evaluation

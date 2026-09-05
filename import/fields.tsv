@@ -65,14 +65,14 @@ MET-C-011	C	L	Must	frontend	Ready	C-EP4	Sprint 5
 MET-C-012	C	S	Should	frontend	Ready	C-EP4	Sprint 5
 MET-C-013	C	M	Should	frontend	Needs refinement	C-EP5	Sprint 5
 MET-C-014	C	M	Should	frontend	Ready	C-EP6	Sprint 6
-MET-C-015	C	M	Should	backend	Blocked	C-EP6	Sprint 6
+MET-C-015	C	M	Should	backend	Ready	C-EP6	Sprint 6
 MET-C-016	C	M	Must	frontend	Ready	C-EP7	Sprint 4
 MET-C-017	C	S	Should	frontend	Ready	C-EP7	Sprint 5
-MET-C-018	C	M	Should	backend	Blocked	C-EP8	Sprint 3
+MET-C-018	C	M	Should	backend	Ready	C-EP8	Sprint 3
 MET-C-019	C	M	Should	backend	Ready	C-EP8	Sprint 4
 MET-C-020	C	S	Should	backend	Ready	C-EP8	Sprint 6
 MET-C-021	C	L	Must	backend	Ready	C-EP11	Sprint 2
-MET-C-022	C	M	Must	backend	Blocked	C-EP11	Sprint 3
+MET-C-022	C	M	Must	backend	Ready	C-EP11	Sprint 3
 MET-C-023	C	M	Should	backend	Blocked	C-EP9	Sprint 6
 MET-C-024	C	M	Could	frontend	Needs refinement	C-EP10	Unscheduled
 MET-C-025	C	L	Could	backend	Blocked	C-EP10	Unscheduled

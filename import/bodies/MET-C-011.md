@@ -24,7 +24,7 @@ Source story C3.1. A gate that can be clicked through instantly is not a gate, a
 
 ## Open questions
 
-- **[Blocking · Metro]** Should an operator be able to take the desk in an emergency without completing the read-and-sign gate? The paper process presumably allows a supervisor to permit it, and a system with no such path will be worked around.
+- **[Answered · Metro, 28 August 2026]** Should an operator be able to take the desk in an emergency without completing the read-and-sign gate? **In practice yes: the operator takes the desk and it is noted that the signatures will follow as soon as possible.** The digital equivalent is a recorded deferred-signature path, visible to the supervisor and chased by a reminder, rather than a hard block.
 
 ## Provenance
 

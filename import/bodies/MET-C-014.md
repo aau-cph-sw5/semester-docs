@@ -24,7 +24,7 @@ Source stories C5.1, C5.2 and C5.3, combined into one item. They are three signa
 
 ## Open questions
 
-- **[Blocking · Metro]** Can someone other than the original originator start a cancellation, for example if that person has left or is unavailable? The source stories assume the originator is always available.
+- **[Answered · I3.4456, August 2026]** Can someone other than the original originator start a cancellation, for example if that person has left or is unavailable? **Yes: if the originator cannot cancel it—end of employment, long absence or sickness—the restriction can be cancelled by the Betriebsleiter** (I3.4456, section 3.2.2).
 
 ## Provenance
 

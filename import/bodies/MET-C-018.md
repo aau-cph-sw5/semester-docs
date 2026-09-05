@@ -1,6 +1,6 @@
 > **Operational Restrictions (Case C)** · Epic C-EP8: Notifications
 
-**Size** M · **Priority** Should · **Readiness** Blocked · **Track** backend · **Type** tech · **Proposed sprint** 3
+**Size** M · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 3
 
 ## User story
 
@@ -23,7 +23,7 @@ Source stories C7.1 and C7.2 both require notification and neither says by what 
 
 ## Open questions
 
-- **[Blocking · Metro]** By what means should a signer be notified out of hours: email, SMS, an application notification, or a telephone call as today? This determines a substantial part of the design.
+- **[Answered · decision with Metro, 28 August 2026]** By what means should a signer be notified out of hours: email, SMS, an application notification, or a telephone call as today? **An application notification: the product is a mobile app and notifies in-app, with Android as the reference platform.** The decision belongs in an ADR; the delivery guarantees—retry, surfacing undeliverable notifications—remain the substance of this item.
 
 ## Provenance
 

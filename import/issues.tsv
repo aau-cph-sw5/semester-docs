@@ -61,18 +61,18 @@ MET-C-007	C	Return-for-change loop between approver and originator	case:C,epic:C
 MET-C-008	C	Duty Operations Manager reviews and signs approval	case:C,epic:C-EP3,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-C-008.md
 MET-C-009	C	Control Room Supervisor signs for implementation	case:C,epic:C-EP3,track:frontend,type:feature,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-C-009.md
 MET-C-010	C	Remote signing from phone, tablet or remote desktop	case:C,epic:C-EP3,track:cross-team,type:feature,size:L,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 5	bodies/MET-C-010.md
-MET-C-011	C	Operator read-and-sign gate before taking the desk	case:C,epic:C-EP4,track:frontend,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 5	bodies/MET-C-011.md
+MET-C-011	C	Operator read-and-sign gate before taking the desk	case:C,epic:C-EP4,track:frontend,type:feature,size:L,prio:must,status:ready,provenance:metro	Sprint 5	bodies/MET-C-011.md
 MET-C-012	C	Duty Operations Manager signs the awareness list	case:C,epic:C-EP4,track:frontend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-C-012.md
 MET-C-013	C	Signature completeness view across the CCR population	case:C,epic:C-EP5,track:frontend,type:feature,size:M,prio:should,status:refine,needs:metro,provenance:metro	Sprint 5	bodies/MET-C-013.md
-MET-C-014	C	Cancellation chain: originator, manager and supervisor signatures	case:C,epic:C-EP6,track:frontend,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 6	bodies/MET-C-014.md
-MET-C-015	C	Implementation signers confirm awareness of a cancellation	case:C,epic:C-EP6,track:backend,type:feature,size:M,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 6	bodies/MET-C-015.md
+MET-C-014	C	Cancellation chain: originator, manager and supervisor signatures	case:C,epic:C-EP6,track:frontend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 6	bodies/MET-C-014.md
+MET-C-015	C	Implementation signers confirm awareness of a cancellation	case:C,epic:C-EP6,track:backend,type:feature,size:M,prio:should,status:ready,needs:metro,provenance:metro	Sprint 6	bodies/MET-C-015.md
 MET-C-016	C	Register of restrictions in force	case:C,epic:C-EP7,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-C-016.md
 MET-C-017	C	Signature completeness indication on a restriction	case:C,epic:C-EP7,track:frontend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-C-017.md
-MET-C-018	C	Notification channel decision and delivery guarantees	case:C,epic:C-EP8,track:backend,type:tech,size:M,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-C-018.md
+MET-C-018	C	Notification channel decision and delivery guarantees	case:C,epic:C-EP8,track:backend,type:tech,size:M,prio:should,status:ready,provenance:metro	Sprint 3	bodies/MET-C-018.md
 MET-C-019	C	Notification when an action is required	case:C,epic:C-EP8,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 4	bodies/MET-C-019.md
 MET-C-020	C	Notification when a signed restriction is cancelled	case:C,epic:C-EP8,track:backend,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 6	bodies/MET-C-020.md
 MET-C-021	C	Versioned audit trail of every restriction and signature	case:C,epic:C-EP11,track:backend,type:tech,size:L,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-C-021.md
-MET-C-022	C	Role-based access control across the workflow	case:C,epic:C-EP11,track:backend,type:compliance,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-C-022.md
+MET-C-022	C	Role-based access control across the workflow	case:C,epic:C-EP11,track:backend,type:compliance,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 3	bodies/MET-C-022.md
 MET-C-023	C	Automatic archiving and five-year retention	case:C,epic:C-EP9,track:backend,type:feature,size:M,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 6	bodies/MET-C-023.md
 MET-C-024	C	Assisted drafting of restriction text from structured input	case:C,epic:C-EP10,track:frontend,type:feature,size:M,prio:could,status:refine,provenance:metro	-	bodies/MET-C-024.md
 MET-C-025	C	Conflict detection against restrictions in force	case:C,epic:C-EP10,track:backend,type:feature,size:L,prio:could,status:blocked,needs:metro,provenance:metro	-	bodies/MET-C-025.md

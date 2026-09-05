@@ -23,12 +23,12 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 - `MET-C-004` Create a restriction with the required fields
 - `MET-C-006` Originator signs the restriction
 - `MET-C-021` Versioned audit trail of every restriction and signature
-- `MET-C-022` Role-based access control across the workflow **(blocked)**
+- `MET-C-022` Role-based access control across the workflow
 
-Items marked **(blocked)** are in this set because the product is incomplete without them, not because they can be pulled today: they need an answer from Metro first. The rule in CONTRIBUTING.md stands, and a blocked item that your team needs next is something to raise at the sprint review.
+C-022 unblocked on 28 August 2026, when the meeting with Metro Service and procedure I3.4456 supplied the role definitions. The rule in CONTRIBUTING.md stands for anything still blocked: raise it at the sprint review.
 
 
-**7 items are blocked** on an answer from Metro Service, down from eleven before Metro's August answers. They are not dead: read them, and bring the question to the next sprint review. Filter the issues by `status:blocked` to see them, and by `needs:metro` for everything that still carries a question for Metro.
+**4 items are blocked** on an answer from Metro Service, down from eleven before Metro's August answers and from seven before the meeting of 28 August 2026. They are not dead: read them, and bring the question to the next sprint review. Filter the issues by `status:blocked` to see them, and by `needs:metro` for everything that still carries a question for Metro.
 
 ## Getting it running
 
