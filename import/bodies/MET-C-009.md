@@ -23,7 +23,7 @@ Source story C2.2. This transition is the one that changes what operators must d
 
 ## Open questions
 
-- **[Blocking · Metro]** When a restriction comes into force, is the set of operators required to sign it fixed at that moment, or does it include operators who join a later shift? The answer changes what the completeness view of C-013 can ever show as complete.
+- **[Answered · Metro, 28 August 2026]** When a restriction comes into force, is the set of operators required to sign it fixed at that moment, or does it include operators who join a later shift? **The people on the list written by the DOM must sign.** The sheet the DOM puts out is pre-printed with the current CCR staff, so the population is the DOM's list rather than the shift, which also settles most of C-013. What remains open is only staff hired after a restriction came into force, and how they get onto its list.
 
 ## Provenance
 

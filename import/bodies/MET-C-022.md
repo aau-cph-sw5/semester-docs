@@ -1,6 +1,6 @@
 > **Operational Restrictions (Case C)** · Epic C-EP11: Access control, audit and versioning
 
-**Size** M · **Priority** Must · **Readiness** Blocked · **Track** backend · **Type** compliance · **Proposed sprint** 3
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** compliance · **Proposed sprint** 3
 
 ## User story
 
@@ -20,11 +20,11 @@ Source story C10.1. This case has the largest role set of the four, naming Origi
 ## Dependencies
 
 - Requires C-002.
-- Blocked on the real role definitions.
+- The role definitions arrived with I3.4456 and the meeting of 28 August 2026.
 
 ## Open questions
 
-- **[Blocking · Metro]** What are the real roles and who may hold more than one? In particular, can the same person originate and approve a restriction when staffing is thin at night?
+- **[Answered in part · Metro and I3.4456, August 2026]** What are the real roles and who may hold more than one? **The originator is whoever owns the work area—typically the maintenance chief, a sector chief, a lead technician, the Betriebsleiter, the safety chief, the operations chief or an on-duty DOM; the DOM approves, the CRS implements, operators acknowledge, and the Betriebsleiter is the cancellation fallback.** An admin role, managing users and roles only, is an AAU addition to record as such. Still open, and sharper now that the DOM is himself a listed originator: may the same person originate and approve a restriction?
 
 ## Provenance
 

@@ -15,11 +15,13 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 
 ## At a glance
 
-**27 items.** Priority: 13 Must, 12 Should, 2 Could. Readiness: 18 ready, 2 needing refinement, 7 blocked on Metro input. Size: 5×S, 16×M, 5×L, 1×XL.
+**27 items.** Priority: 13 Must, 12 Should, 2 Could. Readiness: 21 ready, 2 needing refinement, 4 blocked on Metro input. Size: 5×S, 16×M, 5×L, 1×XL.
+
+> **Updated 28 August 2026.** A meeting with Metro Service and the source folder—the unified procedure I3.4456 (effective 18 March 2026), the two registers, the signature sheets and one worked restriction per line—answer six more questions: the cancellation fallback (C-014), the emergency practice (C-011), the sign-off population (C-009, C-015), the notification channel, decided as in-app push (C-018), and the role definitions (C-022). `MET-C-015`, `MET-C-018` and `MET-C-022` unblock. One correction: earlier answers read the M1/M2 numbering as `YYMMDD-NNNN`; the registers show `DDMMYY-NNNN`, and I3.4456 prescribes `DDMMYYYY-XXXX` for both lines going forward. Re-deriving C-014 and C-015 from I3.4456, and the sprint consequences, go to the next backlog session.
 
 > **Updated 24 August 2026.** The written procedure has arrived, with the forms it operates on: the restriction register for each line, the signature sheet, and a worked restriction per line. That releases `MET-C-001`, `MET-C-004`, whose field set the worked restrictions now define, and, with Metro's answer that no regulatory standard applies, `MET-C-003`. Note that the two lines do not share a numbering convention.
 
-**Minimum demonstrable product**, meaning the 7 Must items proposed for sprints 1 to 3: `MET-C-001`, `MET-C-002`, `MET-C-003`, `MET-C-004`, `MET-C-006`, `MET-C-021`, `MET-C-022` (blocked). Items marked (blocked) are in the set because the product is incomplete without them, not because they can be pulled: they need an answer from Metro first, and the rule in CONTRIBUTING.md stands. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
+**Minimum demonstrable product**, meaning the 7 Must items proposed for sprints 1 to 3: `MET-C-001`, `MET-C-002`, `MET-C-003`, `MET-C-004`, `MET-C-006`, `MET-C-021`, `MET-C-022`. C-022 unblocked on 28 August 2026, when the meeting and procedure I3.4456 supplied the role definitions. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
 ## Epics
 
@@ -56,14 +58,14 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 | `MET-C-012` | Duty Operations Manager signs the awareness list | C-EP4 | S | Should | Ready | 5 |
 | `MET-C-013` | Signature completeness view across the CCR population | C-EP5 | M | Should | Needs refinement | 5 |
 | `MET-C-014` | Cancellation chain: originator, manager and supervisor signatures | C-EP6 | M | Should | Ready | 6 |
-| `MET-C-015` | Implementation signers confirm awareness of a cancellation | C-EP6 | M | Should | Blocked | 6 |
+| `MET-C-015` | Implementation signers confirm awareness of a cancellation | C-EP6 | M | Should | Ready | 6 |
 | `MET-C-016` | Register of restrictions in force | C-EP7 | M | Must | Ready | 4 |
 | `MET-C-017` | Signature completeness indication on a restriction | C-EP7 | S | Should | Ready | 5 |
-| `MET-C-018` | Notification channel decision and delivery guarantees | C-EP8 | M | Should | Blocked | 3 |
+| `MET-C-018` | Notification channel decision and delivery guarantees | C-EP8 | M | Should | Ready | 3 |
 | `MET-C-019` | Notification when an action is required | C-EP8 | M | Should | Ready | 4 |
 | `MET-C-020` | Notification when a signed restriction is cancelled | C-EP8 | S | Should | Ready | 6 |
 | `MET-C-021` | Versioned audit trail of every restriction and signature | C-EP11 | L | Must | Ready | 2 |
-| `MET-C-022` | Role-based access control across the workflow | C-EP11 | M | Must | Blocked | 3 |
+| `MET-C-022` | Role-based access control across the workflow | C-EP11 | M | Must | Ready | 3 |
 | `MET-C-023` | Automatic archiving and five-year retention | C-EP9 | M | Should | Blocked | 6 |
 | `MET-C-024` | Assisted drafting of restriction text from structured input | C-EP10 | M | Could | Needs refinement | - |
 | `MET-C-025` | Conflict detection against restrictions in force | C-EP10 | L | Could | Blocked | - |
@@ -96,7 +98,7 @@ The source backlog describes a complete workflow across ten epics and never name
 
 **Open questions**
 
-- *[Answered · Metro, August 2026]* The written procedure. **Received**, as OPE-PR-S-400-04 Driftsrestriktioner, together with the restriction register for each line, the signature sheet used for each restriction, and one worked restriction per line. Enough of the state model is visible in the forms to start: a restriction carries a number, a restriction text, the initials of its originator, a date of implementation and a date of cancellation, and the register is closed off with the date and signature of the *vagthavende driftschef*, the DOM role Metro names as the approver. The two lines number restrictions differently, M1/M2 as `YYMMDD-NNNN` and M3/M4 as `DD-MM-YYYY-NNNN`, and their forms differ in layout. Whether the product imposes one scheme or carries both is a design decision to take with Metro rather than by default.
+- *[Answered · Metro, August 2026]* The written procedure. **Received**, as OPE-PR-S-400-04 Driftsrestriktioner, together with the restriction register for each line, the signature sheet used for each restriction, and one worked restriction per line. Enough of the state model is visible in the forms to start: a restriction carries a number, a restriction text, the initials of its originator, a date of implementation and a date of cancellation, and the register is closed off with the date and signature of the *vagthavende driftschef*, the DOM role Metro names as the approver. The two lines number restrictions differently, M1/M2 as `DDMMYY-NNNN` and M3/M4 as `DD-MM-YYYY-NNNN`, and their forms differ in layout. The unified procedure I3.4456, effective 18 March 2026, prescribes `DDMMYYYY-XXXX` for both lines, unique per line, which settles the scheme going forward.
 - *[Shaping · Metro]* The AAU evaluation attached a condition to this case: a structured domain onboarding session of two to three hours in week one, covering the restriction lifecycle, roles and regulatory requirements. Can that be scheduled if the case is activated? Now that the written procedure has arrived the item can proceed without it, but the session remains the single most useful thing Metro could give this case.
 - *[Answered in part · Metro, August 2026]* How many restrictions are in force at once? **Up to 50.** How many are raised in a month is still unanswered, though the registers supplied give an indication.
 
@@ -176,7 +178,7 @@ Source story C1.1. The fields themselves are the unknown, and they come from the
 
 **Open questions**
 
-- *[Answered · Metro, August 2026]* A copy of the existing form, to define the field set exactly. **Received in substance**: the August material includes the restriction register for each line and one worked restriction per line, which between them fix the fields: a restriction number, the restriction text, the initials of the originator, a date of implementation and a date of cancellation. One decision to take rather than assume: M1/M2 numbers restrictions as `YYMMDD-NNNN` and M3/M4 as `DD-MM-YYYY-NNNN`, and the product must either impose one scheme or carry both. Anything the team adds beyond the paper fields should be recorded as a deliberate addition.
+- *[Answered · Metro, August 2026]* A copy of the existing form, to define the field set exactly. **Received in substance**: the August material includes the restriction register for each line and one worked restriction per line, which between them fix the fields: a restriction number, the restriction text, the initials of the originator, a date of implementation and a date of cancellation. One correction and one settlement: M1/M2 numbers restrictions as `DDMMYY-NNNN` (not `YYMMDD-NNNN` as earlier recorded) and M3/M4 as `DD-MM-YYYY-NNNN`, and the unified procedure I3.4456 prescribes `DDMMYYYY-XXXX` for both lines going forward, unique per line. Anything the team adds beyond the paper fields should be recorded as a deliberate addition.
 
 *Source: C1.1*
 
@@ -291,7 +293,7 @@ Source story C2.2. This transition is the one that changes what operators must d
 
 **Open questions**
 
-- *[Blocking · Metro]* When a restriction comes into force, is the set of operators required to sign it fixed at that moment, or does it include operators who join a later shift? The answer changes what the completeness view of C-013 can ever show as complete.
+- *[Answered · Metro, 28 August 2026]* When a restriction comes into force, is the set of operators required to sign it fixed at that moment, or does it include operators who join a later shift? **The people on the list written by the DOM must sign.** The sheet the DOM puts out is pre-printed with the current CCR staff, so the population is the DOM's list rather than the shift, which also settles most of C-013. What remains open is only staff hired after a restriction came into force, and how they get onto its list.
 
 *Source: C2.2*
 
@@ -347,7 +349,7 @@ Source story C3.1. A gate that can be clicked through instantly is not a gate, a
 
 **Open questions**
 
-- *[Blocking · Metro]* Should an operator be able to take the desk in an emergency without completing the read-and-sign gate? The paper process presumably allows a supervisor to permit it, and a system with no such path will be worked around.
+- *[Answered · Metro, 28 August 2026]* Should an operator be able to take the desk in an emergency without completing the read-and-sign gate? **In practice yes: the operator takes the desk and it is noted that the signatures will follow as soon as possible.** The digital equivalent is a recorded deferred-signature path, visible to the supervisor and chased by a reminder, rather than a hard block.
 
 *Source: C3.1*
 
@@ -427,19 +429,19 @@ Source stories C5.1, C5.2 and C5.3, combined into one item. They are three signa
 
 **Open questions**
 
-- *[Blocking · Metro]* Can someone other than the original originator start a cancellation, for example if that person has left or is unavailable? The source stories assume the originator is always available.
+- *[Answered · I3.4456, August 2026]* Can someone other than the original originator start a cancellation, for example if that person has left or is unavailable? **Yes: if the originator cannot cancel it—end of employment, long absence or sickness—the restriction can be cancelled by the Betriebsleiter** (I3.4456, section 3.2.2).
 
 *Source: C5.1, C5.2, C5.3*
 
 ### MET-C-015 · Implementation signers confirm awareness of a cancellation
 
-`size:M` `prio:Should` `status:Blocked` `track:backend` `type:feature` `sprint:6`
+`size:M` `prio:Should` `status:Ready` `track:backend` `type:feature` `sprint:6`
 
 **As a Signer who signed the implementation, I want to confirm my awareness of the cancellation, so that the cancellation record matches the implementation record.**
 
 Source story C5.4, and the item with the most awkward failure mode in the case. A cancellation completes only when everyone who signed implementation has confirmed, which means one absent, transferred or departed colleague leaves a restriction permanently incomplete. The source story does not address this and the paper process must have some answer.
 
-This item is scheduled for the last delivery sprint and is blocked on that answer, which is a bad combination. **If the question is still unanswered at the sprint 4 review, do not wait.** Build the documented override in the fourth acceptance criterion as the design: a named role, the duty operations manager on the evidence of the register, may record a confirmation as unobtainable, with a reason and the identity of the person who could not be reached, and the cancellation completes. Metro's answer, when it comes, then adjusts who holds that authority rather than whether the path exists. State the assumption in the architecture decision record so the examiner can see it was a choice.
+This item is scheduled for the last delivery sprint and was blocked on that answer until 28 August 2026, which was a bad combination. **If the question is still unanswered at the sprint 4 review, do not wait.** Build the documented override in the fourth acceptance criterion as the design: a named role, the duty operations manager on the evidence of the register, may record a confirmation as unobtainable, with a reason and the identity of the person who could not be reached, and the cancellation completes. Metro's answer, when it comes, then adjusts who holds that authority rather than whether the path exists. State the assumption in the architecture decision record so the examiner can see it was a choice.
 
 **Acceptance criteria**
 
@@ -454,7 +456,7 @@ This item is scheduled for the last delivery sprint and is blocked on that answe
 
 **Open questions**
 
-- *[Blocking · Metro]* What happens today when someone who signed the implementation of a restriction is unavailable to confirm its cancellation? Without an answer, a restriction can remain uncancellable indefinitely.
+- *[Answered · Metro and I3.4456, August 2026]* What happens today when someone who signed the implementation of a restriction is unavailable to confirm its cancellation? **The premise does not hold: cancellation is signed by the people on the current DOM list, not by the historical implementation signers.** The sheet carries implementation and cancellation columns for the current population and is closed when all relevant employees have signed both, then scanned and attached per I3.4456. Who counts as relevant at cancellation time is the residual detail to confirm, and the item should be re-derived at the next session.
 
 *Source: C5.4*
 
@@ -530,7 +532,7 @@ No source story addresses connectivity. In this case the risk is not that the re
 
 ### MET-C-018 · Notification channel decision and delivery guarantees
 
-`size:M` `prio:Should` `status:Blocked` `track:backend` `type:tech` `sprint:3`
+`size:M` `prio:Should` `status:Ready` `track:backend` `type:tech` `sprint:3`
 
 **As a Signer in any role, I want notifications to reach me reliably wherever I am, so that the workflow does not stall on someone not knowing it is their turn.**
 
@@ -549,7 +551,7 @@ Source stories C7.1 and C7.2 both require notification and neither says by what 
 
 **Open questions**
 
-- *[Blocking · Metro]* By what means should a signer be notified out of hours: email, SMS, an application notification, or a telephone call as today? This determines a substantial part of the design.
+- *[Answered · decision with Metro, 28 August 2026]* By what means should a signer be notified out of hours: email, SMS, an application notification, or a telephone call as today? **An application notification: the product is a mobile app and notifies in-app, with Android as the reference platform.** The decision belongs in an ADR; the delivery guarantees—retry, surfacing undeliverable notifications—remain the substance of this item.
 
 *Source: C7.1, C7.2*
 
@@ -701,7 +703,7 @@ Source story C10.2, which is the best-formed requirement in the source document 
 
 ### MET-C-022 · Role-based access control across the workflow
 
-`size:M` `prio:Must` `status:Blocked` `track:backend` `type:compliance` `sprint:3`
+`size:M` `prio:Must` `status:Ready` `track:backend` `type:compliance` `sprint:3`
 
 **As an administrator, I want each role limited to its permitted actions, so that the workflow cannot be short-circuited.**
 
@@ -717,11 +719,11 @@ Source story C10.1. This case has the largest role set of the four, naming Origi
 **Dependencies**
 
 - Requires C-002.
-- Blocked on the real role definitions.
+- The role definitions arrived with I3.4456 and the meeting of 28 August 2026.
 
 **Open questions**
 
-- *[Blocking · Metro]* What are the real roles and who may hold more than one? In particular, can the same person originate and approve a restriction when staffing is thin at night?
+- *[Answered in part · Metro and I3.4456, August 2026]* What are the real roles and who may hold more than one? **The originator is whoever owns the work area—typically the maintenance chief, a sector chief, a lead technician, the Betriebsleiter, the safety chief, the operations chief or an on-duty DOM; the DOM approves, the CRS implements, operators acknowledge, and the Betriebsleiter is the cancellation fallback.** An admin role, managing users and roles only, is an AAU addition to record as such. Still open, and sharper now that the DOM is himself a listed originator: may the same person originate and approve a restriction?
 
 *Source: C10.1*
 
