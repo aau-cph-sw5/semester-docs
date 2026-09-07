@@ -4,7 +4,7 @@
 
 ## User story
 
-As a Steward, I want to indicate my current location with a single tap, so that the control room knows where I am without a radio call.
+As a Steward, I want to indicate my current location with a single tap, so that the control room and my peers know where I am without a radio call.
 
 ## Context
 

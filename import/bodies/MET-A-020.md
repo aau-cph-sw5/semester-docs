@@ -8,9 +8,9 @@ As a supervisor, I want the scenario suggestion measured against expert-labelled
 
 ## Context
 
-Nothing in the source document asks for a measured result anywhere, which is why the AI stories as written are satisfied by a decorative implementation. This item is what makes the work assessable under the Machine Intelligence course and it is also what produces comparable data across teams. Raised to Must in August 2026 for the same reason as A-019.
+Nothing in the source document asks for a measured result anywhere, which is why the AI stories as written are satisfied by a decorative implementation. This item is what makes the work assessable under the Machine Intelligence course and it is also what produces comparable data across teams. Raised to Must in August 2026 for the same reason as A-019. Both sides agreed that it is a nice-to-have feature, even though it is not part of the MVP.
 
-If the labelled examples do not arrive, the item is not abandoned. The team builds the evaluation set itself, from the scenario material, and reports it as a self-labelled set with the weaker claim that implies. That fallback is worse than expert labels and should be stated as such at the review, but it keeps the measurement in the semester.
+Thus, if the labelled examples do not arrive, the item is not abandoned. The team builds the evaluation set itself, from the scenario material, and reports it as a self-labelled set with the weaker claim that implies. That fallback is worse than expert labels and should be stated as such at the review, but it keeps the measurement in the semester.
 
 ## Acceptance criteria
 

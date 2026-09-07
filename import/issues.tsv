@@ -3,7 +3,7 @@ MET-A-001	A	Derive the scenario domain model from the Metro alternative-operatio
 MET-A-002	A	Scenario reference data schema, persistence and seed loader	case:A,epic:A-EP1,track:backend,type:data,size:L,prio:must,status:ready,provenance:aau-added	Sprint 2	bodies/MET-A-002.md
 MET-A-003	A	Scenario state contract published and versioned	case:A,epic:A-EP1,track:cross-team,type:contract,size:M,prio:must,status:ready,provenance:aau-added	Sprint 1	bodies/MET-A-003.md
 MET-A-004	A	Real-time propagation of scenario and position changes to connected clients	case:A,epic:A-EP3,track:backend,type:feature,size:L,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-A-004.md
-MET-A-005	A	Active scenario and own assignment readable with no network	case:A,epic:A-EP9,track:mobile,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:aau-added	Sprint 3	bodies/MET-A-005.md
+MET-A-005	A	Active scenario and own assignment readable with no network	case:A,epic:A-EP9,track:mobile,type:feature,size:L,prio:must,status:ready,provenance:aau-added	Sprint 3	bodies/MET-A-005.md
 MET-A-006	A	Reconnection, reconciliation and exactly-once delivery of queued reports	case:A,epic:A-EP9,track:mobile,type:feature,size:L,prio:should,status:ready,provenance:aau-added	Sprint 4	bodies/MET-A-006.md
 MET-A-007	A	Operator selects and activates a scenario from the predefined list	case:A,epic:A-EP2,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-A-007.md
 MET-A-008	A	Required staffing for the active scenario shown to the operator	case:A,epic:A-EP2,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-A-008.md

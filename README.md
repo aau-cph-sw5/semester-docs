@@ -34,10 +34,15 @@ cohort. Which three is decided at the August backlog session.
 | C | Operational Restrictions | 27 | 4 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
 | D | DID Master | 24 | 11 | [backlog](backlog/case-d-did-master.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/6) |
 
-> **Updated 28 August 2026.** A meeting with Metro Service and the Case C source folder—the unified procedure I3.4456, the
+> **Updated 28 August 2026 (Case C-specific).** A meeting with Metro Service and the Case C source folder—the unified procedure I3.4456, the
 > registers, the signature sheets and one worked restriction per line—answer six more Case C questions. `MET-C-015`,
 > `MET-C-018` and `MET-C-022` unblock; blocked items fall from 22 to 19. One correction on record: the M1/M2 legacy numbering
 > is `DDMMYY-NNNN`, not `YYMMDD-NNNN` as the August answers recorded.
+
+> **Updated 28 August 2026 (Case A-specific).** The meeting with Metro Service and the Case A clarified the landscape around `MET-A-005`. The
+> radio channel complements the application and the functionality will be satisfactory with information regarding the history of the scenario, i.e.
+> when it was initialized and for how long has been running. `MET-A-019` and `MET-A-020` are from both sides nice-to-have features to cover the
+> course requirements. We keep them as Musts, but they are not included in the MVP.
 
 > **Updated 27 August 2026.** A second batch of answers from Metro Service closes almost every remaining question in Case A
 > and Case B. Blocked items fall from 23 to 22. `MET-A-021` is dropped at Metro's request. `MET-A-020`, the labelled evaluation
