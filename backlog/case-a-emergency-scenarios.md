@@ -373,7 +373,7 @@ Source story A2.1 requires that required stations be identifiable within a few s
 
 `size:M` `prio:Must` `status:Ready` `track:mobile` `type:feature` `sprint:3`
 
-**As a Steward, I want to indicate my current location with a single tap, so that the control room knows where I am without a radio call.**
+**As a Steward, I want to indicate my current location with a single tap, so that the control room and my peers know where I am without a radio call.**
 
 Source story A3.1. The station list a steward chooses from should be scoped to the active scenario, otherwise the single tap becomes a search through the whole network.
 
@@ -395,7 +395,7 @@ Source story A3.1. The station list a steward chooses from should be scoped to t
 
 `size:S` `prio:Should` `status:Ready` `track:mobile` `type:feature` `sprint:3`
 
-**As a Steward, I want to mark a required station as covered, so that the control room can see staffing progress.**
+**As a Steward, I want to mark a required station as covered, so that the control room and my peers can see staffing progress.**
 
 Source story A3.2.
 
@@ -734,13 +734,13 @@ Every case in the source document requires access control and none of them state
 
 `size:L` `prio:Must` `status:Ready` `track:mobile` `type:feature` `sprint:3`
 
-**As a Steward, I want the active scenario, my own assignment and the response checklist to stay readable when I have no signal, so that I am not worse off in a tunnel than I was with the document I used before.**
+**As a Steward, I want the active scenario and my own assignment to stay readable when I have no signal, so that I am not worse off in a tunnel than I was with the document I used before.**
 
-No story in the source document addresses loss of connectivity, and the words offline, connectivity, degraded, unavailable and timeout do not appear in it. Stewards work on platforms, in tunnels and on moving trains. The artefact this product replaces has the property of working without a connection, so a replacement that does not is a regression in exactly the circumstances the product exists for.
+No story in the source document addresses loss of connectivity, and the words offline, connectivity, degraded, unavailable and timeout do not appear in it. Stewards work on platforms, in tunnels and on moving trains. The artefact this product replaces has the property of working without a connection, so a replacement that does not is a regression in exactly the circumstances the product exists for. According to the meeting on August 28th, it is fine to display the duration of the scenario and the radio channel will complement the communication.
 
 **Acceptance criteria**
 
-- [ ] With the device in flight mode, opening the application displays the last synchronised scenario, the steward assignment and the response checklist.
+- [ ] With the device in flight mode, opening the application displays the last synchronised scenario, and the steward assignment.
 - [ ] The time at which the local copy was last synchronised is displayed whenever the client is not connected.
 - [ ] Content served from the local copy is distinguished from live content by a persistent visual indicator.
 - [ ] A local copy older than the agreed staleness period displays its age prominently rather than presenting itself as current.
@@ -749,13 +749,10 @@ No story in the source document addresses loss of connectivity, and the words of
 **Dependencies**
 
 - Requires A-003.
-- The staleness period requires confirmation from Metro.
 
 **Open questions**
 
-- *[Answered in part · Metro, August 2026]* After how long should a locally held scenario be treated as untrustworthy? **Answered in part, and the sentence stops mid-way.** What Metro gives us is the useful half: the radio stays in use throughout, so the steward remains aware of the general situation and the phone is not the only channel. A stale local copy is therefore a degradation rather than a hazard, which argues for showing the age of the held scenario prominently and continuing to work, not for locking the screen. The threshold itself is still unanswered and has been put back to Metro.
-
-*Source: AAU-added. The most consequential gap in the source document.*
+- *[Answered · Metro, August 2026]* After how long should a locally held scenario be treated as untrustworthy? **Answered in part, and the sentence stops mid-way.** What Metro gives us is the useful half: the radio stays in use throughout, so the steward remains aware of the general situation and the phone is not the only channel. A stale local copy is therefore a degradation rather than a hazard, which argues for showing the age of the held scenario prominently and continuing to work, not for locking the screen. The threshold itself is still unanswered and has been put back to Metro. **According to the meeting on August 28th, it is fine to display the duration of the scenario (i.e. when it was initialized, and for how long has been running) and the radio channel will complement the communication.**
 
 ### MET-A-006 · Reconnection, reconciliation and exactly-once delivery of queued reports
 

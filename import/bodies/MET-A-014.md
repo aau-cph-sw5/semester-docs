@@ -4,7 +4,7 @@
 
 ## User story
 
-As a Steward, I want to mark a required station as covered, so that the control room can see staffing progress.
+As a Steward, I want to mark a required station as covered, so that the control room and my peers can see staffing progress.
 
 ## Context
 
