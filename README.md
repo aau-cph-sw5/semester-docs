@@ -30,7 +30,7 @@ cohort. Which three is decided at the August backlog session.
 | Case | Product | Items | Blocked | Backlog | Board |
 |---|---|---|---|---|---|
 | A | Emergency Scenarios | 28 | 1 | [backlog](backlog/case-a-emergency-scenarios.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/3) |
-| B | Manning/patrol requirement | 24 | 3 | [backlog](backlog/case-b-manning-patrol.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/4) |
+| B | Manning/patrol requirement | 25 | 3 | [backlog](backlog/case-b-manning-patrol.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/4) |
 | C | Operational Restrictions | 27 | 4 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
 | D | DID Master | 24 | 11 | [backlog](backlog/case-d-did-master.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/6) |
 

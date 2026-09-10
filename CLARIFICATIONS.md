@@ -45,7 +45,7 @@ Rows are ordered by impact: blocking first, then shaping, then detail, then the 
 
 ## Case B. Manning/patrol requirement
 
-3 of 24 items are blocked. 29 questions, 21 of them answered—18 by Metro Service in August, 3 at the meeting of 28 August 2026.
+3 of 25 items are blocked. 29 questions, 21 of them answered—18 by Metro Service in August, 3 at the meeting of 28 August 2026.
 
 | Item | Impact | Owner | Question |
 |---|---|---|---|

@@ -19,8 +19,9 @@ Source story B5.2, restated. This is the strongest Machine Intelligence content 
 
 ## Dependencies
 
-- Requires B-007 and B-011.
-- Measured by B-016.
+- Blocked by B-007 and B-011.
+- Pulled together with B-016. The fourth acceptance criterion cannot be demonstrated without that evaluation.
+- Blocks B-016.
 
 ## Open questions
 

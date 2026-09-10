@@ -28,28 +28,29 @@ MET-A-026	A	Role and permission matrix enforced server-side	case:A,epic:A-EP8,tr
 MET-A-027	A	Usability evaluation of the steward overview under time pressure	case:A,epic:A-EP3,track:cross-team,type:evaluation,size:M,prio:should,status:ready,provenance:aau-added,needs:metro	Sprint 5	bodies/MET-A-027.md
 MET-A-028	A	Inheritance package for the 2027 cohort	case:A,epic:A-EP10,track:cross-team,type:tech,size:L,prio:must,status:ready,provenance:aau-added	Sprint 7	bodies/MET-A-028.md
 MET-B-001	B	Evidence rule decision: is presence asserted by the system or confirmed by the steward?	case:B,epic:B-EP1,track:cross-team,type:spike,size:S,prio:must,status:ready,provenance:metro	Sprint 1	bodies/MET-B-001.md
-MET-B-002	B	Positioning interface with a simulator implementation	case:B,epic:B-EP1,track:backend,type:tech,size:M,prio:must,status:ready,provenance:metro	Sprint 1	bodies/MET-B-002.md
+MET-B-002	B	Positioning interface contract	case:B,epic:B-EP1,track:backend,type:tech,size:S,prio:must,status:ready,provenance:metro	Sprint 1	bodies/MET-B-002.md
+MET-B-025	B	Positioning simulator and shift fixture	case:B,epic:B-EP1,track:backend,type:tech,size:M,prio:must,status:ready,provenance:metro	Sprint 1	bodies/MET-B-025.md
 MET-B-003	B	Station reference dataset with concourse and platform areas	case:B,epic:B-EP1,track:backend,type:data,size:M,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-B-003.md
 MET-B-004	B	Presence and patrol record capture	case:B,epic:B-EP2,track:backend,type:feature,size:M,prio:must,status:ready,provenance:metro,needs:metro	Sprint 2	bodies/MET-B-004.md
-MET-B-005	B	Steward sees that their presence has been registered	case:B,epic:B-EP2,track:mobile,type:feature,size:S,prio:should,status:ready,provenance:metro	Sprint 3	bodies/MET-B-005.md
-MET-B-006	B	Duplicate and out-of-order observation handling	case:B,epic:B-EP2,track:backend,type:tech,size:S,prio:should,status:ready,provenance:aau-added	Sprint 2	bodies/MET-B-006.md
+MET-B-005	B	Steward sees that their presence has been registered	case:B,epic:B-EP2,track:mobile,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 3	bodies/MET-B-005.md
+MET-B-006	B	Duplicate and out-of-order observation handling	case:B,epic:B-EP2,track:backend,type:tech,size:S,prio:should,status:ready,provenance:aau-added	Sprint 3	bodies/MET-B-006.md
 MET-B-007	B	Patrol completion rule and hourly coverage computation	case:B,epic:B-EP3,track:backend,type:feature,size:L,prio:must,status:ready,provenance:metro	Sprint 3	bodies/MET-B-007.md
-MET-B-008	B	Overdue and at-risk station indication	case:B,epic:B-EP3,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 3	bodies/MET-B-008.md
+MET-B-008	B	Overdue and at-risk station indication	case:B,epic:B-EP3,track:frontend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-B-008.md
 MET-B-009	B	Steward view of stations due for patrol	case:B,epic:B-EP3,track:mobile,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 4	bodies/MET-B-009.md
-MET-B-010	B	Train manning input behind an abstraction	case:B,epic:B-EP4,track:backend,type:tech,size:M,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-B-010.md
-MET-B-011	B	Manned-train percentage against the 70 percent target	case:B,epic:B-EP4,track:backend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-B-011.md
-MET-B-012	B	Real-time shift compliance dashboard	case:B,epic:B-EP5,track:frontend,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 4	bodies/MET-B-012.md
+MET-B-010	B	Train manning input behind an abstraction	case:B,epic:B-EP4,track:backend,type:tech,size:M,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-B-010.md
+MET-B-011	B	Manned-train percentage against the 70 percent target	case:B,epic:B-EP4,track:backend,type:feature,size:M,prio:must,status:ready,provenance:metro	Sprint 3	bodies/MET-B-011.md
+MET-B-012	B	Real-time shift compliance dashboard	case:B,epic:B-EP5,track:frontend,type:feature,size:L,prio:must,status:ready,needs:metro,provenance:metro	Sprint 6	bodies/MET-B-012.md
 MET-B-013	B	Exportable per-night compliance report with traceable records	case:B,epic:B-EP5,track:backend,type:compliance,size:L,prio:must,status:refine,provenance:metro	Sprint 5	bodies/MET-B-013.md
-MET-B-014	B	Coverage gap detection during the shift	case:B,epic:B-EP6,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-B-014.md
+MET-B-014	B	Coverage gap detection during the shift	case:B,epic:B-EP6,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 6	bodies/MET-B-014.md
 MET-B-015	B	End-of-shift compliance forecast from partial-shift data	case:B,epic:B-EP6,track:backend,type:feature,size:L,prio:could,status:ready,provenance:metro	-	bodies/MET-B-015.md
 MET-B-016	B	Forecast evaluation against held-out shifts	case:B,epic:B-EP6,track:backend,type:evaluation,size:M,prio:could,status:refine,provenance:aau-added	-	bodies/MET-B-016.md
-MET-B-017	B	Shift audit summary generated from the record	case:B,epic:B-EP6,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-B-017.md
+MET-B-017	B	Shift audit summary generated from the record	case:B,epic:B-EP6,track:backend,type:feature,size:M,prio:should,status:ready,provenance:metro	Sprint 6	bodies/MET-B-017.md
 MET-B-018	B	Steward transparency view	case:B,epic:B-EP7,track:mobile,type:compliance,size:M,prio:must,status:ready,needs:metro,provenance:metro	Sprint 3	bodies/MET-B-018.md
-MET-B-019	B	Retention expiry and anonymisation enforced by the system	case:B,epic:B-EP7,track:backend,type:compliance,size:L,prio:should,status:blocked,needs:metro,provenance:metro	Sprint 4	bodies/MET-B-019.md
+MET-B-019	B	Retention expiry and anonymisation enforced by the system	case:B,epic:B-EP7,track:backend,type:compliance,size:L,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 4	bodies/MET-B-019.md
 MET-B-020	B	Append-only event store for presence and patrol records	case:B,epic:B-EP8,track:backend,type:tech,size:L,prio:must,status:ready,provenance:metro	Sprint 2	bodies/MET-B-020.md
-MET-B-021	B	Tamper-evident record and point-in-time reconstruction	case:B,epic:B-EP8,track:backend,type:tech,size:L,prio:should,status:ready,provenance:metro	Sprint 5	bodies/MET-B-021.md
-MET-B-022	B	Data-protection statement as a project deliverable	case:B,epic:B-EP7,track:cross-team,type:compliance,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 6	bodies/MET-B-022.md
-MET-B-023	B	Roles, access control and synthetic identity fixtures	case:B,epic:B-EP9,track:backend,type:feature,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-B-023.md
+MET-B-021	B	Tamper-evident record and point-in-time reconstruction	case:B,epic:B-EP8,track:backend,type:tech,size:L,prio:must,status:ready,provenance:metro	Sprint 4	bodies/MET-B-021.md
+MET-B-022	B	Data-protection statement as a project deliverable	case:B,epic:B-EP7,track:cross-team,type:compliance,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 5	bodies/MET-B-022.md
+MET-B-023	B	Roles, access control and synthetic identity fixtures	case:B,epic:B-EP9,track:backend,type:compliance,size:M,prio:must,status:blocked,needs:metro,provenance:metro	Sprint 3	bodies/MET-B-023.md
 MET-B-024	B	Inheritance package for the 2027 cohort	case:B,epic:B-EP10,track:cross-team,type:tech,size:L,prio:must,status:ready,provenance:aau-added	Sprint 7	bodies/MET-B-024.md
 MET-C-001	C	Document the Operational Restriction lifecycle as an explicit state model	case:C,epic:C-EP1,track:cross-team,type:spike,size:M,prio:must,status:ready,needs:metro,provenance:aau-added	Sprint 1	bodies/MET-C-001.md
 MET-C-002	C	State machine implementation with guarded transitions	case:C,epic:C-EP1,track:backend,type:tech,size:XL,prio:must,status:ready,provenance:aau-added	Sprint 2	bodies/MET-C-002.md

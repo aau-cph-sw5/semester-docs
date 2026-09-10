@@ -21,7 +21,8 @@ Source story B4.2, which arrives in the source document wrapped in parentheses a
 
 ## Dependencies
 
-- Requires B-007, B-011, B-020.
+- Blocked by B-007, B-011, B-020.
+- Blocks B-017.
 
 ## Open questions
 

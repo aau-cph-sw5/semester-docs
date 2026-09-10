@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP4: Train manning coverage
 
-**Size** M · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 4
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 3
 
 ## User story
 
@@ -20,7 +20,8 @@ Source story B3.1, revised by Metro Service in August 2026. The arithmetic is tr
 
 ## Dependencies
 
-- Requires B-010.
+- Blocked by B-010.
+- Blocks B-012, B-013, B-015.
 
 ## Open questions
 

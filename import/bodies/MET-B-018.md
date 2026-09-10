@@ -19,8 +19,9 @@ Source story B6.1. Together with B-005 this is where the ethical condition Metro
 
 ## Dependencies
 
-- Requires B-020 for the categories of record.
+- Blocked by B-020 for the categories of record.
 - The retention values come from B-019, which is blocked on Metro. This item does not wait for it: until the periods are confirmed the view marks them provisional, and B-019 replaces the provisional values when it lands.
+- Blocks B-022.
 
 ## Open questions
 

@@ -21,7 +21,7 @@ The requirement is that compliance evidence cannot be quietly altered. An append
 
 ## Dependencies
 
-- Blocks B-004, B-013, B-019, B-021.
+- Blocks B-004, B-013, B-018, B-019, B-021, B-023, B-024.
 
 ## Provenance
 

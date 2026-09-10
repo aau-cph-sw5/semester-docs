@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP2: Presence and patrol capture
 
-**Size** S · **Priority** Should · **Readiness** Ready · **Track** mobile · **Type** feature · **Proposed sprint** 3
+**Size** M · **Priority** Should · **Readiness** Ready · **Track** mobile · **Type** feature · **Proposed sprint** 3
 
 ## User story
 
@@ -19,7 +19,7 @@ Source story B1.2. This is the item that most directly carries the ethical frami
 
 ## Dependencies
 
-- Requires B-004.
+- Blocked by B-001, B-004.
 
 ## Provenance
 

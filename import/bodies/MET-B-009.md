@@ -18,7 +18,7 @@ Source story B2.2. This is the item that makes the system useful to the steward 
 
 ## Dependencies
 
-- Requires B-007.
+- Blocked by B-007.
 
 ## Open questions
 

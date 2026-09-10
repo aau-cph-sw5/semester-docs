@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP6: Coverage analytics and forecasting
 
-**Size** M · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 5
+**Size** M · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 6
 
 ## User story
 
@@ -18,7 +18,7 @@ Source story B5.3, restated as composition from the record rather than generatio
 
 ## Dependencies
 
-- Requires B-013.
+- Blocked by B-013.
 
 ## Provenance
 

@@ -8,7 +8,7 @@ As a Steward, I want my presence at a station recorded, so that the work I do is
 
 ## Context
 
-Source story B1.1, revised by Metro Service on 28 August 2026, which specifies the capture mechanism in detail. The steward opens and closes a session; records inside it are created from beacon observations. Written against the interface of B-002 so that it is testable without hardware.
+Source story B1.1, revised by Metro Service on 28 August 2026, which specifies the capture mechanism in detail. The steward opens and closes a session; records inside it are created from beacon observations. Written against the interface of B-002 and tested against the simulator of B-025, so that it needs no hardware.
 
 ## Acceptance criteria
 
@@ -22,7 +22,8 @@ Source story B1.1, revised by Metro Service on 28 August 2026, which specifies t
 
 ## Dependencies
 
-- Requires B-001, B-002, B-003.
+- Blocked by B-001, B-002, B-003, B-020.
+- Blocks B-005, B-006, B-007.
 
 ## Open questions
 

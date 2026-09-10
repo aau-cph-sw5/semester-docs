@@ -20,7 +20,8 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 ## Dependencies
 
-- Requires B-002. The station data this item was blocked on arrived with Metro's August material.
+- Blocked by B-002
+- Blocks B-004, B-007.
 
 ## Open questions
 

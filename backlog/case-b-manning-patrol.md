@@ -15,7 +15,7 @@ A compliance-grade system documenting that stewards are present and active durin
 
 ## At a glance
 
-**24 items.** Priority: 15 Must, 7 Should, 2 Could. Readiness: 19 ready, 2 needing refinement, 3 blocked on Metro input. Size: 3×S, 13×M, 8×L.
+**25 items.** Priority: 18 Must, 5 Should, 2 Could. Readiness: 20 ready, 2 needing refinement, 3 blocked on Metro input. Size: 3×S, 14×M, 8×L.
 
 > **Updated 28 August 2026.** Metro revised the capture mechanism. Presence comes from a Bluetooth beacon carrying a unique identifier, fixed to a platform, a concourse or a train, rather than from scanning a bar or QR code. The steward presses Start to begin a patrol session and Stop to end it; within a session a record is created for any area whose beacon connection is held past x seconds, and connections to several beacons at once are a normal state. The threshold is configuration rather than a constant. The two and seven minute round durations no longer determine coverage.
 
@@ -23,13 +23,13 @@ A compliance-grade system documenting that stewards are present and active durin
 
 > **Updated 24 August 2026** against Metro Service's answers and the revised user stories. Five of the eight blocked items are released. What changed most: presence is now recorded by scanning a bar or QR code rather than inferred from a beacon (`MET-B-001`, `MET-B-004`), the seventy percent target is a proportion of running time rather than an instantaneous reading (`MET-B-011`), and the compliance report must be exported to Metro's Databricks lakehouse (`MET-B-013`).
 
-**Minimum demonstrable product**, meaning the 9 Must items proposed for sprints 1 to 3: `MET-B-001`, `MET-B-002`, `MET-B-003`, `MET-B-004`, `MET-B-007`, `MET-B-008`, `MET-B-018`, `MET-B-020`, `MET-B-023` (blocked). Items marked (blocked) are in the set because the product is incomplete without them, not because they can be pulled: they need an answer from Metro first, and the rule in CONTRIBUTING.md stands. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
+**Minimum demonstrable product**, meaning the 11 Must items proposed for sprints 1 to 3: `MET-B-001`, `MET-B-002`, `MET-B-003`, `MET-B-004`, `MET-B-007`, `MET-B-010`, `MET-B-011`, `MET-B-018`, `MET-B-020`, `MET-B-023` (blocked), `MET-B-025`. Items marked (blocked) are in the set because the product is incomplete without them, not because they can be pulled: they need an answer from Metro first, and the rule in CONTRIBUTING.md stands. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
 ## Epics
 
 | Epic | Name | Items |
 |---|---|---|
-| `B-EP1` | Foundation: positioning abstraction and station reference data | 3 |
+| `B-EP1` | Foundation: positioning abstraction and station reference data | 4 |
 | `B-EP2` | Presence and patrol capture | 3 |
 | `B-EP3` | Station patrol coverage | 3 |
 | `B-EP4` | Train manning coverage | 2 |
@@ -45,7 +45,8 @@ A compliance-grade system documenting that stewards are present and active durin
 | ID | Title | Epic | Size | Priority | Readiness | Sprint |
 |---|---|---|---|---|---|---|
 | `MET-B-001` | Evidence rule decision: is presence asserted by the system or confirmed by the steward? | B-EP1 | S | Must | Ready | 1 |
-| `MET-B-002` | Positioning interface with a simulator implementation | B-EP1 | M | Must | Ready | 1 |
+| `MET-B-002` | Positioning interface contract | B-EP1 | S | Must | Ready | 1 |
+| `MET-B-025` | Positioning simulator and shift fixture | B-EP1 | M | Must | Ready | 1 |
 | `MET-B-003` | Station reference dataset with concourse and platform areas | B-EP1 | M | Must | Ready | 2 |
 | `MET-B-004` | Presence and patrol record capture | B-EP2 | M | Must | Ready | 2 |
 | `MET-B-005` | Steward sees that their presence has been registered | B-EP2 | M | Should | Ready | 3 |
@@ -90,7 +91,7 @@ Source story B1.1 asks for both designs at once. Its title specifies automatic r
 
 **Dependencies**
 
-- Blocks B-004, B-005, B-007, B-014.
+- Blocks B-004, B-005, B-007, B-014, B-024.
 
 **Open questions**
 
@@ -100,27 +101,24 @@ Source story B1.1 asks for both designs at once. Its title specifies automatic r
 
 *Source: B1.1, decomposed*
 
-### MET-B-002 · Positioning interface with a simulator implementation
+### MET-B-002 · Positioning interface contract
 
-`size:M` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:1`
+`size:S` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:1`
 
-**As a developer on this product, I want station presence captured through a single positioning interface with a simulator behind it, so that coverage, dashboard and reporting can all be built and tested before any team touches a physical beacon.**
+**As a developer on this product, I want station presence exposed through a single published positioning interface, so that coverage, dashboard and reporting can all be built against it rather than against a beacon.**
 
-Source story B1.1 bundles beacon detection, station identification and registration into one item, and behind it sit an indoor positioning subsystem, a reference dataset and unresolved logistics. Putting the hardware behind an interface removes station access, device availability and safety induction from the critical path of everything downstream. The source backlog already proposes this pattern for train beacons in B3.2; this extends it to stations.
+Source story B1.1 bundles beacon detection, station identification and registration into one item, and behind it sit an indoor positioning subsystem, a reference dataset and unresolved logistics. Putting the hardware behind an interface removes station access, device availability and safety induction from the critical path of everything downstream. The source backlog already proposes this pattern for train beacons in B3.2; this extends it to stations. The simulator that implements the interface is B-025.
 
 **Acceptance criteria**
 
 - [ ] The interface exposes one operation returning what the device currently observes, each observation carrying an area identifier, and an observation timestamp.
 - [ ] The interface reports when an area that was being observed is no longer observed, so that a consumer can close a record without polling.
-- [ ] A simulator replays a scripted shift from a versioned fixture file.
-- [ ] The fixture includes at least one gap exceeding the hourly patrol requirement, at least one period with two areas observed at once, and at least one connection that drops and returns within a few seconds.
-- [ ] Every downstream component is built against the interface and passes its tests using the simulator alone, with no reference to BLE anywhere in them.
 - [ ] The interface is published in the shared contract repository and reviewed by the mobile team before implementation.
 - [ ] The shape the interface returns is recorded as an architecture decision record (ADR) naming the option chosen, the option rejected and the reason.
 
 **Dependencies**
 
-- Blocks B-004, B-007, B-012, B-014.
+- Blocks B-003, B-004, B-006, B-007, B-012, B-014, B-025.
 
 **Open questions**
 
@@ -128,6 +126,26 @@ Source story B1.1 bundles beacon detection, station identification and registrat
 
 *Source: B1.1, decomposed. Pattern taken from B3.2.*
 
+### MET-B-025 · Positioning simulator and shift fixture
+
+`size:M` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:1`
+
+**As a developer on this product, I want a simulator behind the positioning interface, so that every downstream component can be built and tested before any team touches a physical beacon.**
+
+Split from B-002 so that the published contract and the implementation behind it are separate work. The contract can be agreed in sprint 1 and reviewed by the consuming teams; the simulator that makes it testable is a separate build. Without the fixture this item defines, the coverage computation of B-007 and the duplicate handling of B-006 have nothing to run against.
+
+**Acceptance criteria**
+
+- [ ] A simulator replays a scripted shift from a versioned fixture file.
+- [ ] The fixture includes at least one gap exceeding the hourly patrol requirement, at least one period with two areas observed at once, and at least one connection that drops and returns within a few seconds.
+- [ ] Every downstream component is built against the interface and passes its tests using the simulator alone, with no reference to BLE anywhere in them.
+
+**Dependencies**
+
+- Blocked by B-002.
+- Blocks B-006, B-007.
+
+*Source: B1.1, decomposed. Split from B-002.*
 
 ### MET-B-003 · Station reference dataset with concourse and platform areas
 
@@ -147,7 +165,8 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 **Dependencies**
 
-- Requires B-002. The station data this item was blocked on arrived with Metro's August material.
+- Blocked by B-002
+- Blocks B-004, B-007.
 
 **Open questions**
 
@@ -168,7 +187,7 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 **As a Steward, I want my presence at a station recorded, so that the work I do is documented without a radio call or a paper form.**
 
-Source story B1.1, revised by Metro Service on 28 August 2026, which specifies the capture mechanism in detail. The steward opens and closes a session; records inside it are created from beacon observations. Written against the interface of B-002 so that it is testable without hardware.
+Source story B1.1, revised by Metro Service on 28 August 2026, which specifies the capture mechanism in detail. The steward opens and closes a session; records inside it are created from beacon observations. Written against the interface of B-002 and tested against the simulator of B-025, so that it needs no hardware.
 
 **Acceptance criteria**
 
@@ -182,7 +201,8 @@ Source story B1.1, revised by Metro Service on 28 August 2026, which specifies t
 
 **Dependencies**
 
-- Requires B-001, B-002, B-003.
+- Blocked by B-001, B-002, B-003, B-020.
+- Blocks B-005, B-006, B-007.
 
 **Open questions**
 
@@ -194,7 +214,7 @@ Source story B1.1, revised by Metro Service on 28 August 2026, which specifies t
 
 ### MET-B-005 · Steward sees that their presence has been registered
 
-`size:S` `prio:Should` `status:Ready` `track:mobile` `type:feature` `sprint:3`
+`size:M` `prio:Should` `status:Ready` `track:mobile` `type:feature` `sprint:3`
 
 **As a Steward, I want to see that my presence has been registered, so that I trust the system is documenting my work.**
 
@@ -209,13 +229,13 @@ Source story B1.2. This is the item that most directly carries the ethical frami
 
 **Dependencies**
 
-- Requires B-004.
+- Blocked by B-001, B-004.
 
 *Source: B1.2*
 
 ### MET-B-006 · Duplicate and out-of-order observation handling
 
-`size:S` `prio:Should` `status:Ready` `track:backend` `type:tech` `sprint:2`
+`size:S` `prio:Should` `status:Ready` `track:backend` `type:tech` `sprint:3`
 
 **As an Operations Administrator, I want repeated or delayed observations not to distort the record, so that the compliance figures reflect what happened.**
 
@@ -223,13 +243,13 @@ A handheld that reconnects after a period underground will deliver observations 
 
 **Acceptance criteria**
 
-- [ ] Repeated observations of one held connection extend a single record rather than creating a second, demonstrated by a test over the fixture of B-002.
+- [ ] Repeated observations of one held connection extend a single record rather than creating a second, demonstrated by a test over the fixture of B-025.
 - [ ] An observation arriving out of order is placed by its observation timestamp rather than its arrival time.
 - [ ] An observation arriving after the shift it belongs to has been reported is handled by a stated rule rather than silently accepted.
 
 **Dependencies**
 
-- Requires B-002 and B-004.
+- Blocked by B-002, B-004, B-025.
 
 **Open questions**
 
@@ -255,12 +275,13 @@ Source story B2.1. The hard part is not the query but the definition: what makes
 - [ ] Coverage is recomputed as records arrive rather than when a session ends.
 - [ ] A station with no qualifying patrol within the window is computed as overdue.
 - [ ] Concourse and platform coverage are computed independently and both are visible.
-- [ ] The computation is covered by tests over the fixture of B-002, including the deliberate gap.
+- [ ] The computation is covered by tests over the fixture of B-025, including the deliberate gap.
 - [ ] Recomputing the same period twice produces the same result, verified by a test.
 
 **Dependencies**
 
-- Requires B-002, B-003, B-004.
+- Blocked by B-001, B-002, B-003, B-004, B-025.
+- Blocks B-008, B-009, B-012, B-013, B-014, B-015, B-024.
 
 **Open questions**
 
@@ -271,7 +292,7 @@ Source story B2.1. The hard part is not the query but the definition: what makes
 
 ### MET-B-008 · Overdue and at-risk station indication
 
-`size:M` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:3`
+`size:M` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:4`
 
 **As a Control Room Operator, I want stations approaching or past their patrol deadline distinguished from those that are compliant, so that I can act before a target is missed rather than after.**
 
@@ -286,7 +307,8 @@ Source stories B2.1 and B4.1 both ask for a flag without saying what triggers it
 
 **Dependencies**
 
-- Requires B-007.
+- Blocked by B-007.
+- Blocks B-012, B-014.
 
 **Open questions**
 
@@ -310,7 +332,7 @@ Source story B2.2. This is the item that makes the system useful to the steward 
 
 **Dependencies**
 
-- Requires B-007.
+- Blocked by B-007.
 
 **Open questions**
 
@@ -324,7 +346,7 @@ Source story B2.2. This is the item that makes the system useful to the steward 
 
 ### MET-B-010 · Train manning input behind an abstraction
 
-`size:M` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:4`
+`size:M` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:2`
 
 **As a developer on this product, I want train manning supplied through an abstracted interface with a simulated or manually entered implementation, so that the design is ready for train hardware while that hardware is still under consideration.**
 
@@ -350,7 +372,7 @@ Source story B3.2, raised from Won't to Should by AAU and now Must. As a Won't i
 
 ### MET-B-011 · Manned-train percentage against the 70 percent target
 
-`size:M` `prio:Must` `status:Ready` `track:backend` `type:feature` `sprint:4`
+`size:M` `prio:Must` `status:Ready` `track:backend` `type:feature` `sprint:3`
 
 **As a Control Room Operator, I want to see what proportion of the running time of the trains has been manned, so that I can confirm the requirement of at least 70 percent is met.**
 
@@ -366,7 +388,8 @@ Source story B3.1, revised by Metro Service in August 2026. The arithmetic is tr
 
 **Dependencies**
 
-- Requires B-010.
+- Blocked by B-010.
+- Blocks B-012, B-013, B-015.
 
 **Open questions**
 
@@ -380,7 +403,7 @@ Source story B3.1, revised by Metro Service in August 2026. The arithmetic is tr
 
 ### MET-B-012 · Real-time shift compliance dashboard
 
-`size:L` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:4`
+`size:L` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:6`
 
 **As a Control Room Operator, I want a live compliance dashboard for the current shift, so that I can redeploy stewards before a target is missed.**
 
@@ -396,7 +419,7 @@ Source story B4.1. The dashboard is the product as far as the control room is co
 
 **Dependencies**
 
-- Requires B-007, B-008, B-011.
+- Blocked by B-002, B-007, B-008, B-011.
 
 **Open questions**
 
@@ -424,7 +447,8 @@ Source story B4.2, which arrives in the source document wrapped in parentheses a
 
 **Dependencies**
 
-- Requires B-007, B-011, B-020.
+- Blocked by B-007, B-011, B-020.
+- Blocks B-017.
 
 **Open questions**
 
@@ -439,7 +463,7 @@ Source story B4.2, which arrives in the source document wrapped in parentheses a
 
 ### MET-B-014 · Coverage gap detection during the shift
 
-`size:M` `prio:Should` `status:Ready` `track:backend` `type:feature` `sprint:5`
+`size:M` `prio:Should` `status:Ready` `track:backend` `type:feature` `sprint:6`
 
 **As a Control Room Operator, I want emerging coverage gaps surfaced as they form, so that I can redeploy stewards in time.**
 
@@ -454,7 +478,7 @@ Source story B5.1, restated. The original assigned this to an assistant; with no
 
 **Dependencies**
 
-- Requires B-007 and B-008.
+- Blocked by B-001, B-002, B-007, B-008.
 
 *Source: B5.1*
 
@@ -475,8 +499,9 @@ Source story B5.2, restated. This is the strongest Machine Intelligence content 
 
 **Dependencies**
 
-- Requires B-007 and B-011.
-- Measured by B-016.
+- Blocked by B-007 and B-011.
+- Pulled together with B-016. The fourth acceptance criterion cannot be demonstrated without that evaluation.
+- Blocks B-016.
 
 **Open questions**
 
@@ -501,13 +526,14 @@ The source document asks for a forecast with reasoning, which any generated text
 
 **Dependencies**
 
-- Requires B-015.
+- Blocked by B-015.
+- Pulled together with B-015, which cannot be demonstrated complete until this evaluation exists.
 
 *Source: AAU-added.*
 
 ### MET-B-017 · Shift audit summary generated from the record
 
-`size:M` `prio:Should` `status:Ready` `track:backend` `type:feature` `sprint:5`
+`size:M` `prio:Should` `status:Ready` `track:backend` `type:feature` `sprint:6`
 
 **As an Operations Administrator, I want a draft summary of the completed shift that I can review and adjust, so that reporting takes minutes rather than hours.**
 
@@ -521,7 +547,7 @@ Source story B5.3, restated as composition from the record rather than generatio
 
 **Dependencies**
 
-- Requires B-013.
+- Blocked by B-013.
 
 *Source: B5.3*
 
@@ -546,8 +572,9 @@ Source story B6.1. Together with B-005 this is where the ethical condition Metro
 
 **Dependencies**
 
-- Requires B-020 for the categories of record.
+- Blocked by B-020 for the categories of record.
 - The retention values come from B-019, which is blocked on Metro. This item does not wait for it: until the periods are confirmed the view marks them provisional, and B-019 replaces the provisional values when it lands.
+- Blocks B-022.
 
 **Open questions**
 
@@ -557,7 +584,7 @@ Source story B6.1. Together with B-005 this is where the ethical condition Metro
 
 ### MET-B-019 · Retention expiry and anonymisation enforced by the system
 
-`size:L` `prio:Should` `status:Blocked` `track:backend` `type:compliance` `sprint:4`
+`size:L` `prio:Must` `status:Blocked` `track:backend` `type:compliance` `sprint:4`
 
 **As an Operations Administrator, I want retention rules enforced automatically, so that compliance does not depend on someone remembering to delete records.**
 
@@ -573,8 +600,9 @@ Source story B6.2 bundles a data lifecycle subsystem and an authorisation model 
 
 **Dependencies**
 
-- Requires B-020.
+- Blocked by B-020.
 - Blocked on retention periods from Metro.
+- Blocks B-022.
 
 **Open questions**
 
@@ -584,7 +612,7 @@ Source story B6.2 bundles a data lifecycle subsystem and an authorisation model 
 
 ### MET-B-022 · Data-protection statement as a project deliverable
 
-`size:M` `prio:Must` `status:Blocked` `track:cross-team` `type:compliance` `sprint:6`
+`size:M` `prio:Must` `status:Blocked` `track:cross-team` `type:compliance` `sprint:5`
 
 **As an Operations Administrator, I want a statement covering what is logged, for how long, who has access and what rights stewards hold, so that the system is auditable and the project meets its required deliverable.**
 
@@ -600,7 +628,7 @@ Source story B6.3. The statement is a student deliverable and a genuine piece of
 
 **Dependencies**
 
-- Requires B-018, B-019, B-021.
+- Blocked by B-018, B-019, B-021.
 - Should follow the ethical guidelines document from Metro.
 
 **Open questions**
@@ -632,13 +660,13 @@ The requirement is that compliance evidence cannot be quietly altered. An append
 
 **Dependencies**
 
-- Blocks B-004, B-013, B-019, B-021.
+- Blocks B-004, B-013, B-018, B-019, B-021, B-023, B-024.
 
 *Source: B7.1, decomposed and brought forward*
 
 ### MET-B-021 · Tamper-evident record and point-in-time reconstruction
 
-`size:L` `prio:Should` `status:Ready` `track:backend` `type:tech` `sprint:5`
+`size:L` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:4`
 
 **As an Operations Administrator, I want past compliance to be verifiable with confidence, so that a historical claim can be defended.**
 
@@ -653,7 +681,8 @@ The remainder of source story B7.1. The source criterion, that any modification 
 
 **Dependencies**
 
-- Requires B-020.
+- Blocked by B-020.
+- Blocks B-022.
 
 *Source: B7.1*
 
@@ -663,7 +692,7 @@ The remainder of source story B7.1. The source criterion, that any modification 
 
 ### MET-B-023 · Roles, access control and synthetic identity fixtures
 
-`size:M` `prio:Must` `status:Blocked` `track:backend` `type:feature` `sprint:3`
+`size:M` `prio:Must` `status:Blocked` `track:backend` `type:compliance` `sprint:3`
 
 **As an administrator, I want access to presence data limited by role, so that a record of a person is seen only by those with a reason to see it.**
 
@@ -678,7 +707,7 @@ The access half of source story B6.2, combined with the identity fixtures the sy
 
 **Dependencies**
 
-- Requires B-020.
+- Blocked by B-020.
 - Blocked on the role definitions from Metro.
 
 **Open questions**
@@ -706,6 +735,11 @@ As for the other products, with one addition specific to this case: the evidence
 - [ ] Characterisation tests cover the coverage computation of B-007 before any future team alters it.
 - [ ] A handover note states what works, what does not, what was cut and why, and what the next team should do first.
 - [ ] The step from synthetic to real identities is documented, including everything that would have to be true first.
+
+**Dependencies**
+
+- Blocked by B-001, B-007, B-020.
+- The tamper-evidence scheme of B-021 and the retention design of B-019 are needed as recorded decisions rather than as delivered features, so neither has to ship before this item.
 
 *Source: AAU-added.*
 

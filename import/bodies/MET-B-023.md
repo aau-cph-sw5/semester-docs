@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP9: Access, roles and identity
 
-**Size** M · **Priority** Must · **Readiness** Blocked · **Track** backend · **Type** feature · **Proposed sprint** 3
+**Size** M · **Priority** Must · **Readiness** Blocked · **Track** backend · **Type** compliance · **Proposed sprint** 3
 
 ## User story
 
@@ -19,7 +19,7 @@ The access half of source story B6.2, combined with the identity fixtures the sy
 
 ## Dependencies
 
-- Requires B-020.
+- Blocked by B-020.
 - Blocked on the role definitions from Metro.
 
 ## Open questions

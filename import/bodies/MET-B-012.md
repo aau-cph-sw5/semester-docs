@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP5: Compliance dashboard and reporting
 
-**Size** L · **Priority** Must · **Readiness** Ready · **Track** frontend · **Type** feature · **Proposed sprint** 4
+**Size** L · **Priority** Must · **Readiness** Ready · **Track** frontend · **Type** feature · **Proposed sprint** 6
 
 ## User story
 
@@ -20,7 +20,7 @@ Source story B4.1. The dashboard is the product as far as the control room is co
 
 ## Dependencies
 
-- Requires B-007, B-008, B-011.
+- Blocked by B-002, B-007, B-008, B-011.
 
 ## Open questions
 

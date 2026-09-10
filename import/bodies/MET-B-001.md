@@ -19,7 +19,7 @@ Source story B1.1 asks for both designs at once. Its title specifies automatic r
 
 ## Dependencies
 
-- Blocks B-004, B-005, B-007, B-014.
+- Blocks B-004, B-005, B-007, B-014, B-024.
 
 ## Open questions
 

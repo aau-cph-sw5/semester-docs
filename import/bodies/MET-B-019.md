@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP7: Data protection, transparency and steward rights
 
-**Size** L · **Priority** Should · **Readiness** Blocked · **Track** backend · **Type** compliance · **Proposed sprint** 4
+**Size** L · **Priority** Must · **Readiness** Blocked · **Track** backend · **Type** compliance · **Proposed sprint** 4
 
 ## User story
 
@@ -20,8 +20,9 @@ Source story B6.2 bundles a data lifecycle subsystem and an authorisation model 
 
 ## Dependencies
 
-- Requires B-020.
+- Blocked by B-020.
 - Blocked on retention periods from Metro.
+- Blocks B-022.
 
 ## Open questions
 

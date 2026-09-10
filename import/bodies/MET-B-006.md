@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP2: Presence and patrol capture
 
-**Size** S · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 2
+**Size** S · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 3
 
 ## User story
 
@@ -12,13 +12,13 @@ A handheld that reconnects after a period underground will deliver observations 
 
 ## Acceptance criteria
 
-- [ ] Repeated observations of one held connection extend a single record rather than creating a second, demonstrated by a test over the fixture of B-002.
+- [ ] Repeated observations of one held connection extend a single record rather than creating a second, demonstrated by a test over the fixture of B-025.
 - [ ] An observation arriving out of order is placed by its observation timestamp rather than its arrival time.
 - [ ] An observation arriving after the shift it belongs to has been reported is handled by a stated rule rather than silently accepted.
 
 ## Dependencies
 
-- Requires B-002 and B-004.
+- Blocked by B-002, B-004, B-025.
 
 ## Open questions
 
