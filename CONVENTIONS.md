@@ -37,7 +37,7 @@ delivered document is not yet a backlog.
 
 | Source story | As delivered | Split into |
 |---|---|---|
-| B1.1 | XXL. Bundles BLE detection, station identification and registration, and contradicts itself on whether presence is detected or confirmed. | `MET-B-001` (evidence rule), `MET-B-002` (positioning interface), `MET-B-003` (station data), `MET-B-004` (capture), `MET-B-006` (duplicate handling) |
+| B1.1 | XXL. Bundles BLE detection, station identification and registration, and contradicts itself on whether presence is detected or confirmed. | `MET-B-001` (evidence rule), `MET-B-002` (interface contract), `MET-B-025` (simulator), `MET-B-003` (station data), `MET-B-004` (capture), `MET-B-006` (duplicate handling) |
 | C5 (epic) | XL. Four signatures in sequence over a state machine that is never itself specified. | `MET-C-001`, `MET-C-002` (lifecycle), `MET-C-014` (chain), `MET-C-015` (confirmations) |
 | B6.2 | XL. A data lifecycle subsystem and an authorisation model in one Must. | `MET-B-019` (retention), `MET-B-023` (access) |
 | A2.3 | XL. A real-time transport architecture carried by one clause. | `MET-A-003` (contract), `MET-A-004` (propagation), `MET-A-006` (reconnection) |

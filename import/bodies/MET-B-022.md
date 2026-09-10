@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP7: Data protection, transparency and steward rights
 
-**Size** M · **Priority** Must · **Readiness** Blocked · **Track** cross-team · **Type** compliance · **Proposed sprint** 6
+**Size** M · **Priority** Must · **Readiness** Blocked · **Track** cross-team · **Type** compliance · **Proposed sprint** 5
 
 ## User story
 
@@ -20,7 +20,7 @@ Source story B6.3. The statement is a student deliverable and a genuine piece of
 
 ## Dependencies
 
-- Requires B-018, B-019, B-021.
+- Blocked by B-018, B-019, B-021.
 - Should follow the ethical guidelines document from Metro.
 
 ## Open questions

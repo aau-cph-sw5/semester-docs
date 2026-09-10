@@ -18,6 +18,11 @@ As for the other products, with one addition specific to this case: the evidence
 - [ ] A handover note states what works, what does not, what was cut and why, and what the next team should do first.
 - [ ] The step from synthetic to real identities is documented, including everything that would have to be true first.
 
+## Dependencies
+
+- Blocked by B-001, B-007, B-020.
+- The tamper-evidence scheme of B-021 and the retention design of B-019 are needed as recorded decisions rather than as delivered features, so neither has to ship before this item.
+
 ## Provenance
 
 Source: AAU-added.

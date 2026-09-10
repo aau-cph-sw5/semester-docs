@@ -17,16 +17,18 @@ A compliance-grade system documenting that stewards are present and active durin
 
 ## The work
 
-24 backlog items across 10 epics, one GitHub issue each. [Board](https://github.com/orgs/aau-cph-sw5/projects) · [Full backlog](https://github.com/aau-cph-sw5/semester-docs/blob/main/backlog/case-b-manning-patrol.md)
+25 backlog items across 10 epics, one GitHub issue each. [Board](https://github.com/orgs/aau-cph-sw5/projects) · [Full backlog](https://github.com/aau-cph-sw5/semester-docs/blob/main/backlog/case-b-manning-patrol.md)
 
-**Start with the minimum demonstrable product**, the 9 items proposed for sprints 1 to 3:
+**Start with the minimum demonstrable product**, the 11 items proposed for sprints 1 to 3:
 
 - `MET-B-001` Evidence rule decision: is presence asserted by the system or confirmed by the steward?
-- `MET-B-002` Positioning interface with a simulator implementation
+- `MET-B-002` Positioning interface contract
+- `MET-B-025` Positioning simulator and shift fixture
 - `MET-B-003` Station reference dataset with concourse and platform areas
 - `MET-B-004` Presence and patrol record capture
 - `MET-B-007` Patrol completion rule and hourly coverage computation
-- `MET-B-008` Overdue and at-risk station indication
+- `MET-B-010` Train manning input behind an abstraction
+- `MET-B-011` Manned-train percentage against the 70 percent target
 - `MET-B-018` Steward transparency view
 - `MET-B-020` Append-only event store for presence and patrol records
 - `MET-B-023` Roles, access control and synthetic identity fixtures **(blocked)**

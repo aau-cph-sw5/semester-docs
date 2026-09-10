@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP4: Train manning coverage
 
-**Size** M · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 4
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 2
 
 ## User story
 

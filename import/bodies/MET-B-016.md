@@ -19,7 +19,8 @@ The source document asks for a forecast with reasoning, which any generated text
 
 ## Dependencies
 
-- Requires B-015.
+- Blocked by B-015.
+- Pulled together with B-015, which cannot be demonstrated complete until this evaluation exists.
 
 ## Provenance
 

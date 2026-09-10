@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP3: Station patrol coverage
 
-**Size** M · **Priority** Must · **Readiness** Ready · **Track** frontend · **Type** feature · **Proposed sprint** 3
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** frontend · **Type** feature · **Proposed sprint** 4
 
 ## User story
 
@@ -19,7 +19,8 @@ Source stories B2.1 and B4.1 both ask for a flag without saying what triggers it
 
 ## Dependencies
 
-- Requires B-007.
+- Blocked by B-007.
+- Blocks B-012, B-014.
 
 ## Open questions
 

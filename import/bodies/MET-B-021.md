@@ -1,6 +1,6 @@
 > **Manning/patrol requirement (Case B)** · Epic B-EP8: Verifiable historical record
 
-**Size** L · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 5
+**Size** L · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 4
 
 ## User story
 
@@ -19,7 +19,8 @@ The remainder of source story B7.1. The source criterion, that any modification 
 
 ## Dependencies
 
-- Requires B-020.
+- Blocked by B-020.
+- Blocks B-022.
 
 ## Provenance
 
