@@ -8,7 +8,7 @@ As a developer on this product, I want train manning supplied through an abstrac
 
 ## Context
 
-Source story B3.2, raised from Won't to Should. As a Won't it removes the interface as well as the hardware, which leaves B3.1 with no input and makes the manning half of the compliance requirement undeliverable. Raised to Should as an interface only, it costs little and keeps the case whole.
+Source story B3.2, raised from Won't to Should by AAU and now Must. As a Won't it removes the interface as well as the hardware, which leaves B3.1 with no input and makes the manning half of the compliance requirement undeliverable. Raised as an interface only, it costs little and keeps the case whole. It is Must because Metro raised source story B3.1, delivered here as B-011, to Must in the August revision, and B-011 cannot be computed without this interface.
 
 ## Acceptance criteria
 
@@ -27,4 +27,4 @@ Source story B3.2, raised from Won't to Should. As a Won't it removes the interf
 
 ## Provenance
 
-Source: B3.2, priority raised from Won't to Should by AAU
+Source: B3.2, priority raised from Won't to Should by AAU, then to Must after Metro's August revision

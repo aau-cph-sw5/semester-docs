@@ -44,8 +44,8 @@ A compliance-grade system documenting that stewards are present and active durin
 |---|---|---|---|---|---|---|
 | `MET-B-001` | Evidence rule decision: is presence asserted by the system or confirmed by the steward? | B-EP1 | S | Must | Ready | 1 |
 | `MET-B-002` | Positioning interface with a simulator implementation | B-EP1 | M | Must | Ready | 1 |
-| `MET-B-003` | Station reference dataset with concourse and platform areas | B-EP1 | M | Must | Needs refinement | 2 |
-| `MET-B-004` | Presence and patrol record capture | B-EP2 | M | Must | Needs refinement | 2 |
+| `MET-B-003` | Station reference dataset with concourse and platform areas | B-EP1 | M | Must | Ready | 2 |
+| `MET-B-004` | Presence and patrol record capture | B-EP2 | M | Must | Ready | 2 |
 | `MET-B-005` | Steward sees that their presence has been registered | B-EP2 | S | Should | Ready | 3 |
 | `MET-B-006` | Duplicate and out-of-order observation handling | B-EP2 | S | Should | Ready | 2 |
 | `MET-B-007` | Patrol completion rule and hourly coverage computation | B-EP3 | L | Must | Ready | 3 |
@@ -56,7 +56,7 @@ A compliance-grade system documenting that stewards are present and active durin
 | `MET-B-012` | Real-time shift compliance dashboard | B-EP5 | L | Must | Ready | 4 |
 | `MET-B-013` | Exportable per-night compliance report with traceable records | B-EP5 | L | Must | Needs refinement | 5 |
 | `MET-B-014` | Coverage gap detection during the shift | B-EP6 | M | Should | Ready | 5 |
-| `MET-B-015` | End-of-shift compliance forecast from partial-shift data | B-EP6 | L | Could | Needs refinement | - |
+| `MET-B-015` | End-of-shift compliance forecast from partial-shift data | B-EP6 | L | Could | Ready | - |
 | `MET-B-016` | Forecast evaluation against held-out shifts | B-EP6 | M | Could | Needs refinement | - |
 | `MET-B-017` | Shift audit summary generated from the record | B-EP6 | M | Should | Ready | 5 |
 | `MET-B-018` | Steward transparency view | B-EP7 | M | Must | Ready | 3 |
@@ -312,7 +312,7 @@ Source story B2.2. This is the item that makes the system useful to the steward 
 
 **As a developer on this product, I want train manning supplied through an abstracted interface with a simulated or manually entered implementation, so that the design is ready for train hardware while that hardware is still under consideration.**
 
-Source story B3.2, raised from Won't to Should. As a Won't it removes the interface as well as the hardware, which leaves B3.1 with no input and makes the manning half of the compliance requirement undeliverable. Raised to Should as an interface only, it costs little and keeps the case whole.
+Source story B3.2, raised from Won't to Should by AAU and now Must. As a Won't it removes the interface as well as the hardware, which leaves B3.1 with no input and makes the manning half of the compliance requirement undeliverable. Raised as an interface only, it costs little and keeps the case whole. It is Must because Metro raised source story B3.1, delivered here as B-011, to Must in the August revision, and B-011 cannot be computed without this interface.
 
 **Acceptance criteria**
 
@@ -329,7 +329,7 @@ Source story B3.2, raised from Won't to Should. As a Won't it removes the interf
 - *[Answered · Metro, August 2026]* Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so a future train-beacon deployment, which source story B3.2 anticipated, becomes one implementation behind this interface rather than the precondition for the feature.
 - *[Answered · Metro, August 2026]* How many trains run at night, and where does the list come from? **The number varies with the track work done that night and with the day and time of year, and Metro needs to set it before the shift starts.** The expected number of trains in service is therefore shift configuration entered in advance, not something derived from a running-train feed. It is also the denominator of the 70 percent figure in B-011, so it must be stored with the shift and shown on the report. A compliance figure whose denominator was not recorded cannot be recomputed, and a figure that cannot be recomputed is not evidence.
 
-*Source: B3.2, priority raised from Won't to Should by AAU*
+*Source: B3.2, priority raised from Won't to Should by AAU, then to Must after Metro's August revision*
 
 ### MET-B-011 · Manned-train percentage against the 70 percent target
 
@@ -544,7 +544,7 @@ Source story B6.1. Together with B-005 this is where the ethical condition Metro
 
 **As an Operations Administrator, I want retention rules enforced automatically, so that compliance does not depend on someone remembering to delete records.**
 
-Source story B6.2 bundles a data lifecycle subsystem and an authorisation model into one item. The lifecycle half is here and the access half is B-021. Retention periods cannot be invented by the students.
+Source story B6.2 bundles a data lifecycle subsystem and an authorisation model into one item. The lifecycle half is here and the access half is B-023. Retention periods cannot be invented by the students.
 
 **Acceptance criteria**
 

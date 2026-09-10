@@ -8,7 +8,7 @@ As an Operations Administrator, I want retention rules enforced automatically, s
 
 ## Context
 
-Source story B6.2 bundles a data lifecycle subsystem and an authorisation model into one item. The lifecycle half is here and the access half is B-021. Retention periods cannot be invented by the students.
+Source story B6.2 bundles a data lifecycle subsystem and an authorisation model into one item. The lifecycle half is here and the access half is B-023. Retention periods cannot be invented by the students.
 
 ## Acceptance criteria
 
