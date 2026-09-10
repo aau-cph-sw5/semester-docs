@@ -8,7 +8,7 @@ As a team on this product, we want a recorded decision on what constitutes evide
 
 ## Context
 
-Source story B1.1 asks for both designs at once. Its title specifies automatic registration via beacons; its first acceptance criterion specifies creating a record with a single tap. These are different products with different evidence value, different failure modes and a different feel for the person being recorded. Everything in epics B3, B4 and B8 depends on the answer, so it is taken first and recorded as an architecture decision record.
+Source story B1.1 asks for both designs at once. Its title specifies automatic registration via beacons; its first acceptance criterion specifies creating a record with a single tap. These are different products with different evidence value, different failure modes and a different feel for the person being recorded. Everything in epics B3, B4 and B8 depends on the answer, so it is taken first and recorded as an architecture decision record (ADR).
 
 ## Acceptance criteria
 
@@ -23,6 +23,8 @@ Source story B1.1 asks for both designs at once. Its title specifies automatic r
 
 ## Open questions
 
+- **[Shaping · Metro]** What is x, the minimum connection duration that counts an area as patrolled? The threshold is configuration rather than a constant, so no item waits on the figure.
+- **[Answered · Metro, 28 August 2026]** The August mechanism is revised. The steward still presses Start/Fortsæt, now to begin a patrol session rather than to open a single record, and Stop to end it. What identifies the location is no longer a scanned bar or QR code but a Bluetooth beacon carrying a unique identifier, fixed to a platform, a concourse or a train. The evidence rule for the ADR changes: *a patrol session is opened and closed by a deliberate act of the steward, and within it records are created by the system from timestamped beacon observations.* Two properties of the mechanism belong in the ADR. The device may hold connections to more than one beacon at once, so simultaneous detections are a normal state: a steward may be in range of a train beacon and a platform beacon at the same time. And an area counts as patrolled once the connection to its beacon exceeds x seconds, so a steward who steps out of a stopped train onto the platform and back has patrolled that platform.
 - **[Answered · Metro, August 2026]** Is a patrol record created automatically, or does the steward confirm it? **"The steward confirms it or starts/stops the record."** The revised story B1.1 specifies the mechanism: the steward presses Start/Fortsæt and scans a bar or QR code to open a record, and Stop plus a scan to close it, on a station level and inside a train. The evidence rule to record in the ADR is therefore that a record is created by a scanned, timestamped act of the steward, with a beacon reading as corroborating context rather than evidence.
 
 ## Provenance

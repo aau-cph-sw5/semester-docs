@@ -12,7 +12,7 @@ A handheld that reconnects after a period underground will deliver observations 
 
 ## Acceptance criteria
 
-- [ ] A duplicate observation does not create a second patrol record, demonstrated by a test over the fixture of B-002.
+- [ ] Repeated observations of one held connection extend a single record rather than creating a second, demonstrated by a test over the fixture of B-002.
 - [ ] An observation arriving out of order is placed by its observation timestamp rather than its arrival time.
 - [ ] An observation arriving after the shift it belongs to has been reported is handled by a stated rule rather than silently accepted.
 
