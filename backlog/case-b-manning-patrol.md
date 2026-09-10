@@ -9,13 +9,15 @@ A compliance-grade system documenting that stewards are present and active durin
 | **AAU evaluation** | Recommended by the AAU evaluation, conditional on a written ethical-framing agreement. Metro has confirmed that an ethical guidelines document will follow after the summer vacation. |
 | **Metro contact** | Ian Røpke (IAR@metroservice.dk); domain expert Karsten Juhl (KJU@metroservice.dk) |
 | **Surfaces** | Android handheld for stewards, web dashboard for control room and operations, back-end analytics and reporting. |
-| **Data readiness** | Station list for both lines received in August, stating for each station whether it has a platform level only or a platform and a concourse level: 46 stations, 76 patrol levels. Records are opened and closed by scanning a bar or QR code, at a station level and inside a train; BLE is corroborating context rather than evidence. The fleet is now known: 42 trains on M1/M2, permanent vehicle IDs 001 to 042, and 39 on M3/M4, IDs 001 to 039. Patrol round durations received: two minutes for any platform, seven for a concourse level, held per station so that Metro can adjust them. |
+| **Data readiness** | Station list for both lines received in August, stating for each station whether it has a platform level only or a platform and a concourse level: 46 stations, 76 patrol levels. The steward opens and closes a patrol session, and within it records are created from Bluetooth beacon connections held past a threshold, on a platform, a concourse or a train. The fleet is now known: 42 trains on M1/M2, permanent vehicle IDs 001 to 042, and 39 on M3/M4, IDs 001 to 039. |
 
 > This product runs on synthetic steward identities for the whole semester. No personal data is transferred to AAU, so no Data Processing Agreement sits on the critical path. The ethical and technical content of the case is unaffected.
 
 ## At a glance
 
 **24 items.** Priority: 15 Must, 7 Should, 2 Could. Readiness: 19 ready, 2 needing refinement, 3 blocked on Metro input. Size: 3×S, 13×M, 8×L.
+
+> **Updated 28 August 2026.** Metro revised the capture mechanism. Presence comes from a Bluetooth beacon carrying a unique identifier, fixed to a platform, a concourse or a train, rather than from scanning a bar or QR code. The steward presses Start to begin a patrol session and Stop to end it; within a session a record is created for any area whose beacon connection is held past x seconds, and connections to several beacons at once are a normal state. The threshold is configuration rather than a constant. The two and seven minute round durations no longer determine coverage.
 
 > **Updated 27 August 2026.** Metro answered every remaining Case B question except the ethical guidelines. A platform is patrolled in two minutes and a concourse level in seven, held per station rather than as a constant, against a ten-minute train interval: nine minutes of work in a ten-minute cycle is the slack the whole case runs on, which is why travel time belongs in the at-risk rule of `MET-B-008` and the gap detection of `MET-B-014`. The re-scan interval is configuration with six minutes as the default, a missed re-scan continues the manning record with the gap flagged, a late observation reissues that night's report, and the number of trains in service is set before the shift and must be stored with it, since it is the denominator of the seventy percent figure. No historical night-shift record exists in any form, so the forecast in `MET-B-015` can be trained and tested only on simulated shifts and stays outside the minimum demonstrable product.
 
@@ -46,24 +48,24 @@ A compliance-grade system documenting that stewards are present and active durin
 | `MET-B-002` | Positioning interface with a simulator implementation | B-EP1 | M | Must | Ready | 1 |
 | `MET-B-003` | Station reference dataset with concourse and platform areas | B-EP1 | M | Must | Ready | 2 |
 | `MET-B-004` | Presence and patrol record capture | B-EP2 | M | Must | Ready | 2 |
-| `MET-B-005` | Steward sees that their presence has been registered | B-EP2 | S | Should | Ready | 3 |
-| `MET-B-006` | Duplicate and out-of-order observation handling | B-EP2 | S | Should | Ready | 2 |
+| `MET-B-005` | Steward sees that their presence has been registered | B-EP2 | M | Should | Ready | 3 |
+| `MET-B-006` | Duplicate and out-of-order observation handling | B-EP2 | S | Should | Ready | 3 |
 | `MET-B-007` | Patrol completion rule and hourly coverage computation | B-EP3 | L | Must | Ready | 3 |
-| `MET-B-008` | Overdue and at-risk station indication | B-EP3 | M | Must | Ready | 3 |
+| `MET-B-008` | Overdue and at-risk station indication | B-EP3 | M | Must | Ready | 4 |
 | `MET-B-009` | Steward view of stations due for patrol | B-EP3 | M | Should | Ready | 4 |
-| `MET-B-010` | Train manning input behind an abstraction | B-EP4 | M | Must | Ready | 4 |
-| `MET-B-011` | Manned-train percentage against the 70 percent target | B-EP4 | M | Must | Ready | 4 |
-| `MET-B-012` | Real-time shift compliance dashboard | B-EP5 | L | Must | Ready | 4 |
+| `MET-B-010` | Train manning input behind an abstraction | B-EP4 | M | Must | Ready | 2 |
+| `MET-B-011` | Manned-train percentage against the 70 percent target | B-EP4 | M | Must | Ready | 3 |
+| `MET-B-012` | Real-time shift compliance dashboard | B-EP5 | L | Must | Ready | 6 |
 | `MET-B-013` | Exportable per-night compliance report with traceable records | B-EP5 | L | Must | Needs refinement | 5 |
-| `MET-B-014` | Coverage gap detection during the shift | B-EP6 | M | Should | Ready | 5 |
+| `MET-B-014` | Coverage gap detection during the shift | B-EP6 | M | Should | Ready | 6 |
 | `MET-B-015` | End-of-shift compliance forecast from partial-shift data | B-EP6 | L | Could | Ready | - |
 | `MET-B-016` | Forecast evaluation against held-out shifts | B-EP6 | M | Could | Needs refinement | - |
-| `MET-B-017` | Shift audit summary generated from the record | B-EP6 | M | Should | Ready | 5 |
+| `MET-B-017` | Shift audit summary generated from the record | B-EP6 | M | Should | Ready | 6 |
 | `MET-B-018` | Steward transparency view | B-EP7 | M | Must | Ready | 3 |
-| `MET-B-019` | Retention expiry and anonymisation enforced by the system | B-EP7 | L | Should | Blocked | 4 |
+| `MET-B-019` | Retention expiry and anonymisation enforced by the system | B-EP7 | L | Must | Blocked | 4 |
 | `MET-B-020` | Append-only event store for presence and patrol records | B-EP8 | L | Must | Ready | 2 |
-| `MET-B-021` | Tamper-evident record and point-in-time reconstruction | B-EP8 | L | Should | Ready | 5 |
-| `MET-B-022` | Data-protection statement as a project deliverable | B-EP7 | M | Must | Blocked | 6 |
+| `MET-B-021` | Tamper-evident record and point-in-time reconstruction | B-EP8 | L | Must | Ready | 4 |
+| `MET-B-022` | Data-protection statement as a project deliverable | B-EP7 | M | Must | Blocked | 5 |
 | `MET-B-023` | Roles, access control and synthetic identity fixtures | B-EP9 | M | Must | Blocked | 3 |
 | `MET-B-024` | Inheritance package for the 2027 cohort | B-EP10 | L | Must | Ready | 7 |
 
@@ -77,7 +79,7 @@ A compliance-grade system documenting that stewards are present and active durin
 
 **As a team on this product, we want a recorded decision on what constitutes evidence of presence, so that every downstream item means the same thing by a patrol record.**
 
-Source story B1.1 asks for both designs at once. Its title specifies automatic registration via beacons; its first acceptance criterion specifies creating a record with a single tap. These are different products with different evidence value, different failure modes and a different feel for the person being recorded. Everything in epics B3, B4 and B8 depends on the answer, so it is taken first and recorded as an architecture decision record.
+Source story B1.1 asks for both designs at once. Its title specifies automatic registration via beacons; its first acceptance criterion specifies creating a record with a single tap. These are different products with different evidence value, different failure modes and a different feel for the person being recorded. Everything in epics B3, B4 and B8 depends on the answer, so it is taken first and recorded as an architecture decision record (ADR).
 
 **Acceptance criteria**
 
@@ -92,6 +94,8 @@ Source story B1.1 asks for both designs at once. Its title specifies automatic r
 
 **Open questions**
 
+- *[Shaping · Metro]* What is x, the minimum connection duration that counts an area as patrolled? The threshold is configuration rather than a constant, so no item waits on the figure.
+- *[Answered · Metro, 28 August 2026]* The August mechanism is revised. The steward still presses Start/Fortsæt, now to begin a patrol session rather than to open a single record, and Stop to end it. What identifies the location is no longer a scanned bar or QR code but a Bluetooth beacon carrying a unique identifier, fixed to a platform, a concourse or a train. The evidence rule for the ADR changes: *a patrol session is opened and closed by a deliberate act of the steward, and within it records are created by the system from timestamped beacon observations.* Two properties of the mechanism belong in the ADR. The device may hold connections to more than one beacon at once, so simultaneous detections are a normal state: a steward may be in range of a train beacon and a platform beacon at the same time. And an area counts as patrolled once the connection to its beacon exceeds x seconds, so a steward who steps out of a stopped train onto the platform and back has patrolled that platform.
 - *[Answered · Metro, August 2026]* Is a patrol record created automatically, or does the steward confirm it? **"The steward confirms it or starts/stops the record."** The revised story B1.1 specifies the mechanism: the steward presses Start/Fortsæt and scans a bar or QR code to open a record, and Stop plus a scan to close it, on a station level and inside a train. The evidence rule to record in the ADR is therefore that a record is created by a scanned, timestamped act of the steward, with a beacon reading as corroborating context rather than evidence.
 
 *Source: B1.1, decomposed*
@@ -102,21 +106,28 @@ Source story B1.1 asks for both designs at once. Its title specifies automatic r
 
 **As a developer on this product, I want station presence captured through a single positioning interface with a simulator behind it, so that coverage, dashboard and reporting can all be built and tested before any team touches a physical beacon.**
 
-Source story B1.1 bundles beacon detection, station identification and registration into one item, and behind it sit an indoor positioning subsystem, a reference dataset and unresolved logistics. Deferring the hardware behind an interface removes station access, device availability and safety induction from the critical path of everything downstream. The source backlog already proposes this pattern for train beacons in B3.2; this extends it to stations.
+Source story B1.1 bundles beacon detection, station identification and registration into one item, and behind it sit an indoor positioning subsystem, a reference dataset and unresolved logistics. Putting the hardware behind an interface removes station access, device availability and safety induction from the critical path of everything downstream. The source backlog already proposes this pattern for train beacons in B3.2; this extends it to stations.
 
 **Acceptance criteria**
 
-- [ ] The interface exposes one operation returning observed station identity, a confidence value and an observation timestamp.
+- [ ] The interface exposes one operation returning what the device currently observes, each observation carrying an area identifier, and an observation timestamp.
+- [ ] The interface reports when an area that was being observed is no longer observed, so that a consumer can close a record without polling.
 - [ ] A simulator replays a scripted shift from a versioned fixture file.
-- [ ] The fixture includes at least one gap exceeding the hourly patrol requirement and at least one ambiguous observation matching two adjacent stations.
+- [ ] The fixture includes at least one gap exceeding the hourly patrol requirement, at least one period with two areas observed at once, and at least one connection that drops and returns within a few seconds.
 - [ ] Every downstream component is built against the interface and passes its tests using the simulator alone, with no reference to BLE anywhere in them.
 - [ ] The interface is published in the shared contract repository and reviewed by the mobile team before implementation.
+- [ ] The shape the interface returns is recorded as an architecture decision record (ADR) naming the option chosen, the option rejected and the reason.
 
 **Dependencies**
 
 - Blocks B-004, B-007, B-012, B-014.
 
+**Open questions**
+
+- *[Shaping · Metro]* What does a beacon broadcast, and in what format? Whether the payload identifies its own location or carries only an identifier decides what the interface returns, and whether it returns one observation or the set currently in range.
+
 *Source: B1.1, decomposed. Pattern taken from B3.2.*
+
 
 ### MET-B-003 · Station reference dataset with concourse and platform areas
 
@@ -128,7 +139,8 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 **Acceptance criteria**
 
-- [ ] Each station maps to its identifier, its line, and its distinct patrol areas.
+- [ ] Each station maps to its identifier, its line, and its distinct patrol areas
+- [ ] Each patrol area carries the identifier of the beacon that names it.
 - [ ] The dataset is loaded from a versioned file and reloading is idempotent.
 - [ ] Stations serving two lines are modelled once and referenced twice rather than duplicated.
 - [ ] A station added to the file appears in the system without a code change.
@@ -139,7 +151,8 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 **Open questions**
 
-- *[Answered · Metro, August 2026]* The station layout data is required before this item can start. **Received**: a per-line list stating for each station whether it has a platform level only or a platform and a concourse level. M1/M2 has 22 stations of which 7 have a concourse, M3/M4 has 24 stations of which 23 do: 46 stations and 76 patrol levels in total. Each station carries a short code (VAN, KGN, CPH) which is the natural primary key. The beacon-to-station mapping was answered "not relevant", which follows from the move to bar and QR codes; what the dataset needs instead is a code identifier per level and per train.
+- *[Answered · Metro, 28 August 2026]* The beacon-to-station mapping was answered "not relevant" in August under the scanning mechanism, and the revision of 28 August does not by itself change that: what the dataset needs is a beacon identifier per patrol area. The round durations are superseded. Coverage is no longer earned by walking a round, so the two and seven minute figures are not reference data this dataset holds.
+- *[Answered · Metro, August 2026]* The station layout data is required before this item can start. **Received**: a per-line list stating for each station whether it has a platform level only or a platform and a concourse level. M1/M2 has 22 stations of which 7 have a concourse, M3/M4 has 24 stations of which 23 do: 46 stations and 76 patrol levels in total. Each station carries a short code (VAN, KGN, CPH) which is the natural primary key.
 - *[Answered · Metro, August 2026]* How long does a full patrol round take in practice? **Two minutes for any platform. Seven minutes for a concourse level, and Metro would prefer a per-station value it can adjust as it gains experience with the requirement.** Round duration is therefore reference data held on the station level, with seven minutes as the default, not a constant in the code. The arithmetic Metro attaches to it is the design constraint of the whole case: seven plus two is nine minutes against a ten-minute train interval, so a full station consumes almost exactly the time between trains. One minute of slack is what the schedule has, which is why the at-risk rule in B-008 and the gap detection in B-014 must reason about travel time rather than only about time elapsed since the last patrol.
 - *[Answered · Metro, August 2026]* The list of trains on both lines. **Received as counts and identifier ranges: M1/M2 has 42 trains, permanent vehicle IDs 001 to 042; M3/M4 has 39, IDs 001 to 039.** The fixture is now real rather than synthetic, 81 trains in total. The identifier is per line rather than per fleet, so a train key must carry the line to be unique, and the seed data should say so explicitly. Which of them run on a given night is a separate matter, answered under B-010.
 
@@ -155,16 +168,17 @@ Source story B2.1 requires that concourse and platform both be accounted for, wh
 
 **As a Steward, I want my presence at a station recorded, so that the work I do is documented without a radio call or a paper form.**
 
-Source story B1.1, revised by Metro Service in August 2026, which now specifies the capture mechanism in detail. A record is opened and closed by a scan, not inferred from a detection. Written against the interface of B-002 so that it is testable without hardware.
+Source story B1.1, revised by Metro Service on 28 August 2026, which specifies the capture mechanism in detail. The steward opens and closes a session; records inside it are created from beacon observations. Written against the interface of B-002 so that it is testable without hardware.
 
 **Acceptance criteria**
 
-- [ ] Start/Fortsæt followed by a scan of a code on a station level opens a patrol record for that level; Stop followed by a scan of a second code on the same level closes it.
-- [ ] Start/Fortsæt followed by a scan of the code in a train opens a manning record; a further scan of the same code confirms continued presence; Stop followed by a scan closes it.
-- [ ] A mandatory re-scan interval is enforced on trains, with the interval held as configuration rather than as a literal in the code.
-- [ ] Stop without a scan closes an open train record, and the recorded time ends three minutes after the last valid scan rather than at the moment Stop was pressed.
-- [ ] An open record is a representable state rather than an error, and the treatment of a record left open past the end of a shift is documented.
-- [ ] Records are written through the append-only store of B-020.
+- [ ] Start/Fortsæt begins a patrol session and Stop ends it. A beacon connection outside a session creates nothing.
+- [ ] Within a session, a record is initiated once a beacon is connected and completed for an area once its beacon connection has been held for x seconds. A connection that never reaches x seconds does not save a record and is discarded.
+- [ ] A connection that drops and returns within the tolerated gap continues the same record rather than opening a second one, or closing the previous one. The tolerated gap is recorded as a design decision, since Bluetooth connections drop briefly and recover without the steward having moved.
+- [ ] A record closes when its connection has been lost for longer than the tolerated gap, and its end time is the last confirmed connection.
+- [ ] Pressing Stop closes every open record at its last confirmed connection, records with connections for more than x seconds are saved; connections shorter than that were never records and are discarded.
+- [ ] Records for more than one area may be open at the same time.
+- [ ] Every record carries which area it was taken in, so that station coverage and train manning are computed from one stream.
 
 **Dependencies**
 
@@ -172,7 +186,7 @@ Source story B1.1, revised by Metro Service in August 2026, which now specifies 
 
 **Open questions**
 
-- *[Shaping · Metro]* What closes a manning record when the steward never scans Stop, for example at the end of a shift or after a maximum duration? Metro has confirmed that a missed re-scan continues the record, so without a closing rule an unclosed record counts as manning for the rest of the night.
+- *[Shaping · Metro]* What closes a record when the steward never presses Stop, for example at the end of a shift? Loss of the beacon connection closes a record, but a session left open has no closing event of its own.
 - *[Answered · Metro, August 2026]* What is the mandatory re-scan interval on a train? **Metro asks for it to be an open input field, and six minutes otherwise.** Held as configuration, which is what the item already assumed, with six minutes as the default. One addition: the interval in force must be recorded on the shift, so that a compliance figure can be recomputed later against the value that actually applied rather than against today's setting.
 - *[Answered · Metro, August 2026]* Does a missed re-scan end the manning record, or continue it and flag the gap? **Continue it, and flag the gap.** Metro's reason is operational: the steward may be occupied by a troubling passenger while the train is still manned. So a missed scan does not close the record, the manning time is not interrupted for the compliance calculation, and the gap is recorded and shown. Two things follow: the flag belongs in the exported report as well as on the dashboard, and there must be a rule for when a record closes without a Stop scan, because a record that never ends counts as manning for the rest of the night. That rule has been put back to Metro.
 
@@ -188,8 +202,9 @@ Source story B1.2. This is the item that most directly carries the ethical frami
 
 **Acceptance criteria**
 
-- [ ] The steward sees a confirmation naming the station and the time recorded.
-- [ ] The steward can review their own records for the current shift without requesting them from anyone.
+- [ ] The steward is notified when a record is opened, naming the area.
+- [ ] The steward can review their own records for the current shift, both closed and currently open, without requesting them from anyone.
+- [ ] For each open record the steward can see how long it has been open and whether it has passed the threshold that counts the area as patrolled.
 - [ ] A record that failed to reach the server is shown as pending rather than as recorded.
 
 **Dependencies**
@@ -208,7 +223,7 @@ A handheld that reconnects after a period underground will deliver observations 
 
 **Acceptance criteria**
 
-- [ ] A duplicate observation does not create a second patrol record, demonstrated by a test over the fixture of B-002.
+- [ ] Repeated observations of one held connection extend a single record rather than creating a second, demonstrated by a test over the fixture of B-002.
 - [ ] An observation arriving out of order is placed by its observation timestamp rather than its arrival time.
 - [ ] An observation arriving after the shift it belongs to has been reported is handled by a stated rule rather than silently accepted.
 
@@ -236,7 +251,8 @@ Source story B2.1. The hard part is not the query but the definition: what makes
 
 **Acceptance criteria**
 
-- [ ] The patrol completion rule is documented before implementation, covering the window definition and the treatment of separate areas.
+- [ ] The patrol completion rule is documented before implementation, covering the window definition, the treatment of separate areas, and the threshold from B-004 that qualifies a record as a patrol.
+- [ ] Coverage is recomputed as records arrive rather than when a session ends.
 - [ ] A station with no qualifying patrol within the window is computed as overdue.
 - [ ] Concourse and platform coverage are computed independently and both are visible.
 - [ ] The computation is covered by tests over the fixture of B-002, including the deliberate gap.
@@ -326,6 +342,7 @@ Source story B3.2, raised from Won't to Should by AAU and now Must. As a Won't i
 
 **Open questions**
 
+- *[Answered · Metro, 28 August 2026]* The beacons are already installed. Platforms, concourses and trains carry Bluetooth beacons deployed for another purpose, so a manning record reads existing hardware rather than waiting on a fitting programme.
 - *[Answered · Metro, August 2026]* Is the raised priority accepted? **Yes.** Metro raised source story B3.1 from Should to Must in the revised document. Train manning also no longer waits on hardware: a steward opens and closes a manning record by scanning a printed code inside the train, so a future train-beacon deployment, which source story B3.2 anticipated, becomes one implementation behind this interface rather than the precondition for the feature.
 - *[Answered · Metro, August 2026]* How many trains run at night, and where does the list come from? **The number varies with the track work done that night and with the day and time of year, and Metro needs to set it before the shift starts.** The expected number of trains in service is therefore shift configuration entered in advance, not something derived from a running-train feed. It is also the denominator of the 70 percent figure in B-011, so it must be stored with the shift and shown on the report. A compliance figure whose denominator was not recorded cannot be recomputed, and a figure that cannot be recomputed is not evidence.
 
@@ -372,7 +389,7 @@ Source story B4.1. The dashboard is the product as far as the control room is co
 **Acceptance criteria**
 
 - [ ] Live patrol coverage and train manning are both visible on one screen for a full line.
-- [ ] The display updates without manual refresh and states the age of its data.
+- [ ] The display updates without manual refresh as records arrive, and states the age of its data.
 - [ ] At-risk and overdue metrics are surfaced without the operator having to look for them.
 - [ ] The dashboard is legible at the resolution the control room actually uses.
 - [ ] The dashboard remains usable when the manning source of B-010 returns nothing, degrading rather than failing.
@@ -604,7 +621,7 @@ Source story B6.3. The statement is a student deliverable and a genuine piece of
 
 Half of source story B7.1, brought forward. Tamper evidence cannot be added to a mutable store afterwards without rebuilding everything above it, so the storage decision is taken in the second sprint rather than the fifth.
 
-The requirement is that compliance evidence cannot be quietly altered. An append-only event store is the candidate design, and the criteria below are written against it. A team that argues for a different mechanism in an architecture decision record may use it, provided the record meets the same requirement. Shipping a store in which a record can be changed without trace is what is ruled out.
+The requirement is that compliance evidence cannot be quietly altered. An append-only event store is the candidate design, and the criteria below are written against it. A team that argues for a different mechanism in an architecture decision record (ADR) may use it, provided the record meets the same requirement. Shipping a store in which a record can be changed without trace is what is ruled out.
 
 **Acceptance criteria**
 

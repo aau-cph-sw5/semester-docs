@@ -12,7 +12,8 @@ Source story B2.1. The hard part is not the query but the definition: what makes
 
 ## Acceptance criteria
 
-- [ ] The patrol completion rule is documented before implementation, covering the window definition and the treatment of separate areas.
+- [ ] The patrol completion rule is documented before implementation, covering the window definition, the treatment of separate areas, and the threshold from B-004 that qualifies a record as a patrol.
+- [ ] Coverage is recomputed as records arrive rather than when a session ends.
 - [ ] A station with no qualifying patrol within the window is computed as overdue.
 - [ ] Concourse and platform coverage are computed independently and both are visible.
 - [ ] The computation is covered by tests over the fixture of B-002, including the deliberate gap.

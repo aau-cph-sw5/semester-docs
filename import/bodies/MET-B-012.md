@@ -13,7 +13,7 @@ Source story B4.1. The dashboard is the product as far as the control room is co
 ## Acceptance criteria
 
 - [ ] Live patrol coverage and train manning are both visible on one screen for a full line.
-- [ ] The display updates without manual refresh and states the age of its data.
+- [ ] The display updates without manual refresh as records arrive, and states the age of its data.
 - [ ] At-risk and overdue metrics are surfaced without the operator having to look for them.
 - [ ] The dashboard is legible at the resolution the control room actually uses.
 - [ ] The dashboard remains usable when the manning source of B-010 returns nothing, degrading rather than failing.
