@@ -80,12 +80,12 @@ Raise it early, at the lowest level that can resolve it.
 Within the team, with the person, if you can. Most problems are misreadings and
 dissolve in a five-minute conversation.
 
-With your supervisor, if you cannot, or if it concerns the distribution of work,
-or if a conversation has already been tried.
+With the semester coordinator, if you cannot, or if it concerns the distribution
+of work, or if a conversation has already been tried.
 
-With the semester coordinator or the Product Owner, for anything spanning teams,
-anything involving the partner, or anything you do not want to raise with your
-supervisor.
+With the Product Owner, for anything spanning teams or involving the partner.
+The semester coordinator remains the route for anything you would rather not
+raise with your Product Owner.
 
 Through the study board's formal channels, for anything involving harassment or
 discrimination. Those routes exist, they are independent of the teaching staff,

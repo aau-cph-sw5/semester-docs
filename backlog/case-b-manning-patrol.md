@@ -7,6 +7,7 @@ A compliance-grade system documenting that stewards are present and active durin
 | | |
 |---|---|
 | **AAU evaluation** | Recommended by the AAU evaluation, conditional on a written ethical-framing agreement. Metro has confirmed that an ethical guidelines document will follow after the summer vacation. |
+| **AAU Product Owner** | Josephine Marie Bakka, jmba@cs.aau.dk |
 | **Metro contact** | Ian Røpke; domain expert Karsten Juhl |
 | **Surfaces** | Android handheld for stewards, web dashboard for control room and operations, back-end analytics and reporting. |
 | **Data readiness** | Station list for both lines received in August, stating for each station whether it has a platform level only or a platform and a concourse level: 46 stations, 76 patrol levels. The steward opens and closes a patrol session, and within it records are created from Bluetooth beacon connections held past a threshold, on a platform, a concourse or a train. The fleet is now known: 42 trains on M1/M2, permanent vehicle IDs 001 to 042, and 39 on M3/M4, IDs 001 to 039. |

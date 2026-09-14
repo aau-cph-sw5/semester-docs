@@ -17,7 +17,8 @@ feature/*     one per backlog item, named for it.
 
 `development` is where the teams meet. `staging` is where you find out whether
 they meet successfully. `main` is the record of what has been shown to the
-partner, which makes it the branch a supervisor or an examiner will look at.
+partner, which makes it the branch your Product Owner or an examiner will look
+at.
 
 Protect `main` and `staging`. At minimum: no direct pushes, pull request required,
 at least two approving reviews, and the pipeline must be green.

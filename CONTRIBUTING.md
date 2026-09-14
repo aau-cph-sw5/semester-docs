@@ -37,7 +37,8 @@ these backlogs depend on something outside the team that owns them.
 If the item carries an Open question labelled Blocking, do not start building
 around a guess. Raise it. The sprint review with Metro is every second week and
 that is the fastest route to an answer. Between reviews, write to Karsten Juhl at
-Metro and copy your Product Owner, as described in
+Metro Service, whose address is on the Moodle page, and copy your Product Owner,
+as described in
 [02-ways-of-working.md](docs/02-ways-of-working.md).
 
 Assign the issue to yourself and move the card to In progress. An item nobody has
@@ -99,7 +100,7 @@ record is better when the thing you discovered was a choice rather than a fact.
 ## When you are stuck
 
 In order: the guides in `docs/`, your own team, the other teams on your product,
-your supervisor, the Product Owner, Metro.
+the Product Owner, Metro.
 
 Two hours is a reasonable amount of time to be stuck before asking. Two days is
 not, and in a two-week sprint two days is a fifth of the sprint.

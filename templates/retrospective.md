@@ -20,8 +20,8 @@ possible, so that it can be repeated deliberately rather than by luck.
 ## What did not
 
 Specific, and about the work rather than about people. If a person is genuinely
-the problem, that is a conversation with the supervisor, not a line in a
-retrospective document.
+the problem, that is a conversation with the semester coordinator, not a line in
+a retrospective document.
 
 ## Where we lost time
 

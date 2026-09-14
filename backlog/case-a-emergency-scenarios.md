@@ -7,6 +7,7 @@ A shared situational-awareness tool that lets the control room select the active
 | | |
 |---|---|
 | **AAU evaluation** | Recommended by the AAU evaluation as the centre of the semester plan. |
+| **AAU Product Owner** | Theocharis Tavantzis, thta@cs.aau.dk |
 | **Metro contact** | Karsten Juhl |
 | **Surfaces** | Control-room web dashboard and steward Android application, kept in real-time sync. |
 | **Data readiness** | No dataset. Two presentations describe the alternative-operation scenarios, one per line. The domain model is derived from these and from interviews. |

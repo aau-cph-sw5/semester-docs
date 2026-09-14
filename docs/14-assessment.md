@@ -27,8 +27,8 @@ The authoritative source is the study regulation, *Studieordning for
 bacheloruddannelsen i software, 2020, København*, together with the module
 description for your project module. **Read the module description.** It contains
 the knowledge, skills and competence objectives your examiner works from, and
-this page does not reproduce them. Ask your supervisor for it in week one if you
-cannot find it.
+this page does not reproduce them. Ask your Product Owner for it in week one if
+you cannot find it.
 
 ---
 
@@ -58,7 +58,7 @@ decision to be recorded rather than a particular design to be built.
 
 | Deliverable | What it is | Where it is described |
 |---|---|---|
-| Project report | The academic document. Problem, method, design, results, discussion. | Your module description and your supervisor |
+| Project report | The academic document. Problem, method, design, results, discussion. | Your module description and your Product Owner |
 | Software | The product repository at the end of sprint 7 | Your product's README |
 | Architecture decision records | One per decision a stranger would question | [08-architecture-decisions.md](08-architecture-decisions.md) |
 | AI use declaration | What you used an assistant for and what you can explain without it | [11-ai-use.md](11-ai-use.md) |

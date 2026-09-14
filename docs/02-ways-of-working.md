@@ -116,10 +116,11 @@ documentation that the change makes wrong, corrected in the same pull request.
 
 ## Working with Metro Service
 
-Metro attends the sprint reviews. Between reviews there is one address, and Metro
-named it themselves in August: **Karsten Juhl**, the domain
-expert. Write to him directly when a question is blocking your sprint, and copy
-your AAU Product Owner so that the answer reaches the item and the other teams.
+Metro attends the sprint reviews. Between reviews there is one contact, and Metro
+named him themselves in August: **Karsten Juhl**, the domain expert. His address
+is on the Moodle page rather than here, because this repository is public. Write
+to him directly when a question is blocking your sprint, and copy your AAU
+Product Owner so that the answer reaches the item and the other teams.
 
 Anything that is not a question about the domain, and in particular anything about
 scope, priority, access, data or the collaboration itself, goes to the AAU Product

@@ -26,7 +26,7 @@ graduate, and a component nobody measured is a component nobody can defend at an
 examination.
 
 If you think a product genuinely needs a language model to work, raise it with
-your supervisor before building it. Do not wire in a personal key.
+your Product Owner before building it. Do not wire in a personal key.
 
 ## What you have to be able to explain
 

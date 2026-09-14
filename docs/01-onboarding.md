@@ -7,19 +7,18 @@ that are not are the parts that block everything else.
 
 ## 0. Who is who
 
-Four roles are named throughout these guides. They are different people and they
-answer different questions.
+Three roles are named throughout these guides. They are different people and
+they answer different questions.
 
 | Role | Who | What they are for |
 |---|---|---|
 | **Semester coordinator** | *(name, email)* | The semester as a whole: structure, cases, teams, anything that affects more than one product |
-| **AAU Product Owner** | *(name, email; one per product)* | Your single route to Metro between reviews, backlog priority and refinement, organisation access |
-| **Team supervisor** | *(assigned at semester start)* | Your team's technical and academic guidance, and the person who answers questions about the report and the examination |
-| **Metro domain expert** | Karsten Juhl | Questions about how the metro actually works, and only those |
+| **AAU Product Owner** | Case A: Theocharis Tavantzis, thta@cs.aau.dk<br>Case B: Josephine Marie Bakka, jmba@cs.aau.dk<br>Case C: Stefano Lambiase, stla@cs.aau.dk | Your single route to Metro between reviews, backlog priority and refinement, organisation access |
+| **Metro domain expert** | Karsten Juhl, Metro Service. His address is on the Moodle page, not here: this repository is public. | Questions about how the metro actually works, and only those |
 
-*This table is filled in before the semester starts. If you are reading it with
-the names still missing, ask at the first lecture and it is a bug in this
-repository.*
+*The semester coordinator is named at the first lecture and on Moodle. No
+address outside `cs.aau.dk` is published in this repository; the Metro Service
+address sits on the Moodle page, which is behind AAU authentication.*
 
 The Product Owner appears first because organisation access runs through them:
 they invite you to `aau-cph-sw5` and without that nothing else in this guide
@@ -31,7 +30,7 @@ works.
 
 | What | How | Blocked without it |
 |---|---|---|
-| GitHub account | Your own, or a new one. Use a name a supervisor can recognise. | Everything |
+| GitHub account | Your own, or a new one. Use a name your Product Owner and the other teams can recognise. | Everything |
 | Organisation membership | Your Product Owner invites you to `aau-cph-sw5` | Everything |
 | Team membership | Assigned at semester start; gives write access to your product repository | Pushing code |
 | Product board | Visible to all organisation members | Sprint planning |

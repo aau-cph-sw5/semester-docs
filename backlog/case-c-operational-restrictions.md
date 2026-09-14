@@ -7,6 +7,7 @@ A digital replacement for the paper-based Operational Restriction workflow: auth
 | | |
 |---|---|
 | **AAU evaluation** | The AAU evaluation placed this case on hold, to be activated only if the team count requires a fourth product, with a structured domain onboarding session in week 1. This backlog is written so that the decision can be taken at the August session on the same evidence as the others. |
+| **AAU Product Owner** | Stefano Lambiase, stla@cs.aau.dk |
 | **Metro contact** | Karsten Juhl |
 | **Surfaces** | Desktop and mobile, usable from home and at the workstation. |
 | **Data readiness** | No structured data. An existing written procedure for handling Operational Restrictions. The data model is derived from that procedure and from interviews. |
