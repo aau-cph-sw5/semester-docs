@@ -15,7 +15,7 @@ Source story B6.3. The statement is a student deliverable and a genuine piece of
 - [ ] The statement covers logged categories, retention, access, and the rights stewards hold.
 - [ ] Every claim in it corresponds to behaviour implemented in B-018, B-019 and B-021, with the item referenced.
 - [ ] The statement records that the semester ran on synthetic identities and states what would change with real data.
-- [ ] The statement is reviewed by the Metro contact before the final report.
+- [ ] The statement is reviewed by Metro Service before the final report.
 - [ ] The statement contains a short section arguing whether a system that documents the presence of named night staff should exist at all, and on what conditions, rather than only how to build it acceptably. Disagreement inside the team is recorded rather than resolved.
 
 ## Dependencies

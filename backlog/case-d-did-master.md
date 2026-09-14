@@ -7,7 +7,6 @@ Decision support for assigning Destination IDs. The operator describes the inten
 | | |
 |---|---|
 | **AAU evaluation** | Recommended by the AAU evaluation as the best alignment with the Machine Intelligence course, and the only case with structured source data available in week 1. |
-| **Metro contact** | Karsten Juhl |
 | **Surfaces** | Desktop application for control-room operators, with back-end catalogue and ranking services. |
 | **Data readiness** | M3M4: a spreadsheet of roughly 650 Destination IDs with descriptions, plus images showing route and behaviour. M1M2: roughly 450 with the same structure. The only case with structured source data ready. |
 

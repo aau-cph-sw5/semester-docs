@@ -7,18 +7,16 @@ that are not are the parts that block everything else.
 
 ## 0. Who is who
 
-Three roles are named throughout these guides. They are different people and
+Two roles are named throughout these guides. They are different people and
 they answer different questions.
 
 | Role | Who | What they are for |
 |---|---|---|
-| **Semester coordinator** | *(name, email)* | The semester as a whole: structure, cases, teams, anything that affects more than one product |
+| **Semester coordinator** | Daniel Russo, daniel.russo@cs.aau.dk | The semester as a whole: structure, cases, teams, anything that affects more than one product |
 | **AAU Product Owner** | Case A: Theocharis Tavantzis, thta@cs.aau.dk<br>Case B: Josephine Marie Bakka, jmba@cs.aau.dk<br>Case C: Stefano Lambiase, stla@cs.aau.dk | Your single route to Metro between reviews, backlog priority and refinement, organisation access |
-| **Metro domain expert** | Karsten Juhl, Metro Service. His address is on the Moodle page, not here: this repository is public. | Questions about how the metro actually works, and only those |
 
-*The semester coordinator is named at the first lecture and on Moodle. No
-address outside `cs.aau.dk` is published in this repository; the Metro Service
-address sits on the Moodle page, which is behind AAU authentication.*
+*Every question for Metro Service goes through your Product Owner, including
+questions about the domain. Students do not contact Metro Service directly.*
 
 The Product Owner appears first because organisation access runs through them:
 they invite you to `aau-cph-sw5` and without that nothing else in this guide
@@ -93,7 +91,7 @@ history that should not be there.
 - [ ] I have read [03-pull-request-process.md](03-pull-request-process.md)
 - [ ] I can run the project locally and its tests pass
 - [ ] I have met the other teams on my product, by name
-- [ ] I know who my Product Owner is and how to reach the Metro contact
+- [ ] I know who my Product Owner is, and that every question for Metro goes through them
 - [ ] I have read [14-assessment.md](14-assessment.md) and I know what the examination assesses
 
 ## 6. Track-specific notes

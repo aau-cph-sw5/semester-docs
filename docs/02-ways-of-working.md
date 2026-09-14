@@ -116,17 +116,12 @@ documentation that the change makes wrong, corrected in the same pull request.
 
 ## Working with Metro Service
 
-Metro attends the sprint reviews. Between reviews there is one contact, and Metro
-named him themselves in August: **Karsten Juhl**, the domain expert. His address
-is on the Moodle page rather than here, because this repository is public. Write
-to him directly when a question is blocking your sprint, and copy your AAU
-Product Owner so that the answer reaches the item and the other teams.
-
-Anything that is not a question about the domain, and in particular anything about
-scope, priority, access, data or the collaboration itself, goes to the AAU Product
-Owner and not to Metro. Other Metro names appear in the backlog headers as the
-people who own each case inside Metro Service; they are not there as an address
-for student questions.
+Metro attends the sprint reviews. Between reviews there is one route to Metro and
+it is your AAU Product Owner. Students do not contact Metro Service directly,
+whether the question is about the domain, about scope, priority, access or data,
+or about the collaboration itself. Put it to your Product Owner when it is
+blocking your sprint. They carry it to Metro and bring the answer back to the
+item, so that the other teams see it as well.
 
 Ask early. A question asked in September changes what gets built; the same
 question asked in November corrects something already built.

@@ -36,9 +36,8 @@ these backlogs depend on something outside the team that owns them.
 
 If the item carries an Open question labelled Blocking, do not start building
 around a guess. Raise it. The sprint review with Metro is every second week and
-that is the fastest route to an answer. Between reviews, write to Karsten Juhl at
-Metro Service, whose address is on the Moodle page, and copy your Product Owner,
-as described in
+that is the fastest route to an answer. Between reviews, put it to your Product
+Owner, who is the only route to Metro, as described in
 [02-ways-of-working.md](docs/02-ways-of-working.md).
 
 Assign the issue to yourself and move the card to In progress. An item nobody has
