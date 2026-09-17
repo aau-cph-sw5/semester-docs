@@ -70,6 +70,17 @@ repository afterwards. Four lines, not minutes.
 accumulates. If a branch has been open for more than a week, it is too big and
 should have been split.
 
+**Branching inside an item is the team's own business.** The rule above governs
+what merges into `development`: one item, one pull request, one integration event.
+It does not require six people to work on one branch. Pairs may work on child
+branches cut from the feature branch and merge them back with a light internal
+review, and on an item that several people work at once, that is usually the
+better arrangement. The pull request from the feature branch into `development`
+still carries the full process: two reviewers, one of them from another team,
+Product Owner acceptance first, and every acceptance criterion demonstrated. If
+the child branches are keeping the feature branch open past a week, the item
+needed splitting after all.
+
 **Merge `development` into your branch before requesting review**, every time. The
 conflict you resolve now is smaller than the one you resolve on Friday afternoon.
 
