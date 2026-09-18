@@ -11,14 +11,20 @@ are allowed to send outside the university.
 ## Two different things, often confused
 
 **AI as a development aid.** You use an assistant to write, explain or review
-code. Your choice, your tool, your subscription. Nothing is supplied by the
-semester and nothing is required.
+code. Since 18 September each group has a Mistral AI API key, issued by the
+semester and used through the Mistral extension for VS Code; the conditions
+attached to it are in the next section. You may also use assistants you already
+have. Nothing is required.
 
 **AI as a product component.** The system itself does ranking, classification or
 forecasting. Three of the four products have items like this.
 
-**No external model is supplied for the second.** The Mistral integration named in
-Metro's original user stories is not part of this semester. Where a source story
+**The group key is for the first, and no external model is supplied for the
+second.** The Mistral integration named in Metro's original user stories is not
+part of this semester, and the group key does not change that. Do not call it
+from product code: it expires every 30 days, every call draws on the group's
+monthly quota, and it would have to sit in the configuration of a public
+repository. Where a source story
 assigned work to an assistant, the backlog item has been rewritten as something
 you implement and measure. This is not a limitation to work around: a component
 built on somebody's personal API key is a component that stops working when they
@@ -26,7 +32,45 @@ graduate, and a component nobody measured is a component nobody can defend at an
 examination.
 
 If you think a product genuinely needs a language model to work, raise it with
-your Product Owner before building it. Do not wire in a personal key.
+your Product Owner before building it. Do not wire in a personal key, and do not
+wire in the group key.
+
+## Your group's Mistral key
+
+Each group received its key by email on 18 September. Before the first call,
+install and authenticate the Mistral extension for VS Code, following
+[Mistral's instructions](https://docs.mistral.ai/vibe/code/vs-code-extension/install-authenticate).
+
+The access comes with conditions. They follow from the university's data policy
+and from the agreement under which the keys were issued, so read them as rules of
+the semester.
+
+1. **The key stays inside your team.** It identifies your group, and your group
+   is accountable for everything done with it. Treat it as a secret in the sense
+   of [09-environments-and-ci.md](09-environments-and-ci.md): never in a
+   repository, a comment, a screenshot or a shared channel.
+2. **Level 1 data only.** AAU's
+   [data classification scheme](https://www.sikkerhed.aau.dk/dataklassifikation)
+   defines the levels. If you are uncertain how a dataset should be classified,
+   ask your Product Owner before you send anything to the service. The rule on
+   Metro Service material under *Confidentiality* below applies in addition,
+   whatever level you believe a file has.
+3. **Project-related activities only.**
+4. **Mistral AI's [terms and conditions](https://legal.mistral.ai/terms/get-started/)
+   apply to your use.**
+5. **Each group has a monthly usage limit of EUR 267.** When the limit is reached,
+   access stops for the rest of the month. There is no way to monitor consumption
+   in real time, so the group has to plan its usage and distribute it fairly. The
+   [published prices per model](https://mistral.ai/pricing/api/) give a workable
+   estimate of what your calls cost.
+6. **A key is valid for 30 days.** The first keys expire on 18 October. A new key
+   is issued to each group when the current one runs out, so you do not need to
+   request one.
+
+A shared quota with no live meter is a coordination problem of the kind this
+semester is meant to teach you to handle. Agree inside the group on who runs what,
+and on when a large batch of calls is worth its cost. A group that spends its
+month in the first week works without the tool until the quota resets.
 
 ## What you have to be able to explain
 

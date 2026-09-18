@@ -80,6 +80,11 @@ Tests run with a single command.
 The repository has a `.gitignore` that covers the stack, and nothing in the
 history that should not be there.
 
+Your group's Mistral AI API key arrived by email. Install and authenticate the
+[Mistral extension for VS Code](https://docs.mistral.ai/vibe/code/vs-code-extension/install-authenticate)
+with it, after reading the conditions attached to the key in
+[11-ai-use.md](11-ai-use.md#your-groups-mistral-key).
+
 ## 5. First-week checklist
 
 - [ ] I can push a branch to my product repository
@@ -88,6 +93,7 @@ history that should not be there.
 - [ ] I know which items in my product are blocked, and why
 - [ ] I have read [10-data-handling.md](10-data-handling.md) and I know what must never be committed
 - [ ] I have read [11-ai-use.md](11-ai-use.md) and I know what I have to be able to explain at the exam
+- [ ] I know the conditions attached to my group's Mistral key, including the Level 1 rule and the EUR 267 monthly limit
 - [ ] I have read [03-pull-request-process.md](03-pull-request-process.md)
 - [ ] I can run the project locally and its tests pass
 - [ ] I have met the other teams on my product, by name
@@ -122,7 +128,8 @@ that everyone can see is worth more than a right one in your head.
 garnish: `MET-A-019` turns a free-text incident description into a ranked
 shortlist of scenarios, and `MET-A-020` measures it against expert-labelled
 examples. Cases B and C carry optional forecasting and drafting items. No external
-model is supplied. You build and measure the method yourself, against a labelled
+model is supplied for the product; the group's Mistral key is a development aid
+and is not to be called from product code. You build and measure the method yourself, against a labelled
 set and a deterministic baseline, and the measurement is the deliverable as much
 as the method is. Start with the baseline. It guarantees a working product and it
 is the control condition you compare against.

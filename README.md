@@ -34,6 +34,11 @@ cohort. Which three is decided at the August backlog session.
 | C | Operational Restrictions | 27 | 4 | [backlog](backlog/case-c-operational-restrictions.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/5) |
 | D | DID Master | 24 | 11 | [backlog](backlog/case-d-did-master.md) | [board](https://github.com/orgs/aau-cph-sw5/projects/6) |
 
+> **Updated 18 September 2026.** Each group has received a Mistral AI API key by email, for use as a development aid through
+> the Mistral extension for VS Code. The key carries conditions: team only, Level 1 data only, project work only, and a
+> monthly limit of EUR 267 per group. Read them in [docs/11-ai-use.md](docs/11-ai-use.md#your-groups-mistral-key) before
+> the first call. The current keys expire on 18 October and are replaced automatically.
+
 > **Updated 28 August 2026 (Case C-specific).** A meeting with Metro Service and the Case C source folder—the unified procedure I3.4456, the
 > registers, the signature sheets and one worked restriction per line—answer six more Case C questions. `MET-C-015`,
 > `MET-C-018` and `MET-C-022` unblock; blocked items fall from 22 to 19. One correction on record: the M1/M2 legacy numbering
