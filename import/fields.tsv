@@ -1,18 +1,18 @@
 id	case	size	priority	track	readiness	epic	sprint
-MET-A-001	A	M	Must	cross-team	Ready	A-EP1	Sprint 1
+MET-A-001	A	M	Must	cross-team	Ready	A-EP1	Sprint 2
 MET-A-002	A	L	Must	backend	Ready	A-EP1	Sprint 2
-MET-A-003	A	M	Must	cross-team	Ready	A-EP1	Sprint 1
-MET-A-004	A	L	Must	backend	Ready	A-EP3	Sprint 2
+MET-A-003	A	M	Must	cross-team	Ready	A-EP1	Sprint 2
+MET-A-004	A	L	Must	backend	Ready	A-EP3	Sprint 3
 MET-A-005	A	L	Must	mobile	Ready	A-EP9	Sprint 3
 MET-A-006	A	L	Should	mobile	Ready	A-EP9	Sprint 4
-MET-A-007	A	M	Must	frontend	Ready	A-EP2	Sprint 2
-MET-A-008	A	M	Must	frontend	Ready	A-EP2	Sprint 2
-MET-A-009	A	S	Should	frontend	Ready	A-EP2	Sprint 3
-MET-A-010	A	L	Must	mobile	Needs refinement	A-EP3	Sprint 3
-MET-A-011	A	L	Must	frontend	Ready	A-EP3	Sprint 3
+MET-A-007	A	M	Must	frontend	Ready	A-EP2	Sprint 3
+MET-A-008	A	M	Must	frontend	Ready	A-EP2	Sprint 3
+MET-A-009	A	S	Should	frontend	Ready	A-EP2	Sprint 4
+MET-A-010	A	L	Must	mobile	Needs refinement	A-EP3	Sprint 4
+MET-A-011	A	L	Must	frontend	Ready	A-EP3	Sprint 4
 MET-A-012	A	S	Should	backend	Ready	A-EP3	Sprint 3
-MET-A-013	A	M	Must	mobile	Ready	A-EP4	Sprint 3
-MET-A-014	A	S	Should	mobile	Ready	A-EP4	Sprint 3
+MET-A-013	A	M	Must	mobile	Ready	A-EP4	Sprint 4
+MET-A-014	A	S	Should	mobile	Ready	A-EP4	Sprint 4
 MET-A-015	A	S	Should	mobile	Ready	A-EP4	Sprint 4
 MET-A-016	A	M	Should	backend	Ready	A-EP5	Sprint 4
 MET-A-017	A	S	Should	mobile	Ready	A-EP5	Sprint 4
@@ -21,7 +21,7 @@ MET-A-019	A	L	Must	backend	Needs refinement	A-EP6	Sprint 4
 MET-A-020	A	M	Must	backend	Blocked	A-EP6	Sprint 5
 MET-A-021	A	M	Won't	frontend	Dropped	A-EP6	-
 MET-A-022	A	S	Could	frontend	Needs refinement	A-EP6	Unscheduled
-MET-A-023	A	L	Must	backend	Ready	A-EP7	Sprint 2
+MET-A-023	A	L	Must	backend	Ready	A-EP7	Sprint 3
 MET-A-024	A	M	Should	frontend	Ready	A-EP7	Sprint 5
 MET-A-025	A	M	Must	backend	Ready	A-EP8	Sprint 2
 MET-A-026	A	S	Should	backend	Ready	A-EP8	Sprint 3

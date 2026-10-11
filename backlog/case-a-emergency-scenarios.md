@@ -15,13 +15,15 @@ A shared situational-awareness tool that lets the control room select the active
 
 **28 items.** Priority: 15 Must, 11 Should, 1 Could, 1 Won't. Readiness: 23 ready, 3 needing refinement, 1 blocked on Metro input, 1 dropped. Size: 7×S, 12×M, 9×L.
 
+> **Updated 11 October 2026** after the sprint 1 review and sprint 2 planning. `MET-A-001` and `MET-A-003` were not finished in sprint 1 and are carried into sprint 2. Sprint 2 is committed as the four foundation items, `MET-A-001`, `MET-A-003`, `MET-A-002` and `MET-A-025`, and nothing else; if those finish early, `MET-A-007` or `MET-A-023` is the item to pull next, because it has no dependencies and six items write to it, then `MET-A-008`, which needs only `MET-A-002`. The other four items proposed for sprint 2, `MET-A-004`, `MET-A-007`, `MET-A-008` and `MET-A-023`, move to sprint 3. The principle behind Metro's August answer on `MET-A-023`, that the log exists before anything writes to it, is kept by making it the first backend item of sprint 3; `MET-A-007` is the one deliberate same-sprint dependency on it, and its log-event criterion is wired last. So that sprint 3 stays a size one sprint can hold, `MET-A-009`, `MET-A-010`, `MET-A-011`, `MET-A-013` and `MET-A-014` move from sprint 3 to sprint 4, each because something it requires is now itself in sprint 3. `MET-A-012` and `MET-A-026` stay in sprint 3 as the items to pull if time permits, since each needs only a sprint 2 deliverable. The minimum demonstrable product therefore spans sprints 1 to 4 rather than 1 to 3. Sprints 5 and 7 are unchanged and sprint 6 remains unallocated. Proposed sprint 3 goal: an operator activates a scenario from real reference data, the activation is logged, and connected clients, including a steward phone with no signal, show it.
+
 > **Updated 27 August 2026.** Metro answered the remaining Case A questions. `MET-A-018` is released: the steward phones are enrolled in SOTI, running on Metro's own server, so the application can be distributed and notification permission granted centrally. `MET-A-021` is dropped at Metro's request, since no response checklists exist and authoring safety-relevant checklists is not work to give students. `MET-A-020` is not dropped: Metro proposed deleting the evaluation set, and it has been kept and the request restated, because with Case D deprioritised and no historical data in Case B it is the only place in the semester where a result can be measured against real Metro material. Two answers reach past their own item. The control room works from ordinary desktops, four operators and five in rush hour, with no wall display in either room. And operators share one control-room login, which leaves the incident log in `MET-A-023` attributing actions to a position rather than to a person unless Metro decides otherwise.
 
 > **Updated 25 August 2026.** `MET-A-019` and `MET-A-020` were raised to Must: with Case D deprioritised by Metro, the scenario-suggestion feature and its measured evaluation are what connect this semester's project work to the Machine Intelligence course.
 
 > **Updated 24 August 2026** against Metro Service's answers. The alternative-operation material for both lines has arrived, which releases `MET-A-001` and with it the whole case. The steward device is a Samsung Galaxy A52 to A55 on Android 14 or 15, operators type in Danish, and the role model is settled: CCR activates scenarios, DOM approves restrictions, Operation Administration amends the catalogue.
 
-**Minimum demonstrable product**, meaning the 12 Must items proposed for sprints 1 to 3: `MET-A-001`, `MET-A-002`, `MET-A-003`, `MET-A-004`, `MET-A-005`, `MET-A-007`, `MET-A-008`, `MET-A-010`, `MET-A-011`, `MET-A-013`, `MET-A-023`, `MET-A-025`. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
+**Minimum demonstrable product**, meaning the 12 Must items proposed for sprints 1 to 4 (sprints 1 to 3 until the October re-plan): `MET-A-001`, `MET-A-002`, `MET-A-003`, `MET-A-004`, `MET-A-005`, `MET-A-007`, `MET-A-008`, `MET-A-010`, `MET-A-011`, `MET-A-013`, `MET-A-023`, `MET-A-025`. This is the set to argue about at the August session. If it is wrong, everything after it is wrong too.
 
 ## Epics
 
@@ -42,20 +44,20 @@ A shared situational-awareness tool that lets the control room select the active
 
 | ID | Title | Epic | Size | Priority | Readiness | Sprint |
 |---|---|---|---|---|---|---|
-| `MET-A-001` | Derive the scenario domain model from the Metro alternative-operation presentations | A-EP1 | M | Must | Ready | 1 |
+| `MET-A-001` | Derive the scenario domain model from the Metro alternative-operation presentations | A-EP1 | M | Must | Ready | 2 |
 | `MET-A-002` | Scenario reference data schema, persistence and seed loader | A-EP1 | L | Must | Ready | 2 |
-| `MET-A-003` | Scenario state contract published and versioned | A-EP1 | M | Must | Ready | 1 |
-| `MET-A-004` | Real-time propagation of scenario and position changes to connected clients | A-EP3 | L | Must | Ready | 2 |
+| `MET-A-003` | Scenario state contract published and versioned | A-EP1 | M | Must | Ready | 2 |
+| `MET-A-004` | Real-time propagation of scenario and position changes to connected clients | A-EP3 | L | Must | Ready | 3 |
 | `MET-A-005` | Active scenario and own assignment readable with no network | A-EP9 | L | Must | Ready | 3 |
 | `MET-A-006` | Reconnection, reconciliation and exactly-once delivery of queued reports | A-EP9 | L | Should | Ready | 4 |
-| `MET-A-007` | Operator selects and activates a scenario from the predefined list | A-EP2 | M | Must | Ready | 2 |
-| `MET-A-008` | Required staffing for the active scenario shown to the operator | A-EP2 | M | Must | Ready | 2 |
-| `MET-A-009` | Operator changes or stands down the active scenario | A-EP2 | S | Should | Ready | 3 |
-| `MET-A-010` | Steward graphical scenario overview on the mobile client | A-EP3 | L | Must | Needs refinement | 3 |
-| `MET-A-011` | Control-room live coverage overview with steward positions | A-EP3 | L | Must | Ready | 3 |
+| `MET-A-007` | Operator selects and activates a scenario from the predefined list | A-EP2 | M | Must | Ready | 3 |
+| `MET-A-008` | Required staffing for the active scenario shown to the operator | A-EP2 | M | Must | Ready | 3 |
+| `MET-A-009` | Operator changes or stands down the active scenario | A-EP2 | S | Should | Ready | 4 |
+| `MET-A-010` | Steward graphical scenario overview on the mobile client | A-EP3 | L | Must | Needs refinement | 4 |
+| `MET-A-011` | Control-room live coverage overview with steward positions | A-EP3 | L | Must | Ready | 4 |
 | `MET-A-012` | Coverage gap rules and derived station state | A-EP3 | S | Should | Needs refinement | 3 |
-| `MET-A-013` | Steward sets current location with a single action | A-EP4 | M | Must | Ready | 3 |
-| `MET-A-014` | Steward marks a required station as covered | A-EP4 | S | Should | Ready | 3 |
+| `MET-A-013` | Steward sets current location with a single action | A-EP4 | M | Must | Ready | 4 |
+| `MET-A-014` | Steward marks a required station as covered | A-EP4 | S | Should | Ready | 4 |
 | `MET-A-015` | Steward status transitions | A-EP4 | S | Should | Ready | 4 |
 | `MET-A-016` | Operator sends a dispatch instruction to selected stewards | A-EP5 | M | Should | Ready | 4 |
 | `MET-A-017` | Steward acknowledges a received instruction | A-EP5 | S | Should | Ready | 4 |
@@ -64,7 +66,7 @@ A shared situational-awareness tool that lets the control room select the active
 | `MET-A-020` | Evaluation set and measured accuracy for scenario suggestion | A-EP6 | M | Must | Blocked | 5 |
 | `MET-A-021` | Response checklist for the active scenario | A-EP6 | M | Should | Needs refinement | 4 |
 | `MET-A-022` | Dispatch message drafting from scenario templates | A-EP6 | S | Could | Needs refinement | - |
-| `MET-A-023` | Append-only incident event log with actor and timestamp | A-EP7 | L | Must | Ready | 2 |
+| `MET-A-023` | Append-only incident event log with actor and timestamp | A-EP7 | L | Must | Ready | 3 |
 | `MET-A-024` | Incident timeline reconstruction | A-EP7 | M | Should | Ready | 5 |
 | `MET-A-025` | Authentication and role-based interface routing | A-EP8 | M | Must | Ready | 2 |
 | `MET-A-026` | Role and permission matrix enforced server-side | A-EP8 | S | Should | Ready | 3 |
@@ -77,7 +79,7 @@ A shared situational-awareness tool that lets the control room select the active
 
 ### MET-A-001 · Derive the scenario domain model from the Metro alternative-operation presentations
 
-`size:M` `prio:Must` `status:Ready` `track:cross-team` `type:spike` `sprint:1`
+`size:M` `prio:Must` `status:Ready` `track:cross-team` `type:spike` `sprint:2`
 
 **As a team on this product, we want a documented entity model for emergency scenarios extracted from the two Metro presentations, so that every other item on this backlog has something concrete to build against.**
 
@@ -132,11 +134,11 @@ Follows A-001. The scenarios are reference data maintained by Metro operations, 
 
 ### MET-A-003 · Scenario state contract published and versioned
 
-`size:M` `prio:Must` `status:Ready` `track:cross-team` `type:contract` `sprint:1`
+`size:M` `prio:Must` `status:Ready` `track:cross-team` `type:contract` `sprint:2`
 
 **As a developer on either surface, I want a published and versioned contract for scenario state, so that the mobile and web clients can be built in parallel without integrating on guesswork.**
 
-The steward client and the control-room client share one notion of what the active scenario is. This is the interface between a front-end team and a back-end team and is the highest-value coordination artefact in the product. It is scheduled in the first sprint deliberately, before either team builds against it.
+The steward client and the control-room client share one notion of what the active scenario is. This is the interface between a front-end team and a back-end team and is the highest-value coordination artefact in the product. It was scheduled in the first sprint deliberately, before either team builds against it; it was not finished there and is carried into sprint 2, and nothing that depends on it is pulled before it is published.
 
 **Acceptance criteria**
 
@@ -159,7 +161,7 @@ The steward client and the control-room client share one notion of what the acti
 
 ### MET-A-007 · Operator selects and activates a scenario from the predefined list
 
-`size:M` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:2`
+`size:M` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:3`
 
 **As a Control Room Operator, I want to select the active emergency scenario from a predefined list, so that every steward immediately sees which alternative-operation plan is in effect.**
 
@@ -185,7 +187,7 @@ Source story A1.1, restated with testable criteria. The original criterion, that
 
 ### MET-A-008 · Required staffing for the active scenario shown to the operator
 
-`size:M` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:2`
+`size:M` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:3`
 
 **As a Control Room Operator, I want to see which stations must be staffed for the selected scenario, so that I can direct stewards to the right locations.**
 
@@ -210,7 +212,7 @@ Source story A1.2. Its criteria used the terms clearly marked and visually disti
 
 ### MET-A-009 · Operator changes or stands down the active scenario
 
-`size:S` `prio:Should` `status:Ready` `track:frontend` `type:feature` `sprint:3`
+`size:S` `prio:Should` `status:Ready` `track:frontend` `type:feature` `sprint:4`
 
 **As a Control Room Operator, I want to change or stand down the current scenario, so that the field picture always reflects the current operational reality.**
 
@@ -235,7 +237,7 @@ Source story A1.3. Standing down is the state transition most likely to be left 
 
 ### MET-A-004 · Real-time propagation of scenario and position changes to connected clients
 
-`size:L` `prio:Must` `status:Ready` `track:backend` `type:feature` `sprint:2`
+`size:L` `prio:Must` `status:Ready` `track:backend` `type:feature` `sprint:3`
 
 **As a Control Room Operator, I want the overview to update as stewards report position without my having to refresh it, so that I always work from a current picture.**
 
@@ -263,7 +265,7 @@ Source stories A1.1 and A2.3 state this requirement in one clause each. Behind i
 
 ### MET-A-010 · Steward graphical scenario overview on the mobile client
 
-`size:L` `prio:Must` `status:Needs refinement` `track:mobile` `type:feature` `sprint:3`
+`size:L` `prio:Must` `status:Needs refinement` `track:mobile` `type:feature` `sprint:4`
 
 **As a Steward, I want a clear graphical overview of the active scenario on my phone, so that I no longer have to navigate a document that is hard to read during a stressful situation.**
 
@@ -291,7 +293,7 @@ Source story A2.1. Its criterion, that the required stations be identifiable wit
 
 ### MET-A-011 · Control-room live coverage overview with steward positions
 
-`size:L` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:3`
+`size:L` `prio:Must` `status:Ready` `track:frontend` `type:feature` `sprint:4`
 
 **As a Control Room Operator, I want a live overview showing required staffing and current steward positions, so that I can see coverage at a glance.**
 
@@ -371,7 +373,7 @@ Source story A2.1 requires that required stations be identifiable within a few s
 
 ### MET-A-013 · Steward sets current location with a single action
 
-`size:M` `prio:Must` `status:Ready` `track:mobile` `type:feature` `sprint:3`
+`size:M` `prio:Must` `status:Ready` `track:mobile` `type:feature` `sprint:4`
 
 **As a Steward, I want to indicate my current location with a single tap, so that the control room and my peers know where I am without a radio call.**
 
@@ -393,7 +395,7 @@ Source story A3.1. The station list a steward chooses from should be scoped to t
 
 ### MET-A-014 · Steward marks a required station as covered
 
-`size:S` `prio:Should` `status:Ready` `track:mobile` `type:feature` `sprint:3`
+`size:S` `prio:Should` `status:Ready` `track:mobile` `type:feature` `sprint:4`
 
 **As a Steward, I want to mark a required station as covered, so that the control room and my peers can see staffing progress.**
 
@@ -621,7 +623,7 @@ Source story A5.3, restated as template composition rather than generation, sinc
 
 ### MET-A-023 · Append-only incident event log with actor and timestamp
 
-`size:L` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:2`
+`size:L` `prio:Must` `status:Ready` `track:backend` `type:tech` `sprint:3`
 
 **As an Operations Administrator, I want every scenario activation, staffing event and message recorded with a timestamp and an actor, so that the incident can be analysed afterwards.**
 

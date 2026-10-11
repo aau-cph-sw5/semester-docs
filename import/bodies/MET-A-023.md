@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP7: Incident log and post-incident analysis
 
-**Size** L · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 2
+**Size** L · **Priority** Must · **Readiness** Ready · **Track** backend · **Type** tech · **Proposed sprint** 3
 
 ## User story
 

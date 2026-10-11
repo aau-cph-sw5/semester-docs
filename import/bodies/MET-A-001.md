@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP1: Foundation and scenario domain model
 
-**Size** M · **Priority** Must · **Readiness** Ready · **Track** cross-team · **Type** spike · **Proposed sprint** 1
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** cross-team · **Type** spike · **Proposed sprint** 2
 
 ## User story
 

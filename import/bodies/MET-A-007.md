@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP2: Scenario selection and activation
 
-**Size** M · **Priority** Must · **Readiness** Ready · **Track** frontend · **Type** feature · **Proposed sprint** 2
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** frontend · **Type** feature · **Proposed sprint** 3
 
 ## User story
 

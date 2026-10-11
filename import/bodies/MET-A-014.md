@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP4: Steward self-localization and status
 
-**Size** S · **Priority** Should · **Readiness** Ready · **Track** mobile · **Type** feature · **Proposed sprint** 3
+**Size** S · **Priority** Should · **Readiness** Ready · **Track** mobile · **Type** feature · **Proposed sprint** 4
 
 ## User story
 

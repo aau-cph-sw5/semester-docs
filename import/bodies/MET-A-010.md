@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP3: Shared situational overview
 
-**Size** L · **Priority** Must · **Readiness** Needs refinement · **Track** mobile · **Type** feature · **Proposed sprint** 3
+**Size** L · **Priority** Must · **Readiness** Needs refinement · **Track** mobile · **Type** feature · **Proposed sprint** 4
 
 ## User story
 

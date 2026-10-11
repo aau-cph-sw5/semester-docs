@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP1: Foundation and scenario domain model
 
-**Size** M · **Priority** Must · **Readiness** Ready · **Track** cross-team · **Type** contract · **Proposed sprint** 1
+**Size** M · **Priority** Must · **Readiness** Ready · **Track** cross-team · **Type** contract · **Proposed sprint** 2
 
 ## User story
 
@@ -8,7 +8,7 @@ As a developer on either surface, I want a published and versioned contract for 
 
 ## Context
 
-The steward client and the control-room client share one notion of what the active scenario is. This is the interface between a front-end team and a back-end team and is the highest-value coordination artefact in the product. It is scheduled in the first sprint deliberately, before either team builds against it.
+The steward client and the control-room client share one notion of what the active scenario is. This is the interface between a front-end team and a back-end team and is the highest-value coordination artefact in the product. It was scheduled in the first sprint deliberately, before either team builds against it; it was not finished there and is carried into sprint 2, and nothing that depends on it is pulled before it is published.
 
 ## Acceptance criteria
 
