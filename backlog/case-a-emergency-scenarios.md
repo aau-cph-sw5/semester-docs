@@ -385,10 +385,11 @@ Source story A3.1. The station list a steward chooses from should be scoped to t
 - [ ] Setting a location requires one action from the main screen, not a navigation sequence.
 - [ ] The previous position is replaced rather than accumulated, and the replacement is visible to the steward.
 - [ ] A report made with no connection is queued per A-006 and the steward is told it is queued rather than sent.
+- [ ] Setting a location writes an event to the incident log with actor, station and timestamp.
 
 **Dependencies**
 
-- Requires A-003.
+- Requires A-003 and A-023.
 - Interacts with A-006.
 
 *Source: A3.1*
@@ -430,10 +431,11 @@ Source story A3.3.
 - [ ] The permitted status values and the transitions between them are defined in the contract of A-003.
 - [ ] The current status is shown against the steward name on the control-room overview.
 - [ ] An invalid transition is rejected server-side with a message the client can display.
+- [ ] A status transition writes an event to the incident log with actor, old and new status, and timestamp.
 
 **Dependencies**
 
-- Requires A-003 and A-011.
+- Requires A-003, A-011 and A-023.
 
 *Source: A3.3*
 
@@ -633,7 +635,8 @@ The requirement is that the record of what happened during an incident cannot be
 
 **Acceptance criteria**
 
-- [ ] Every state-changing action in the product writes an event carrying type, actor, subject, payload and server timestamp.
+- [ ] A single write entry point exists for state-changing actions to record an event with type, actor, subject, payload and server timestamp.
+- [ ] Nothing in the application writes to the event log except through the entry point.
 - [ ] Events are append-only. There is no code path that updates or deletes one, verified by a test.
 - [ ] Clock source is the server, and any client-supplied time is stored as a separate field rather than replacing it.
 - [ ] The event schema is versioned and documented, and adding a new event type does not require a migration.
@@ -641,7 +644,7 @@ The requirement is that the record of what happened during an incident cannot be
 
 **Dependencies**
 
-- Blocks A-007, A-009, A-014, A-016, A-021, A-024.
+- Blocks A-007, A-009, A-013, A-014, A-015, A-016, A-021, A-024.
 
 **Open questions**
 
