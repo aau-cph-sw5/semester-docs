@@ -115,6 +115,7 @@ rather than a complete list.
 | E1003 | The scenario referenced by this report has been stood down |
 | E1004 | The station is not part of the active scenario |
 | E1005 | The client's local copy is too stale to act on |
+| E1006 | The status change is not permitted from the steward's current status |
 
 ### Case B. Manning/patrol requirement
 
