@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP6: Decision support: classification and checklists
 
-**Size** L · **Priority** Must · **Readiness** Needs refinement · **Track** backend · **Type** feature · **Proposed sprint** 4
+**Size** L · **Priority** Must · **Readiness** Needs refinement · **Track** backend · **Type** feature · **Proposed sprint** 5
 
 ## User story
 

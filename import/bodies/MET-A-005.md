@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP9: Offline and degraded operation
 
-**Size** L · **Priority** Must · **Readiness** Ready · **Track** mobile · **Type** feature · **Proposed sprint** 3
+**Size** L · **Priority** Must · **Readiness** Ready · **Track** mobile · **Type** feature · **Proposed sprint** 4
 
 ## User story
 

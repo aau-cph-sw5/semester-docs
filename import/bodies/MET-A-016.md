@@ -1,6 +1,6 @@
 > **Emergency Scenarios (Case A)** · Epic A-EP5: Low-radio dispatch
 
-**Size** M · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 4
+**Size** M · **Priority** Should · **Readiness** Ready · **Track** backend · **Type** feature · **Proposed sprint** 5
 
 ## User story
 
