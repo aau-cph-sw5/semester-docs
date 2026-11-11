@@ -13,7 +13,7 @@ A shared situational-awareness tool that lets the control room select the active
 
 ## At a glance
 
-**28 items.** Priority: 15 Must, 11 Should, 1 Could, 1 Won't. Readiness: 23 ready, 3 needing refinement, 1 blocked on Metro input, 1 dropped. Size: 7×S, 12×M, 9×L.
+**29 items.** Priority: 15 Must, 12 Should, 1 Could, 1 Won't. Readiness: 23 ready, 4 needing refinement, 1 blocked on Metro input, 1 dropped. Size: 7×S, 12×M, 9×L, 1×XL.
 
 > **Updated 1 November 2026** at sprint 4 planning. Sprint 3 holds `MET-A-008`, `MET-A-012` and `MET-A-026`. Sprint 4 is `MET-A-023`, `MET-A-004`, `MET-A-005`, `MET-A-007`, `MET-A-010`, `MET-A-011` and `MET-A-013`, with `MET-A-009` and `MET-A-014` as the items to pull if time permits. That is the whole remainder of the minimum demonstrable product in one sprint, five of its items L, so the same-sprint dependencies are deliberate and the order inside the sprint is fixed: the log, the transport and the offline store first (`MET-A-023`, `MET-A-004`, `MET-A-005`), then activation and location reporting against them (`MET-A-007`, `MET-A-013`), then the two overviews (`MET-A-010`, `MET-A-011`). The items displaced from sprint 4 move to sprint 5: `MET-A-006`, `MET-A-015`, `MET-A-016`, `MET-A-017`, `MET-A-018` and `MET-A-019`. The sprint 5 items move to sprint 6: `MET-A-020`, `MET-A-024` and `MET-A-027`, so the steward session date for `MET-A-027` is to be fixed for sprint 6. Three stale rows in the backlog index are corrected to match their items: `MET-A-012` and `MET-A-018` are Ready, and `MET-A-021` is Won't, Dropped, no sprint.
 
@@ -35,7 +35,7 @@ A shared situational-awareness tool that lets the control room select the active
 | `A-EP2` | Scenario selection and activation | 3 |
 | `A-EP3` | Shared situational overview | 5 |
 | `A-EP4` | Steward self-localization and status | 3 |
-| `A-EP5` | Low-radio dispatch | 3 |
+| `A-EP5` | Low-radio dispatch | 4 |
 | `A-EP6` | Decision support: classification and checklists | 4 |
 | `A-EP7` | Incident log and post-incident analysis | 2 |
 | `A-EP8` | Access, roles and identity | 2 |
@@ -74,6 +74,7 @@ A shared situational-awareness tool that lets the control room select the active
 | `MET-A-026` | Role and permission matrix enforced server-side | A-EP8 | S | Should | Ready | 3 |
 | `MET-A-027` | Usability evaluation of the steward overview under time pressure | A-EP3 | M | Should | Ready | 6 |
 | `MET-A-028` | Inheritance package for the 2027 cohort | A-EP10 | L | Must | Ready | 7 |
+| `MET-A-029` | Station-to-operator messages for non-critical requests | A-EP5 | XL | Should | Needs refinement | 5 |
 
 ---
 
@@ -514,6 +515,45 @@ The source document assumes instructions reach stewards but says nothing about h
 
 - *[Answered · Metro, August 2026]* Which device, and is a push service reachable? The device is a consumer Samsung Galaxy A52 to A55 on Android 14 or 15, so Google Play services can be assumed present and Firebase Cloud Messaging is a reasonable default rather than a gamble.
 - *[Answered · Metro, August 2026]* Are the phones enrolled in a mobile device management system, and which one? **Yes. SOTI, running on Metro's own server.** That closes the item. An application can be distributed to the fleet without the public store, notification permission can be granted centrally rather than requested from a steward at the worst possible moment, and a managed configuration can be read at install time. Two further consequences. Firebase Cloud Messaging remains available, since the handsets are consumer Samsung phones with Google services, so enrolment constrains distribution rather than transport. And managed configuration is the natural carrier of a device's steward identity, which matters because Metro's answer on A-025 is that stewards do not log in at all.
+
+*Source: AAU-added.*
+
+### MET-A-029 · Station-to-operator messages for non-critical requests
+
+`size:XL` `prio:Should` `status:Needs refinement` `track:cross-team` `type:feature` `sprint:5`
+
+**As a Steward checked in at a station, I want to send a non-critical message to the control room and get an answer in the app, so that the radio is kept free for critical communication.**
+
+Replaces A-016 (operator sends a dispatch instruction to selected stewards): all in-app communication between the control room and stewards goes through station threads. Both the steward and the operator can start the conversation. Messages are free text.
+
+The thread belongs to the station, not the person: the operator sees "Station X", and every steward checked in at that station sees the same thread. A steward cannot write to the operator unless they have checked in at a station. Critical communication stays on the radio.
+
+The thread belongs to the station for the lifetime of the activation. It stays available at the station while the scenario is live, regardless of which stewards check in or out, and it ends at stand-down. After stand-down the messages can be read in the incident log (log view, [#276](https://github.com/aau-cph-sw5/case-a-emergency-scenarios/issues/276)).
+
+Alerts while the app is in the background are out of scope and belong to A-018.
+
+**Acceptance criteria**
+
+- [ ] **Access:** A steward checked in (ARRIVED) at a station can open the station's thread from the main screen in one tap. A steward who is not checked in cannot read or send, and the server rejects the attempt with a message the client can display.
+- [ ] **Messages:** A message is free text, is shown as coming from the station, and shows the time it was written. The steward's identity is not shown to the operator.
+- [ ] **Operator:** An operator can write to any station's thread during an active scenario, as a reply or as the first message. It reaches the stewards checked in at that station within the timings in A-004, with a visible in-app notification, and messages only reach operators in the station's line group ([#315](https://github.com/aau-cph-sw5/case-a-emergency-scenarios/issues/315)).
+- [ ] **Unanswered first:** A thread is unanswered from a steward message until an operator replies. Opening it changes nothing. The operator's list shows unanswered threads first, oldest at the top.
+- [ ] **Lifetime:** The thread stays at the station while the scenario is live, so a steward who checks in later sees the earlier messages. At stand-down it is closed and removed from both clients.
+- [ ] **Offline:** A message written without connection is queued, sent once on reconnection (A-006) and shown as pending, and it keeps its original time written.
+- [ ] **Incident log:** Every message writes an event to the incident log (A-023) with the station as the source, the text and both timestamps (written and received by the server), and without the steward's identity.
+
+**Dependencies**
+
+- Requires A-003 (contract), A-004 (realtime), A-015 (check-in) and A-023 (incident log).
+- Requires socket rooms per line group ([#318](https://github.com/aau-cph-sw5/case-a-emergency-scenarios/issues/318)) and A-006 (offline queue).
+- Replaces A-016 (dispatch).
+- Related: A-018 (background notifications), which lists A-016 as a requirement and should point here instead.
+
+**Open questions**
+
+- Should unanswered messages be shown as a badge on the station on the operator map?
+- A-016 let the operator reach one steward, several, or everyone in the scenario, and kept an instruction visible until acknowledged. With station threads the operator cannot reach a steward who is not checked in, and there is no acknowledgement. Is that accepted?
+- Is the sending steward stored on the message row at all, or is the message fully anonymous in the database too?
 
 *Source: AAU-added.*
 
