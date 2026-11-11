@@ -13,7 +13,7 @@ A shared situational-awareness tool that lets the control room select the active
 
 ## At a glance
 
-**29 items.** Priority: 15 Must, 12 Should, 1 Could, 1 Won't. Readiness: 23 ready, 4 needing refinement, 1 blocked on Metro input, 1 dropped. Size: 7×S, 12×M, 9×L, 1×XL.
+**29 items.** Priority: 15 Must, 10 Should, 1 Could, 3 Won't. Readiness: 21 ready, 4 needing refinement, 1 blocked on Metro input, 3 dropped. Size: 7×S, 12×M, 9×L, 1×XL.
 
 > **Updated 1 November 2026** at sprint 4 planning. Sprint 3 holds `MET-A-008`, `MET-A-012` and `MET-A-026`. Sprint 4 is `MET-A-023`, `MET-A-004`, `MET-A-005`, `MET-A-007`, `MET-A-010`, `MET-A-011` and `MET-A-013`, with `MET-A-009` and `MET-A-014` as the items to pull if time permits. That is the whole remainder of the minimum demonstrable product in one sprint, five of its items L, so the same-sprint dependencies are deliberate and the order inside the sprint is fixed: the log, the transport and the offline store first (`MET-A-023`, `MET-A-004`, `MET-A-005`), then activation and location reporting against them (`MET-A-007`, `MET-A-013`), then the two overviews (`MET-A-010`, `MET-A-011`). The items displaced from sprint 4 move to sprint 5: `MET-A-006`, `MET-A-015`, `MET-A-016`, `MET-A-017`, `MET-A-018` and `MET-A-019`. The sprint 5 items move to sprint 6: `MET-A-020`, `MET-A-024` and `MET-A-027`, so the steward session date for `MET-A-027` is to be fixed for sprint 6. Three stale rows in the backlog index are corrected to match their items: `MET-A-012` and `MET-A-018` are Ready, and `MET-A-021` is Won't, Dropped, no sprint.
 
@@ -61,8 +61,8 @@ A shared situational-awareness tool that lets the control room select the active
 | `MET-A-013` | Steward sets current location with a single action | A-EP4 | M | Must | Ready | 4 |
 | `MET-A-014` | Steward marks a required station as covered | A-EP4 | S | Should | Ready | 4 |
 | `MET-A-015` | Steward status transitions | A-EP4 | S | Should | Ready | 5 |
-| `MET-A-016` | Operator sends a dispatch instruction to selected stewards | A-EP5 | M | Should | Ready | 5 |
-| `MET-A-017` | Steward acknowledges a received instruction | A-EP5 | S | Should | Ready | 5 |
+| `MET-A-016` | Operator sends a dispatch instruction to selected stewards | A-EP5 | M | Won't | Dropped | - |
+| `MET-A-017` | Steward acknowledges a received instruction | A-EP5 | S | Won't | Dropped | - |
 | `MET-A-018` | Notification delivery decision and implementation for dispatch | A-EP5 | M | Should | Ready | 5 |
 | `MET-A-019` | Scenario suggestion from a free-text incident description | A-EP6 | L | Must | Needs refinement | 5 |
 | `MET-A-020` | Evaluation set and measured accuracy for scenario suggestion | A-EP6 | M | Must | Blocked | 6 |
@@ -448,11 +448,13 @@ Source story A3.3.
 
 ### MET-A-016 · Operator sends a dispatch instruction to selected stewards
 
-`size:M` `prio:Should` `status:Ready` `track:backend` `type:feature` `sprint:5`
+`size:M` `prio:Won't` `status:Dropped` `track:backend` `type:feature` `sprint:none`
 
 **As a Control Room Operator, I want to send a dispatch instruction to one or several stewards in the application, so that I reduce radio traffic in already pressured situations.**
 
 Source story A4.1. The original criterion, that the instruction be clearly visible, is replaced by properties that can be tested.
+
+**Replaced by A-029.** All in-app communication between the control room and stewards goes through station threads, so this item is dropped and its issue closed with a reference to A-029. The criteria below are kept as a record of what was replaced.
 
 **Acceptance criteria**
 
@@ -473,11 +475,13 @@ Source story A4.1. The original criterion, that the instruction be clearly visib
 
 ### MET-A-017 · Steward acknowledges a received instruction
 
-`size:S` `prio:Should` `status:Ready` `track:mobile` `type:feature` `sprint:5`
+`size:S` `prio:Won't` `status:Dropped` `track:mobile` `type:feature` `sprint:none`
 
 **As a Steward, I want to acknowledge a received instruction, so that the control room knows it was received and understood.**
 
 Source story A4.2.
+
+**Dropped with A-016.** There are no instructions to acknowledge once A-029 replaces dispatch with station threads, and station threads have no acknowledgement. A thread instead counts as unanswered until an operator replies. Whether losing acknowledgement is accepted is an open question on A-029.
 
 **Acceptance criteria**
 
@@ -508,7 +512,7 @@ The source document assumes instructions reach stewards but says nothing about h
 
 **Dependencies**
 
-- Requires A-016.
+- Requires A-029.
 - Blocked on the device question in A-010.
 
 **Open questions**
@@ -524,7 +528,7 @@ The source document assumes instructions reach stewards but says nothing about h
 
 **As a Steward checked in at a station, I want to send a non-critical message to the control room and get an answer in the app, so that the radio is kept free for critical communication.**
 
-Replaces A-016 (operator sends a dispatch instruction to selected stewards): all in-app communication between the control room and stewards goes through station threads. Both the steward and the operator can start the conversation. Messages are free text.
+Replaces A-016 (operator sends a dispatch instruction to selected stewards) and with it A-017 (steward acknowledges a received instruction): all in-app communication between the control room and stewards goes through station threads. Both the steward and the operator can start the conversation. Messages are free text.
 
 The thread belongs to the station, not the person: the operator sees "Station X", and every steward checked in at that station sees the same thread. A steward cannot write to the operator unless they have checked in at a station. Critical communication stays on the radio.
 
@@ -546,8 +550,8 @@ Alerts while the app is in the background are out of scope and belong to A-018.
 
 - Requires A-003 (contract), A-004 (realtime), A-015 (check-in) and A-023 (incident log).
 - Requires socket rooms per line group ([#318](https://github.com/aau-cph-sw5/case-a-emergency-scenarios/issues/318)) and A-006 (offline queue).
-- Replaces A-016 (dispatch).
-- Related: A-018 (background notifications), which lists A-016 as a requirement and should point here instead.
+- Replaces A-016 (dispatch) and A-017 (acknowledgement).
+- Blocks A-018 (background notifications) and A-022 (message drafting).
 
 **Open questions**
 
@@ -657,7 +661,7 @@ Source story A5.3, restated as template composition rather than generation, sinc
 
 **Dependencies**
 
-- Requires A-016.
+- Requires A-029.
 
 *Source: A5.3*
 
@@ -686,7 +690,7 @@ The requirement is that the record of what happened during an incident cannot be
 
 **Dependencies**
 
-- Blocks A-007, A-009, A-013, A-014, A-015, A-016, A-021, A-024.
+- Blocks A-007, A-009, A-013, A-014, A-015, A-021, A-024, A-029.
 
 **Open questions**
 
